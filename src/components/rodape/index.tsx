@@ -5,7 +5,7 @@ export default function Rodape() {
   return (
     <>
       <Flex
-        bg="#003829"
+        bg="white"
         h="500px"
         flexDir={{ base: 'column' }}
         p={{ base: '20px' }}
