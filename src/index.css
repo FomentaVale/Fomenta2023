@@ -122,3 +122,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Gotham-Black';
+  src: url(/public/fonts/Gotham/Gotham-Black.otf);
+}
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url(/public/fonts/Gotham/Gotham-Light.otf);
+}
