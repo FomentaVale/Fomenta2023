@@ -6,12 +6,14 @@ import {
   ListItem,
   Text,
   UnorderedList,
+  useToast,
 } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 import { Link as LinkPage } from 'react-router-dom';
 import './style.css';
 
 export default function Rodape() {
+  const toast = useToast();
   return (
     <>
       <Flex
@@ -19,9 +21,9 @@ export default function Rodape() {
         h="100%"
         flexDir={{ base: 'column' }}
         p={{ base: '20px' }}
-        w="100vw"
+        w="100%"
         color="white"
-        fontSize={{ base: '9px', sm: '12px' }}
+        fontSize={{ base: '9px', sm: '10px', lg: '11px', '2xl': '14px' }}
         fontFamily="gotham"
         alignItems={{ base: ' ', md: 'center' }}
       >
@@ -31,7 +33,7 @@ export default function Rodape() {
           justifyContent={{ base: 'center', md: 'space-between' }}
           borderBottom="0.5px solid white"
           padding={{ base: '20px 0px' }}
-          w={{ base: '', md: '80%', '2xl': '50%' }}
+          w={{ base: '', md: '80%', lg: '70%', '2xl': '50%' }}
         >
           <Image
             mb={{ base: '20px', md: '0px' }}
@@ -46,8 +48,12 @@ export default function Rodape() {
             justifyContent={{ base: 'center', md: 'space-evenly' }}
           >
             <Flex
+              as={Link}
+              target="_blank"
+              href="https://goo.gl/maps/8KaUh2WBPY6D1KXP9"
               gap={{ base: '10px', md: '5px' }}
               alignItems={{ base: 'center' }}
+              _hover={{ color: 'cor.P3' }}
             >
               <Icon
                 className="icones"
@@ -65,8 +71,13 @@ export default function Rodape() {
               justifyContent={{ md: 'space-between' }}
             >
               <Flex
+                as={Link}
+                target="_self"
+                textDecoration="none !important"
+                href="tel:+5518996922667"
                 gap={{ base: '10px', md: '5px' }}
                 alignItems={{ base: 'center' }}
+                _hover={{ color: 'cor.P3' }}
               >
                 <Icon
                   className="icones"
@@ -76,9 +87,36 @@ export default function Rodape() {
                 <Text>(18) 99692-2667</Text>
               </Flex>
               <Flex
+                cursor="pointer"
                 gap={{ base: '10px', md: '5px' }}
                 alignItems={{ base: 'center' }}
                 justifyContent={{ md: 'flex-end' }}
+                _hover={{ color: 'cor.P3' }}
+                onClick={() => {
+                  navigator.clipboard.writeText('contato@fomentavale.com.br');
+                  toast({
+                    position: 'bottom-right',
+                    duration: 3000,
+                    isClosable: true,
+                    render: () => (
+                      <Flex
+                        alignItems="center"
+                        gap="10px"
+                        color="white"
+                        p={3}
+                        bg="cor.P3"
+                        borderRadius="8px"
+                      >
+                        <Icon
+                          fontSize="20px"
+                          icon="mdi:clipboard-check-multiple-outline"
+                          color="white"
+                        />
+                        Email copiado para área de transferência.
+                      </Flex>
+                    ),
+                  });
+                }}
               >
                 <Icon
                   className="icones"
@@ -97,7 +135,9 @@ export default function Rodape() {
               mt={{ base: '10px' }}
             >
               <Flex whiteSpace="nowrap">
-                <Text>Mídias Sociais</Text>
+                <Text fontSize={{ lg: '13px' }} fontWeight={600}>
+                  Mídias Sociais
+                </Text>
               </Flex>
               <Flex
                 fontSize={{ base: '20px', sm: '22px' }}
@@ -159,14 +199,13 @@ export default function Rodape() {
           </Flex>
         </Flex>
         <Flex
-          w={{ md: '75%', '2xl': '45%' }}
+          w={{ md: '75%', lg: '65%', '2xl': '45%' }}
           flexDirection={{ base: 'column' }}
           gap="50px"
           alignItems="center"
         >
           <UnorderedList
             listStyleType="none"
-            textDecoration="underline"
             display="flex"
             flexDirection={{ base: 'column', md: 'row' }}
             gap={{ base: '10px', md: '0px' }}
@@ -176,25 +215,39 @@ export default function Rodape() {
             justifyContent={{ md: 'space-evenly' }}
           >
             <LinkPage to="/">
-              <ListItem>HOME</ListItem>
+              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
+                HOME
+              </ListItem>
             </LinkPage>
             <LinkPage to="/oqueSomos">
-              <ListItem>O QUE SOMOS</ListItem>
+              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
+                O QUE SOMOS
+              </ListItem>
             </LinkPage>
             <LinkPage to="/quemSomos">
-              <ListItem>QUEM SOMOS</ListItem>
+              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
+                QUEM SOMOS
+              </ListItem>
             </LinkPage>
             <LinkPage to="/realizacoes">
-              <ListItem>REALIZAÇÕES</ListItem>
+              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
+                REALIZAÇÕES
+              </ListItem>
             </LinkPage>
             <LinkPage to="/startups">
-              <ListItem>STARTUPS</ListItem>
+              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
+                STARTUPS
+              </ListItem>
             </LinkPage>
             <LinkPage to="/facaParte">
-              <ListItem>FAÇA PARTE</ListItem>
+              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
+                FAÇA PARTE
+              </ListItem>
             </LinkPage>
             <LinkPage to="/politica">
-              <ListItem>POLÍTICAS DE PRIVICIDADE</ListItem>
+              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
+                POLÍTICAS DE PRIVICIDADE
+              </ListItem>
             </LinkPage>
           </UnorderedList>
           <Text
