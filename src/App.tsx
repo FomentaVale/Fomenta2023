@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
+import Rodape from './components/rodape';
+import OqueSomos from './pages/OqueSomos';
 
 export default function App() {
   return (
@@ -9,9 +11,11 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/oqueSomos" element={<OqueSomos />} />
         <Route path="/quemSomos" element={<QuemSomos />} />
         <Route path="/*" element={<div>Página não encontrada</div>} />
       </Routes>
+      <Rodape />
     </BrowserRouter>
   );
 }
