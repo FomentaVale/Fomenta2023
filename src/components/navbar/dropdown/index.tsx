@@ -29,7 +29,7 @@ export default function Dropdown({
         marginX="5px"
         borderRadius="10px"
         border="2px solid rgba(255, 255, 255, 0.5)"
-        bg="#00A99D"
+        bg="cor.P2"
         rightIcon={
           <Icon
             icon="material-symbols:arrow-drop-down-rounded"
@@ -41,7 +41,7 @@ export default function Dropdown({
         <Text
           color="#ffff"
           fontSize="15px"
-          fontFamily="Gotham Light"
+          fontFamily="Gotham-Light"
           fontWeight="900"
         >
           {descricao}
@@ -54,7 +54,7 @@ export default function Dropdown({
             <Text
               color="#ffff"
               fontSize="15px"
-              fontFamily="Gotham Light"
+              fontFamily="Gotham-Light"
               fontWeight="900"
             >
               Oque Somos
@@ -66,7 +66,7 @@ export default function Dropdown({
             <Text
               color="#ffff"
               fontSize="15px"
-              fontFamily="Gotham Light"
+              fontFamily="Gotham-Light"
               fontWeight="900"
             >
               Quem Somos

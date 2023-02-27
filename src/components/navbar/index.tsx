@@ -11,7 +11,7 @@ import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Botao from '../botao';
-import Dropdown from '../botao/dropdown';
+import Dropdown from './dropdown';
 
 export default function Navbar() {
   const [larguraTela, setLarguraTela] = useState(window.innerWidth > 768);
