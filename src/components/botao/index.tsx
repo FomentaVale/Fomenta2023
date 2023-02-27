@@ -11,7 +11,7 @@ export default function Botao({ descricao, caminho }: Props) {
     <Flex>
       <Link to={caminho}>
         <Button
-          w="170px"
+          w="150px"
           h="50px"
           marginX="5px"
           borderRadius="10px"
