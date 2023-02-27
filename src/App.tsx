@@ -3,11 +3,8 @@ import Navbar from './components/navbar';
 import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
 import Rodape from './components/rodape';
-import Politica from './pages/PoliticaPrivacidade';
+
 import OqueSomos from './pages/OqueSomos';
-import Realizacoes from './pages/Realizacoes';
-import Startups from './pages/Startups';
-import FacaParte from './pages/FacaParte';
 
 export default function App() {
   return (
