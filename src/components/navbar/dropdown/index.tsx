@@ -4,7 +4,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  Button,
+  Button
 } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
@@ -18,7 +18,7 @@ interface Props {
 export default function Dropdown({
   descricao,
   caminhoOqueSomos,
-  caminhoQuemSomos,
+  caminhoQuemSomos
 }: Props) {
   return (
     <Menu>
@@ -57,7 +57,7 @@ export default function Dropdown({
               fontFamily="Gotham-Light"
               fontWeight="900"
             >
-              Oque Somos
+              O que Somos
             </Text>
           </Link>
         </MenuItem>

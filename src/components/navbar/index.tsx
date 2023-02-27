@@ -5,12 +5,12 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  MenuList,
+  MenuList
 } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Botao from '../botao';
+import BotaoGeral from '../botaoGeral';
 import Dropdown from './dropdown';
 
 export default function Navbar() {
@@ -48,9 +48,29 @@ export default function Navbar() {
             caminhoOqueSomos="/oqueSomos"
             caminhoQuemSomos="/quemSomos"
           />
-          <Botao descricao="Realizações" caminho="/realizacoes" />
-          <Botao descricao="Coworking" caminho="/coworking" />
-          <Botao descricao="Faça Parte" caminho="/facaParte" />
+          <BotaoGeral
+            tituloBotao="Realizacoes"
+            caminho="/realizacoes"
+            corBotao="cor.P2"
+            bordaBotao="2px solid rgba(255, 255, 255, 0.5)"
+            arredondamentoBorda="10px"
+          />
+
+          <BotaoGeral
+            tituloBotao="Coworking"
+            caminho="/coworking"
+            corBotao="cor.P2"
+            bordaBotao="2px solid rgba(255, 255, 255, 0.5)"
+            arredondamentoBorda="10px"
+          />
+
+          <BotaoGeral
+            tituloBotao="Faça Parte"
+            caminho="/facaparte"
+            corBotao="cor.P2"
+            bordaBotao="2px solid rgba(255, 255, 255, 0.5)"
+            arredondamentoBorda="10px"
+          />
         </Flex>
       ) : (
         <Menu>
