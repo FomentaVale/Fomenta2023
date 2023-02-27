@@ -55,7 +55,7 @@ export default function Navbar() {
       ) : (
         <Menu>
           <MenuButton
-            bg="cor.S1"
+            colorScheme="cor.S1"
             as={IconButton}
             aria-label="Options"
             icon={
@@ -67,7 +67,8 @@ export default function Navbar() {
             }
           />
           <MenuList>
-            <MenuItem>A Fomenta</MenuItem>
+            <MenuItem>Oque Somos</MenuItem>
+            <MenuItem>Quem Somos</MenuItem>
             <MenuItem>Realizações</MenuItem>
             <MenuItem>Coworking</MenuItem>
             <MenuItem>Faça Parte</MenuItem>

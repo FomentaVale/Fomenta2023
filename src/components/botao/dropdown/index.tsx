@@ -24,7 +24,7 @@ export default function Dropdown({
     <Menu>
       <MenuButton
         as={Button}
-        w="170px"
+        w="150px"
         h="50px"
         marginX="5px"
         borderRadius="10px"
@@ -47,17 +47,10 @@ export default function Dropdown({
           {descricao}
         </Text>
       </MenuButton>
-      <MenuList>
-        <Link to={caminhoOqueSomos}>
-          <MenuItem
-            display="flex"
-            justifyContent="center"
-            w="170px"
-            h="50px"
-            border="2px solid rgba(255, 255, 255, 0.5)"
-            borderTopRadius="10px"
-            bg="#00A99D"
-          >
+
+      <MenuList bg="cor.P1">
+        <MenuItem bg="cor.P1">
+          <Link to={caminhoOqueSomos}>
             <Text
               color="#ffff"
               fontSize="15px"
@@ -66,18 +59,10 @@ export default function Dropdown({
             >
               Oque Somos
             </Text>
-          </MenuItem>
-        </Link>
+          </Link>
+        </MenuItem>
         <Link to={caminhoQuemSomos}>
-          <MenuItem
-            display="flex"
-            justifyContent="center"
-            w="170px"
-            h="50px"
-            border="2px solid rgba(255, 255, 255, 0.5)"
-            borderBottomRadius="10px"
-            bg="#00A99D"
-          >
+          <MenuItem bg="cor.P1">
             <Text
               color="#ffff"
               fontSize="15px"
