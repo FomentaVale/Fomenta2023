@@ -162,17 +162,21 @@ export default function OqueSomos() {
       {/* Section Trajetoria */}
       <Flex
         bg="cor.S1"
-        flexDir={{ base: 'column-reverse' }}
+        flexDir={{ base: 'column-reverse', lg: 'column' }}
         padding={{ base: '10px' }}
-        gap={{ base: '100px' }}
+        gap={{ base: '100px', lg: '50px' }}
       >
         <Flex
-          h={{ base: '100%', lg: '100vh' }}
+          h={{ base: '100%' }}
           alignItems="center"
           justifyContent="center"
           fontFamily="Gotham-Medium"
         >
-          <Flex w="45%" h="100vh" alignItems={{ base: 'flex-start' }}>
+          <Flex
+            w="45%"
+            h={{ base: '100vh' }}
+            alignItems={{ base: 'flex-start' }}
+          >
             <Flex
               flexDir={{ base: 'column', lg: 'row' }}
               justifyContent="space-between"
@@ -187,13 +191,26 @@ export default function OqueSomos() {
                   w="100%"
                   justifyContent={{ base: 'space-around' }}
                 >
-                  <Link w={{ base: '45%' }} href={item.caminho}>
+                  <Link
+                    w={{ base: '45%' }}
+                    href={item.caminho}
+                    _hover={{
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}
+                  >
                     <Button
                       bg={item.bg}
                       color={item.color}
                       border="2px solid white"
                       w="100%"
+                      textDecoration="none"
                       fontSize={{ base: '12px' }}
+                      _hover={{
+                        bg: 'white',
+                        textDecoration: 'none',
+                        color: 'black',
+                      }}
                     >
                       {item.ano}
                     </Button>
@@ -204,7 +221,7 @@ export default function OqueSomos() {
             </Flex>
           </Flex>
           <Flex
-            flexDir={{ base: 'column' }}
+            flexDir={{ base: 'column', lg: 'row' }}
             alignItems={{ base: 'center' }}
             w="10%"
           >
@@ -235,13 +252,25 @@ export default function OqueSomos() {
                   justifyContent={{ base: 'space-around' }}
                 >
                   <Image h="10px" src={item.image} />
-                  <Link w={{ base: '45%' }} href={item.caminho}>
+                  <Link
+                    w={{ base: '45%' }}
+                    href={item.caminho}
+                    _hover={{
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}
+                  >
                     <Button
                       border="2px solid white"
                       bg={item.bg}
                       color={item.color}
                       w="100%"
                       fontSize={{ base: '12px' }}
+                      _hover={{
+                        bg: 'white',
+                        textDecoration: 'none',
+                        color: 'black',
+                      }}
                     >
                       {item.ano}
                     </Button>
@@ -260,11 +289,14 @@ export default function OqueSomos() {
         >
           <Heading>A nossa história</Heading>
           <Flex
-            flexDir={{ base: 'column' }}
+            flexDir={{ base: 'column', lg: 'row' }}
             alignItems={{ base: 'center' }}
             gap={{ base: '20px' }}
           >
-            <Flex flexDir={{ base: 'column' }} gap={{ base: '20px' }}>
+            <Flex
+              flexDir={{ base: 'column', lg: 'row' }}
+              gap={{ base: '20px' }}
+            >
               {dataRevista1.map((item, index) => (
                 <Flex
                   key={index}
@@ -273,12 +305,20 @@ export default function OqueSomos() {
                   justifyContent={{ base: 'space-around' }}
                   color="black"
                 >
-                  <Link w="100%" href={item.caminho}>
+                  <Link
+                    w="100%"
+                    href={item.caminho}
+                    _hover={{
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}
+                  >
                     <Button
                       fontSize={{ base: '14px' }}
                       bg="cor.P3"
                       border="2px solid white"
                       w="100%"
+                      _hover={{ bg: 'white', textDecoration: 'none' }}
                     >
                       {item.titulo}
                     </Button>
@@ -287,7 +327,10 @@ export default function OqueSomos() {
               ))}
             </Flex>
             <Text>Baixe e saiba mais!</Text>
-            <Flex flexDir={{ base: 'column' }} gap={{ base: '20px' }}>
+            <Flex
+              flexDir={{ base: 'column', lg: 'row' }}
+              gap={{ base: '20px' }}
+            >
               {dataRevista2.map((item, index) => (
                 <Flex
                   key={index}
@@ -296,12 +339,24 @@ export default function OqueSomos() {
                   justifyContent={{ base: 'space-around' }}
                   color="white"
                 >
-                  <Link w="100%" href={item.caminho}>
+                  <Link
+                    w="100%"
+                    href={item.caminho}
+                    _hover={{
+                      textDecoration: 'none',
+                      color: 'black',
+                    }}
+                  >
                     <Button
                       fontSize={{ base: '14px' }}
                       bg="cor.P2"
                       border="2px solid white"
                       w="100%"
+                      _hover={{
+                        bg: 'white',
+                        color: 'black',
+                        textDecoration: 'none',
+                      }}
                     >
                       {item.titulo}
                     </Button>
