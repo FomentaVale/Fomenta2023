@@ -143,3 +143,8 @@ a {
   font-family: 'Gotham-Light';
   src: url(/public/fonts/Gotham/Gotham-Light.otf);
 }
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url(/public/fonts/Gotham/Gotham-Medium.otf);
+}

@@ -15,36 +15,78 @@ export default function OqueSomos() {
   const dataAnos1 = [
     {
       caminho: '',
-      ano: 2019,
+      ano: '2019',
       image: '/public/img/oqueSomos/ItemH1.png',
+      bg: 'cor.P3',
+      color: 'black',
     },
     {
       caminho: '',
-      ano: 2021,
+      ano: '2021',
       image: '/public/img/oqueSomos/ItemH1.png',
+      bg: 'cor.P3',
+      color: 'black',
     },
     {
       caminho: '',
-      ano: 2023,
+      ano: '2023',
       image: '/public/img/oqueSomos/ItemH2.png',
+      bg: 'cor.P2',
+      color: 'white',
     },
   ];
 
   const dataAnos2 = [
     {
       caminho: '',
-      ano: 2020,
+      ano: '2020',
       image: '/public/img/oqueSomos/ItemH1.png',
+      bg: 'cor.P3',
+      color: 'black',
     },
     {
       caminho: '',
-      ano: 2022,
+      ano: '2022',
       image: '/public/img/oqueSomos/ItemH2.png',
+      bg: 'cor.P2',
+      color: 'white',
     },
     {
       caminho: '',
-      ano: 2024,
+      ano: '2024',
       image: '/public/img/oqueSomos/ItemH2.png',
+      bg: 'cor.P2',
+      color: 'white',
+    },
+  ];
+
+  const dataRevista1 = [
+    {
+      titulo: 'Revista 2019',
+      caminho: '',
+    },
+    {
+      titulo: 'Revista 2020',
+      caminho: '',
+    },
+    {
+      titulo: 'Revista 2021',
+      caminho: '',
+    },
+  ];
+
+  const dataRevista2 = [
+    {
+      titulo: 'Revista 2022',
+      caminho: '',
+    },
+    {
+      titulo: 'Revista 2023',
+      caminho: '',
+    },
+    {
+      titulo: 'Revista 2024',
+      caminho: '',
     },
   ];
   return (
@@ -119,68 +161,154 @@ export default function OqueSomos() {
       </Flex>
       {/* Section Trajetoria */}
       <Flex
-        h={{ base: '100%', lg: '100vh' }}
         bg="cor.S1"
-        alignItems="center"
-        justifyContent="center"
+        flexDir={{ base: 'column-reverse' }}
+        padding={{ base: '10px' }}
+        gap={{ base: '100px' }}
       >
-        <Flex w="40%" h="100vh" alignItems={{ base: 'flex-start' }}>
+        <Flex
+          h={{ base: '100%', lg: '100vh' }}
+          alignItems="center"
+          justifyContent="center"
+          fontFamily="Gotham-Medium"
+        >
+          <Flex w="45%" h="100vh" alignItems={{ base: 'flex-start' }}>
+            <Flex
+              flexDir={{ base: 'column', lg: 'row' }}
+              justifyContent="space-between"
+              alignItems={{ base: 'flex-start' }}
+              w="100%"
+              h="80%"
+            >
+              {dataAnos1.map((item, index) => (
+                <Flex
+                  key={index}
+                  alignItems={{ base: 'center' }}
+                  w="100%"
+                  justifyContent={{ base: 'space-around' }}
+                >
+                  <Link w={{ base: '45%' }} href={item.caminho}>
+                    <Button
+                      bg={item.bg}
+                      color={item.color}
+                      border="2px solid white"
+                      w="100%"
+                      fontSize={{ base: '12px' }}
+                    >
+                      {item.ano}
+                    </Button>
+                  </Link>
+                  <Image h="10px" src={item.image} />
+                </Flex>
+              ))}
+            </Flex>
+          </Flex>
           <Flex
-            flexDir={{ base: 'column', lg: 'row' }}
-            justifyContent="space-around"
-            alignItems={{ base: 'flex-start' }}
-            w="100%"
-            h="80%"
+            flexDir={{ base: 'column' }}
+            alignItems={{ base: 'center' }}
+            w="10%"
           >
-            {dataAnos1.map((item, index) => (
-              <Link
-                key={index}
-                href={item.caminho}
-                display="flex"
-                alignItems="center"
-              >
-                <Button>{item.ano}</Button>
-                <Image w="100%" h="20px" src={item.image} />
-              </Link>
-            ))}
+            <Image
+              h="full"
+              src="/public/img/oqueSomos/TrajetoriaV1.png"
+              alt="Inicio da linha do tempo"
+            ></Image>
+            <Image
+              h="full"
+              src="/public/img/oqueSomos/TrajetoriaV2.png"
+              alt="Fim da linha do tempo"
+            ></Image>
+          </Flex>
+          <Flex w="45%" h="100vh" alignItems={{ base: 'flex-end' }}>
+            <Flex
+              flexDir={{ base: 'column', lg: 'row' }}
+              justifyContent="space-between"
+              alignItems={{ base: 'flex-end' }}
+              w="100%"
+              h="80%"
+            >
+              {dataAnos2.map((item, index) => (
+                <Flex
+                  key={index}
+                  alignItems={{ base: 'center' }}
+                  w="100%"
+                  justifyContent={{ base: 'space-around' }}
+                >
+                  <Image h="10px" src={item.image} />
+                  <Link w={{ base: '45%' }} href={item.caminho}>
+                    <Button
+                      border="2px solid white"
+                      bg={item.bg}
+                      color={item.color}
+                      w="100%"
+                      fontSize={{ base: '12px' }}
+                    >
+                      {item.ano}
+                    </Button>
+                  </Link>
+                </Flex>
+              ))}
+            </Flex>
           </Flex>
         </Flex>
         <Flex
-          flexDir={{ base: 'column' }}
           alignItems={{ base: 'center' }}
-          w="10%"
+          flexDir={{ base: 'column' }}
+          fontFamily="Gotham-Medium"
+          color="white"
+          gap={{ base: '20px' }}
         >
-          <Image
-            h="full"
-            src="/public/img/oqueSomos/TrajetoriaV1.png"
-            alt="Inicio da linha do tempo"
-          ></Image>
-          <Image
-            h="full"
-            src="/public/img/oqueSomos/TrajetoriaV2.png"
-            alt="Fim da linha do tempo"
-          ></Image>
-        </Flex>
-        <Flex
-          border="1px solid red"
-          w="40%"
-          h="100vh"
-          alignItems={{ base: 'flex-end' }}
-        >
+          <Heading>A nossa história</Heading>
           <Flex
-            flexDir={{ base: 'column', lg: 'row' }}
-            justifyContent="space-around"
-            alignItems={{ base: 'flex-end' }}
-            border="1px solid white"
-            w="100%"
-            h="80%"
+            flexDir={{ base: 'column' }}
+            alignItems={{ base: 'center' }}
+            gap={{ base: '20px' }}
           >
-            {dataAnos2.map((item, index) => (
-              <Link key={index} href={item.caminho}>
-                <Image src={item.image} />
-                <Button>{item.ano}</Button>
-              </Link>
-            ))}
+            <Flex flexDir={{ base: 'column' }} gap={{ base: '20px' }}>
+              {dataRevista1.map((item, index) => (
+                <Flex
+                  key={index}
+                  alignItems={{ base: 'center' }}
+                  w="100%"
+                  justifyContent={{ base: 'space-around' }}
+                  color="black"
+                >
+                  <Link w="100%" href={item.caminho}>
+                    <Button
+                      fontSize={{ base: '14px' }}
+                      bg="cor.P3"
+                      border="2px solid white"
+                      w="100%"
+                    >
+                      {item.titulo}
+                    </Button>
+                  </Link>
+                </Flex>
+              ))}
+            </Flex>
+            <Text>Baixe e saiba mais!</Text>
+            <Flex flexDir={{ base: 'column' }} gap={{ base: '20px' }}>
+              {dataRevista2.map((item, index) => (
+                <Flex
+                  key={index}
+                  alignItems={{ base: 'center' }}
+                  w="100%"
+                  justifyContent={{ base: 'space-around' }}
+                  color="white"
+                >
+                  <Link w="100%" href={item.caminho}>
+                    <Button
+                      fontSize={{ base: '14px' }}
+                      bg="cor.P2"
+                      border="2px solid white"
+                      w="100%"
+                    >
+                      {item.titulo}
+                    </Button>
+                  </Link>
+                </Flex>
+              ))}
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

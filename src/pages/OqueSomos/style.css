@@ -2,12 +2,8 @@
     background-image: url('/public/img/oqueSomos/bgOqueSomos.png');
 }
 
-
-
-@media screen and (min-width: 768px) {
-    .oqueSomos-video {
-        border-radius: 10px;
-    }
+.oqueSomos-video {
+    border-radius: 10px;
 }
 
 @media screen and (min-width: 992px) {
