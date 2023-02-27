@@ -54,6 +54,7 @@ export default function Rodape() {
               gap={{ base: '10px', md: '5px' }}
               alignItems={{ base: 'center' }}
               _hover={{ color: 'cor.P3' }}
+              textDecoration="none !important"
             >
               <Icon
                 className="icones"
