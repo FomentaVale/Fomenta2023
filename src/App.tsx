@@ -17,11 +17,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/oqueSomos" element={<OqueSomos />} />
         <Route path="/quemSomos" element={<QuemSomos />} />
-        <Route path="/realizacoes" element={<Realizacoes />} />
-        <Route path="/startups" element={<Startups />} />
-        <Route path="/facaParte" element={<FacaParte />} />
         <Route path="/*" element={<div>Página não encontrada</div>} />
-        <Route path="/politica" element={<Politica />} />
       </Routes>
       <Rodape />
     </BrowserRouter>
