@@ -5,53 +5,46 @@ interface Props {
   to?: string;
   href?: string;
   descricao: string;
+  cor?: string;
+  corTexto?: string;
+  borda?: string;
+  fonteTexto?: string;
+  corHover?: string;
 }
 
-export default function Botao({ to, href, descricao }: Props): JSX.Element {
-  if (to) {
-    return (
-      <LinkRouter to={to}>
-        <Button
-          w="150px"
-          h="50px"
-          marginX="5px"
-          borderRadius="10px"
-          border="2px solid rgba(255, 255, 255, 0.5)"
-          bg="cor.P2"
-          _hover={{ bg: 'cor.P3' }}
-        >
-          <Text
-            color="#ffff"
-            fontSize="15px"
-            fontFamily="Gotham-Light"
-            fontWeight="900"
-          >
-            {descricao}
-          </Text>
-        </Button>
-      </LinkRouter>
-    );
-  }
+const botaoEstilizado = ({
+  descricao,
+  cor,
+  corTexto,
+  borda,
+  fonteTexto,
+  corHover
+}: Props) => {
   return (
-    <Link href={href}>
-      <Button
-        w="150px"
-        h="50px"
-        marginX="5px"
-        borderRadius="10px"
-        border="2px solid rgba(255, 255, 255, 0.5)"
-        bg="cor.P2"
-        _hover={{ bg: 'cor.P3' }}
+    <Button
+      w="150px"
+      h="50px"
+      marginX="5px"
+      borderRadius="10px"
+      border={borda}
+      bg={cor || 'cor.P2'}
+      _hover={{ bg: { corHover } }}
+    >
+      <Text
+        color={corTexto || '#ffff'}
+        fontSize="15px"
+        fontFamily={fonteTexto || 'Gotham-Light'}
+        fontWeight="900"
       >
-        <Text
-          color="#ffff"
-          fontSize="15px"
-          fontFamily="Gotham-Light"
-          fontWeight="900"
-        >
-          {descricao}
-        </Text>
-      </Button>
-    </Link>
+        {descricao}
+      </Text>
+    </Button>
   );
+};
+
+export default function Botao(props: Props): JSX.Element {
+  if (props.to) {
+    return <LinkRouter to={props.to}>{botaoEstilizado(props)}</LinkRouter>;
+  }
+  return <Link href={props.href}>{botaoEstilizado(props)}</Link>;
 }

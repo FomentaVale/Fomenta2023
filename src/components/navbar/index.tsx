@@ -48,9 +48,21 @@ export default function Navbar() {
             caminhoOqueSomos="/oqueSomos"
             caminhoQuemSomos="/quemSomos"
           />
-          <Botao descricao="Realizações" to="/realizacoes" />
-          <Botao descricao="Coworking" to="/coworking" />
-          <Botao descricao="Faça Parte" to="/facaParte" />
+          <Botao
+            descricao="Realizações"
+            to="/realizacoes"
+            borda="solid 2px rgba(255, 255, 255, 0.5)"
+          />
+          <Botao
+            descricao="Coworking"
+            to="/coworking"
+            borda="solid 2px rgba(255, 255, 255, 0.5)"
+          />
+          <Botao
+            descricao="Faça Parte"
+            to="/facaParte"
+            borda="solid 2px rgba(255, 255, 255, 0.5)"
+          />
         </Flex>
       ) : (
         <Menu>
@@ -67,7 +79,7 @@ export default function Navbar() {
             }
           />
           <MenuList>
-            <MenuItem>Oque Somos</MenuItem>
+            <MenuItem>O que Somos</MenuItem>
             <MenuItem>Quem Somos</MenuItem>
             <MenuItem>Realizações</MenuItem>
             <MenuItem>Coworking</MenuItem>
