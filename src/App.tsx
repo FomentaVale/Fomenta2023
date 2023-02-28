@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar';
-import Home from './pages/Home';
-import QuemSomos from './pages/QuemSomos';
-import Rodape from './components/rodape';
-import Realizacoes from './pages/Realizacoes';
+import Navbar from './components/navbar/navbar';
+import Home from './pages/Home/home';
+import QuemSomos from './pages/QuemSomos/quemSomos';
+import Rodape from './components/rodape/rodape';
+import Realizacoes from './pages/Realizacoes/realizacoes';
 
 export default function App() {
   return (

@@ -12,31 +12,24 @@ interface Props {
   corHover?: string;
 }
 
-const botaoEstilizado = ({
-  descricao,
-  cor,
-  corTexto,
-  borda,
-  fonteTexto,
-  corHover
-}: Props) => {
+const botaoEstilizado = (props: Props) => {
   return (
     <Button
       w="150px"
       h="50px"
       marginX="5px"
       borderRadius="10px"
-      border={borda}
-      bg={cor || 'cor.P2'}
-      _hover={{ bg: { corHover } }}
+      border={props.borda}
+      bg={props.cor || 'cor.P2'}
+      _hover={{ bg: props.corHover }}
     >
       <Text
-        color={corTexto || '#ffff'}
+        color={props.corTexto || '#ffff'}
         fontSize="15px"
-        fontFamily={fonteTexto || 'Gotham-Light'}
+        fontFamily={props.fonteTexto || 'Gotham-Light'}
         fontWeight="900"
       >
-        {descricao}
+        {props.descricao}
       </Text>
     </Button>
   );

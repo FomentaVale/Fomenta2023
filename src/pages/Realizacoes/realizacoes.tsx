@@ -1,14 +1,4 @@
-import {
-  Center,
-  Grid,
-  GridItem,
-  Heading,
-  Text,
-  Box,
-  Flex
-} from '@chakra-ui/react';
-
-import Botao from '../../components/botao';
+import { Center, Heading, Text, Flex } from '@chakra-ui/react';
 
 export default function Realizacoes() {
   return (
