@@ -10,7 +10,7 @@ import {
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import BotaoGeral from '../botaoGeral';
+import Botao from '../botao';
 import Dropdown from './dropdown';
 
 export default function Navbar() {
@@ -48,29 +48,9 @@ export default function Navbar() {
             caminhoOqueSomos="/oqueSomos"
             caminhoQuemSomos="/quemSomos"
           />
-          <BotaoGeral
-            tituloBotao="Realizacoes"
-            caminho="/realizacoes"
-            corBotao="cor.P2"
-            bordaBotao="2px solid rgba(255, 255, 255, 0.5)"
-            arredondamentoBorda="10px"
-          />
-
-          <BotaoGeral
-            tituloBotao="Coworking"
-            caminho="/coworking"
-            corBotao="cor.P2"
-            bordaBotao="2px solid rgba(255, 255, 255, 0.5)"
-            arredondamentoBorda="10px"
-          />
-
-          <BotaoGeral
-            tituloBotao="Faça Parte"
-            caminho="/facaparte"
-            corBotao="cor.P2"
-            bordaBotao="2px solid rgba(255, 255, 255, 0.5)"
-            arredondamentoBorda="10px"
-          />
+          <Botao descricao="Realizações" to="/realizacoes" />
+          <Botao descricao="Coworking" to="/coworking" />
+          <Botao descricao="Faça Parte" to="/facaParte" />
         </Flex>
       ) : (
         <Menu>
