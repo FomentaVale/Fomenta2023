@@ -15,11 +15,7 @@ interface Props {
   caminhoQuemSomos: string;
 }
 
-export default function Dropdown({
-  descricao,
-  caminhoOqueSomos,
-  caminhoQuemSomos,
-}: Props) {
+export default function Dropdown(props: Props) {
   return (
     <Menu>
       <MenuButton
@@ -44,24 +40,24 @@ export default function Dropdown({
           fontFamily="Gotham-Light"
           fontWeight="900"
         >
-          {descricao}
+          {props.descricao}
         </Text>
       </MenuButton>
 
       <MenuList bg="cor.P1">
         <MenuItem bg="cor.P1">
-          <Link to={caminhoOqueSomos}>
+          <Link to={props.caminhoOqueSomos}>
             <Text
               color="#ffff"
               fontSize="15px"
               fontFamily="Gotham-Light"
               fontWeight="900"
             >
-              Oque Somos
+              O que Somos
             </Text>
           </Link>
         </MenuItem>
-        <Link to={caminhoQuemSomos}>
+        <Link to={props.caminhoQuemSomos}>
           <MenuItem bg="cor.P1">
             <Text
               color="#ffff"
