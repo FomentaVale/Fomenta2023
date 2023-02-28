@@ -12,7 +12,7 @@ import {
 import './style.css';
 
 export default function OqueSomos() {
-  const dataAnos1 = [
+  const dadosAnosImpar = [
     {
       caminho: '',
       ano: '2019',
@@ -33,7 +33,7 @@ export default function OqueSomos() {
     },
   ];
 
-  const dataAnos2 = [
+  const dadosAnosPar = [
     {
       caminho: '',
       ano: '2020',
@@ -54,7 +54,7 @@ export default function OqueSomos() {
     },
   ];
 
-  const dataRevista1 = [
+  const dadosRevistaImpar = [
     {
       titulo: 'Revista 2019',
       caminho: '',
@@ -69,7 +69,7 @@ export default function OqueSomos() {
     },
   ];
 
-  const dataRevista2 = [
+  const dadosRevistaPar = [
     {
       titulo: 'Revista 2022',
       caminho: '',
@@ -178,7 +178,7 @@ export default function OqueSomos() {
               w="100%"
               h="80%"
             >
-              {dataAnos1.map((item, index) => (
+              {dadosAnosImpar.map((item, index) => (
                 <Flex
                   key={index}
                   alignItems={{ base: 'center' }}
@@ -238,7 +238,7 @@ export default function OqueSomos() {
               w="100%"
               h="80%"
             >
-              {dataAnos2.map((item, index) => (
+              {dadosAnosPar.map((item, index) => (
                 <Flex
                   key={index}
                   alignItems={{ base: 'center' }}
@@ -291,7 +291,7 @@ export default function OqueSomos() {
               flexDir={{ base: 'column', lg: 'row' }}
               gap={{ base: '20px' }}
             >
-              {dataRevista1.map((item, index) => (
+              {dadosRevistaImpar.map((item, index) => (
                 <Flex
                   key={index}
                   alignItems={{ base: 'center' }}
@@ -325,7 +325,7 @@ export default function OqueSomos() {
               flexDir={{ base: 'column', lg: 'row' }}
               gap={{ base: '20px' }}
             >
-              {dataRevista2.map((item, index) => (
+              {dadosRevistaPar.map((item, index) => (
                 <Flex
                   key={index}
                   alignItems={{ base: 'center' }}
