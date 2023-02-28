@@ -17,22 +17,19 @@ export default function OqueSomos() {
       caminho: '',
       ano: '2019',
       image: '/public/img/oqueSomos/ItemH1.png',
-      bg: 'cor.P3',
-      color: 'black',
+      temaLaranja: true,
     },
     {
       caminho: '',
       ano: '2021',
       image: '/public/img/oqueSomos/ItemH1.png',
-      bg: 'cor.P3',
-      color: 'black',
+      temaLaranja: true,
     },
     {
       caminho: '',
       ano: '2023',
       image: '/public/img/oqueSomos/ItemH2.png',
-      bg: 'cor.P2',
-      color: 'white',
+      temaLaranja: false,
     },
   ];
 
@@ -41,22 +38,19 @@ export default function OqueSomos() {
       caminho: '',
       ano: '2020',
       image: '/public/img/oqueSomos/ItemH1.png',
-      bg: 'cor.P3',
-      color: 'black',
+      temaLaranja: true,
     },
     {
       caminho: '',
       ano: '2022',
       image: '/public/img/oqueSomos/ItemH2.png',
-      bg: 'cor.P2',
-      color: 'white',
+      temaLaranja: false,
     },
     {
       caminho: '',
       ano: '2024',
       image: '/public/img/oqueSomos/ItemH2.png',
-      bg: 'cor.P2',
-      color: 'white',
+      temaLaranja: false,
     },
   ];
 
@@ -200,8 +194,8 @@ export default function OqueSomos() {
                     }}
                   >
                     <Button
-                      bg={item.bg}
-                      color={item.color}
+                      bg={item.temaLaranja ? 'cor.P3' : 'cor.P2'}
+                      color={item.temaLaranja ? 'black' : 'white'}
                       border="2px solid white"
                       w="100%"
                       textDecoration="none"
@@ -262,8 +256,8 @@ export default function OqueSomos() {
                   >
                     <Button
                       border="2px solid white"
-                      bg={item.bg}
-                      color={item.color}
+                      bg={item.temaLaranja ? 'cor.P3' : 'cor.P2'}
+                      color={item.temaLaranja ? 'black' : 'white'}
                       w="100%"
                       fontSize={{ base: '12px' }}
                       _hover={{
