@@ -6,29 +6,35 @@ import {
   Highlight,
   Image,
   Link,
-  Stack,
   Text,
+  useMediaQuery,
 } from '@chakra-ui/react';
+import { isHtmlElement } from 'react-router-dom/dist/dom';
 import './style.css';
 
 export default function OqueSomos() {
+  const [eMaiorQue768] = useMediaQuery('screen and (min-width:768px');
+
   const dadosAnosImpar = [
     {
       caminho: '',
       ano: '2019',
-      image: '/public/img/oqueSomos/ItemH1.png',
+      imageH: '/public/img/oqueSomos/ItemH1.png',
+      imageV: '/public/img/oqueSomos/ItemV1.png',
       temaLaranja: true,
     },
     {
       caminho: '',
       ano: '2021',
-      image: '/public/img/oqueSomos/ItemH1.png',
+      imageH: '/public/img/oqueSomos/ItemH1.png',
+      imageV: '/public/img/oqueSomos/ItemV1.png',
       temaLaranja: true,
     },
     {
       caminho: '',
       ano: '2023',
-      image: '/public/img/oqueSomos/ItemH2.png',
+      imageH: '/public/img/oqueSomos/ItemH2.png',
+      imageV: '/public/img/oqueSomos/ItemV2.png',
       temaLaranja: false,
     },
   ];
@@ -37,19 +43,22 @@ export default function OqueSomos() {
     {
       caminho: '',
       ano: '2020',
-      image: '/public/img/oqueSomos/ItemH1.png',
+      imageH: '/public/img/oqueSomos/ItemH1.png',
+      imageV: '/public/img/oqueSomos/ItemV1.png',
       temaLaranja: true,
     },
     {
       caminho: '',
       ano: '2022',
-      image: '/public/img/oqueSomos/ItemH2.png',
+      imageH: '/public/img/oqueSomos/ItemH2.png',
+      imageV: '/public/img/oqueSomos/ItemV2.png',
       temaLaranja: false,
     },
     {
       caminho: '',
       ano: '2024',
-      image: '/public/img/oqueSomos/ItemH2.png',
+      imageH: '/public/img/oqueSomos/ItemH2.png',
+      imageV: '/public/img/oqueSomos/ItemV2.png',
       temaLaranja: false,
     },
   ];
@@ -83,6 +92,17 @@ export default function OqueSomos() {
       caminho: '',
     },
   ];
+
+  const anosDeHistoria = [
+    {
+      ano: '2019',
+      titulos: [''],
+      texts: [''],
+      imagensPrincipais: [''],
+      imagensSecundarias: [''],
+    },
+  ];
+
   return (
     <>
       {/* Section O que somos */}
@@ -157,32 +177,36 @@ export default function OqueSomos() {
       <Flex
         bg="cor.S1"
         flexDir={{ base: 'column-reverse', lg: 'column' }}
-        padding={{ base: '10px' }}
-        gap={{ base: '100px', lg: '50px' }}
+        padding={{ base: '10px', lg: '50px 0px' }}
+        gap={{ base: '100px', lg: '150px' }}
       >
         <Flex
           h={{ base: '100%' }}
           alignItems="center"
           justifyContent="center"
           fontFamily="Gotham-Medium"
+          flexDirection={{ lg: 'column' }}
         >
           <Flex
-            w="45%"
-            h={{ base: '100vh' }}
+            w={{ base: '45%', lg: '100%' }}
+            h={{ base: '100vh', lg: '20vh' }}
+            flexDir={{ base: 'row', lg: 'column' }}
             alignItems={{ base: 'flex-start' }}
           >
             <Flex
               flexDir={{ base: 'column', lg: 'row' }}
               justifyContent="space-between"
               alignItems={{ base: 'flex-start' }}
-              w="100%"
-              h="80%"
+              w={{ base: '100%', lg: '80%' }}
+              h={{ base: '80%', lg: '100%' }}
             >
               {dadosAnosImpar.map((item, index) => (
                 <Flex
+                  flexDir={{ base: 'row', lg: 'column' }}
                   key={index}
                   alignItems={{ base: 'center' }}
                   w="100%"
+                  h="100%"
                   justifyContent={{ base: 'space-around' }}
                 >
                   <Link
@@ -209,7 +233,11 @@ export default function OqueSomos() {
                       {item.ano}
                     </Button>
                   </Link>
-                  <Image h="10px" src={item.image} />
+                  {eMaiorQue768 ? (
+                    <Image h="50px" src={item.imageV} />
+                  ) : (
+                    <Image h="10px" src={item.imageH} />
+                  )}
                 </Flex>
               ))}
             </Flex>
@@ -217,35 +245,61 @@ export default function OqueSomos() {
           <Flex
             flexDir={{ base: 'column', lg: 'row' }}
             alignItems={{ base: 'center' }}
-            w="10%"
+            w={{ base: '10%', lg: '100%' }}
           >
-            <Image
-              h="full"
-              src="/public/img/oqueSomos/TrajetoriaV1.png"
-              alt="Inicio da linha do tempo"
-            ></Image>
-            <Image
-              h="full"
-              src="/public/img/oqueSomos/TrajetoriaV2.png"
-              alt="Fim da linha do tempo"
-            ></Image>
+            {eMaiorQue768 ? (
+              <>
+                <Image
+                  w="50%"
+                  src="/public/img/oqueSomos/Trajetoria1.png"
+                  alt="Inicio da linha do tempo"
+                />
+                <Image
+                  w="50%"
+                  src="/public/img/oqueSomos/Trajetoria2.png"
+                  alt="Fim da linha do tempo"
+                />
+              </>
+            ) : (
+              <>
+                <Image
+                  src="/public/img/oqueSomos/TrajetoriaV1.png"
+                  alt="Inicio da linha do tempo"
+                />
+                <Image
+                  src="/public/img/oqueSomos/TrajetoriaV2.png"
+                  alt="Fim da linha do tempo"
+                />
+              </>
+            )}
           </Flex>
-          <Flex w="45%" h="100vh" alignItems={{ base: 'flex-end' }}>
+          <Flex
+            w={{ base: '45%', lg: '100%' }}
+            h={{ base: '100vh', lg: '20vh' }}
+            flexDir={{ base: 'row', lg: 'column' }}
+            alignItems={{ base: 'flex-end' }}
+          >
             <Flex
               flexDir={{ base: 'column', lg: 'row' }}
               justifyContent="space-between"
               alignItems={{ base: 'flex-end' }}
-              w="100%"
-              h="80%"
+              w={{ base: '100%', lg: '80%' }}
+              h={{ base: '80%', lg: '100%' }}
             >
               {dadosAnosPar.map((item, index) => (
                 <Flex
+                  flexDir={{ base: 'row', lg: 'column' }}
                   key={index}
                   alignItems={{ base: 'center' }}
                   w="100%"
+                  h="100%"
                   justifyContent={{ base: 'space-around' }}
                 >
-                  <Image h="10px" src={item.image} />
+                  {eMaiorQue768 ? (
+                    <Image h="50px" src={item.imageV} />
+                  ) : (
+                    <Image h="10px" src={item.imageH} />
+                  )}
                   <Link
                     w={{ base: '45%' }}
                     href={item.caminho}
@@ -279,7 +333,7 @@ export default function OqueSomos() {
           flexDir={{ base: 'column' }}
           fontFamily="Gotham-Medium"
           color="white"
-          gap={{ base: '20px' }}
+          gap={{ base: '20px', lg: '50px' }}
         >
           <Heading>A nossa história</Heading>
           <Flex
@@ -360,6 +414,38 @@ export default function OqueSomos() {
             </Flex>
           </Flex>
         </Flex>
+      </Flex>
+
+      {/* Section Anos */}
+      <Flex h="100vh">
+        {anosDeHistoria.map((item, index) => (
+          <Flex key={index}>
+            <Heading>{item.ano}</Heading>
+            <Flex>
+              <Flex>
+                <Flex></Flex>
+                {eMaiorQue768 ? (
+                  <Flex>
+                    <Image src="/public/img/oqueSomos/Historico/5.jpeg" />
+                    <Flex>
+                      <Image src="/public/img/oqueSomos/Historico/4.JPG" />
+                      <Image src="/public/img/oqueSomos/Historico/3.JPG" />
+                    </Flex>
+                  </Flex>
+                ) : (
+                  <Flex>
+                    <Image src="/public/img/oqueSomos/Historico/5.jpeg" />
+                  </Flex>
+                )}
+              </Flex>
+              <Flex>
+                <Heading>{item.titulos}</Heading>
+                <Text>{item.texts}</Text>
+                <Text>{item.texts}</Text>
+              </Flex>
+            </Flex>
+          </Flex>
+        ))}
       </Flex>
     </>
   );
