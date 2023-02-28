@@ -9,7 +9,7 @@ import {
   Text,
   useMediaQuery,
 } from '@chakra-ui/react';
-import { isHtmlElement } from 'react-router-dom/dist/dom';
+import HistoricoAnos from '../../components/historicoAnos/historicoAnos';
 import './style.css';
 
 export default function OqueSomos() {
@@ -93,13 +93,33 @@ export default function OqueSomos() {
     },
   ];
 
-  const anosDeHistoria = [
+  const historico2019 = [
     {
       ano: '2019',
-      titulos: [''],
-      texts: [''],
-      imagensPrincipais: [''],
-      imagensSecundarias: [''],
+      imagemPrincipalQuadro1: '',
+      imagemSecundariaQuadro1: '',
+      tituloQuadro1: 'teste1',
+      textQuadro1: 'lorem ipsum lorem ipsum lorem ipsum',
+      imagemPrincipalQuadro2: '',
+      imagemSecundariaQuadro2: '',
+      tituloQuadro2: 'teste2',
+      textQuadro2: 'lorem ipsum lorem ipsum lorem ipsum',
+      temaClaro: true,
+    },
+  ];
+
+  const historico2020 = [
+    {
+      ano: '2020',
+      imagemPrincipalQuadro1: '',
+      imagemSecundariaQuadro1: '',
+      tituloQuadro1: 'teste1',
+      textQuadro1: 'lorem ipsum lorem ipsum lorem ipsum',
+      imagemPrincipalQuadro2: '',
+      imagemSecundariaQuadro2: '',
+      tituloQuadro2: 'teste2',
+      textQuadro2: 'lorem ipsum lorem ipsum lorem ipsum',
+      temaClaro: false,
     },
   ];
 
@@ -417,34 +437,28 @@ export default function OqueSomos() {
       </Flex>
 
       {/* Section Anos */}
-      <Flex h="100vh">
-        {anosDeHistoria.map((item, index) => (
-          <Flex key={index}>
-            <Heading>{item.ano}</Heading>
-            <Flex>
-              <Flex>
-                <Flex></Flex>
-                {eMaiorQue768 ? (
-                  <Flex>
-                    <Image src="/public/img/oqueSomos/Historico/5.jpeg" />
-                    <Flex>
-                      <Image src="/public/img/oqueSomos/Historico/4.JPG" />
-                      <Image src="/public/img/oqueSomos/Historico/3.JPG" />
-                    </Flex>
-                  </Flex>
-                ) : (
-                  <Flex>
-                    <Image src="/public/img/oqueSomos/Historico/5.jpeg" />
-                  </Flex>
-                )}
-              </Flex>
-              <Flex>
-                <Heading>{item.titulos}</Heading>
-                <Text>{item.texts}</Text>
-                <Text>{item.texts}</Text>
-              </Flex>
-            </Flex>
-          </Flex>
+      <Flex h="100%" flexDir={{ base: 'column' }}>
+        {historico2019.map((item, index) => (
+          <HistoricoAnos
+            key={index}
+            ano={item.ano}
+            temaClaro={item.temaClaro}
+            tituloQuadro1={item.tituloQuadro1}
+            textQuadro1={item.textQuadro1}
+            tituloQuadro2={item.tituloQuadro2}
+            textQuadro2={item.textQuadro2}
+          />
+        ))}
+        {historico2020.map((item, index) => (
+          <HistoricoAnos
+            key={index}
+            ano={item.ano}
+            temaClaro={item.temaClaro}
+            tituloQuadro1={item.tituloQuadro1}
+            textQuadro1={item.textQuadro1}
+            tituloQuadro2={item.tituloQuadro2}
+            textQuadro2={item.textQuadro2}
+          />
         ))}
       </Flex>
     </>

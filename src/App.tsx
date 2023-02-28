@@ -3,7 +3,7 @@ import Navbar from './components/navbar';
 import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
 import Rodape from './components/rodape';
-import OqueSomos from './pages/OqueSomos';
+import OqueSomos from './pages/OqueSomos/OqueSomos';
 
 export default function App() {
   return (
