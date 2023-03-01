@@ -178,10 +178,10 @@ export default function OqueSomos() {
       {/* Section O que somos */}
       <Flex
         className="oqueSomos-container"
-        h="100%"
+        h={{ base: '100%', lg: '100vh' }}
         alignItems="center"
         justifyContent="center"
-        margin={{ base: '30px 0px' }}
+        margin={{ base: '30px 0px', lg: '0px' }}
         padding="50px"
       >
         <Flex

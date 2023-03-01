@@ -32,7 +32,6 @@ export default function HistoricoAnos({
         flexDir={{ base: 'column' }}
         gap={{ base: '20px' }}
         padding={{ base: '10px 0px', lg: '50px' }}
-        border="1px solid red"
         w="100%"
         alignItems={{ base: 'center' }}
       >
