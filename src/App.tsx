@@ -11,7 +11,6 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/oqueSomos" element={<OqueSomos />} />
         <Route path="/quemSomos" element={<QuemSomos />} />
         <Route path="/*" element={<div>Página não encontrada</div>} />
       </Routes>

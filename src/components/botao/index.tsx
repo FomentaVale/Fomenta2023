@@ -16,12 +16,12 @@ export default function Botao({ descricao, caminho }: Props) {
           marginX="5px"
           borderRadius="10px"
           border="2px solid rgba(255, 255, 255, 0.5)"
-          bg="#00A99D"
+          bg="cor.P2"
         >
           <Text
             color="#ffff"
             fontSize="15px"
-            fontFamily="Gotham Light"
+            fontFamily="Gotham-Light"
             fontWeight="900"
           >
             {descricao}
