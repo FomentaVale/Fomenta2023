@@ -22,11 +22,11 @@ const botaoEstilizado = ({
 }: Props) => {
   return (
     <Button
-      w="150px"
-      h="50px"
+      w="9vw"
+      h="6.5vh"
       marginX="5px"
       borderRadius="10px"
-      border={borda}
+      border={borda || '2px solid rgba(255, 255, 255, 0.5)'}
       bg={cor || 'cor.P2'}
       _hover={{ bg: { corHover } }}
     >
