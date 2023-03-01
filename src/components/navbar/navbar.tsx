@@ -1,4 +1,5 @@
 import {
+  useMediaQuery,
   Flex,
   IconButton,
   Image,
@@ -8,22 +9,12 @@ import {
   MenuList,
 } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Botao from '../botao';
-import Dropdown from '../botao/dropdown';
+import Botao from '../botao/botao';
+import Dropdown from './dropdown/dropdown';
 
 export default function Navbar() {
-  const [larguraTela, setLarguraTela] = useState(window.innerWidth > 768);
-
-  const pegarLarguraTela = () => {
-    setLarguraTela(window.innerWidth > 768);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', pegarLarguraTela);
-    return () => window.removeEventListener('resize', pegarLarguraTela);
-  });
+  const [larguraTelaMaior768] = useMediaQuery('(min-width: 768px)');
 
   return (
     <Flex
@@ -41,16 +32,28 @@ export default function Navbar() {
           />
         </Link>
       </Flex>
-      {larguraTela ? (
+      {larguraTelaMaior768 ? (
         <Flex>
           <Dropdown
             descricao="A Fomenta"
             caminhoOqueSomos="/oqueSomos"
             caminhoQuemSomos="/quemSomos"
           />
-          <Botao descricao="Realizações" caminho="/realizacoes" />
-          <Botao descricao="Coworking" caminho="/coworking" />
-          <Botao descricao="Faça Parte" caminho="/facaParte" />
+          <Botao
+            to="/realizacoes"
+            descricao="Realizações"
+            borda="solid 2px rgba(255, 255, 255, 0.5)"
+          />
+          <Botao
+            to="/coworking"
+            descricao="Coworking"
+            borda="solid 2px rgba(255, 255, 255, 0.5)"
+          />
+          <Botao
+            to="/facaParte"
+            descricao="Faça Parte"
+            borda="solid 2px rgba(255, 255, 255, 0.5)"
+          />
         </Flex>
       ) : (
         <Menu>
@@ -67,7 +70,7 @@ export default function Navbar() {
             }
           />
           <MenuList>
-            <MenuItem>Oque Somos</MenuItem>
+            <MenuItem>O que Somos</MenuItem>
             <MenuItem>Quem Somos</MenuItem>
             <MenuItem>Realizações</MenuItem>
             <MenuItem>Coworking</MenuItem>

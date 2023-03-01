@@ -15,13 +15,9 @@ interface Props {
   caminhoQuemSomos: string;
 }
 
-export default function Dropdown({
-  descricao,
-  caminhoOqueSomos,
-  caminhoQuemSomos,
-}: Props) {
+export default function Dropdown(props: Props) {
   return (
-    <Menu>
+    <Menu matchWidth={true}>
       <MenuButton
         as={Button}
         w="150px"
@@ -29,7 +25,9 @@ export default function Dropdown({
         marginX="5px"
         borderRadius="10px"
         border="2px solid rgba(255, 255, 255, 0.5)"
-        bg="#00A99D"
+        bg="cor.P2"
+        _hover={{ bg: 'cor.P3' }}
+        _active={{ bg: 'cor.P3' }}
         rightIcon={
           <Icon
             icon="material-symbols:arrow-drop-down-rounded"
@@ -41,32 +39,41 @@ export default function Dropdown({
         <Text
           color="#ffff"
           fontSize="15px"
-          fontFamily="Gotham Light"
+          fontFamily="Gotham-Light"
           fontWeight="900"
         >
-          {descricao}
+          {props.descricao}
         </Text>
       </MenuButton>
 
-      <MenuList bg="cor.P1">
-        <MenuItem bg="cor.P1">
-          <Link to={caminhoOqueSomos}>
+      <MenuList minWidth="150px" p="0" bg="transparent">
+        <MenuItem
+          margin="0"
+          borderTopRadius="10px"
+          bg="cor.P2"
+          _hover={{ bg: 'cor.P3' }}
+        >
+          <Link to={props.caminhoOqueSomos}>
             <Text
               color="#ffff"
               fontSize="15px"
-              fontFamily="Gotham Light"
+              fontFamily="Gotham-Light"
               fontWeight="900"
             >
-              Oque Somos
+              O que Somos
             </Text>
           </Link>
         </MenuItem>
-        <Link to={caminhoQuemSomos}>
-          <MenuItem bg="cor.P1">
+        <Link to={props.caminhoQuemSomos}>
+          <MenuItem
+            borderBottomRadius="10px"
+            bg="cor.P2"
+            _hover={{ bg: 'cor.P3' }}
+          >
             <Text
               color="#ffff"
               fontSize="15px"
-              fontFamily="Gotham Light"
+              fontFamily="Gotham-Light"
               fontWeight="900"
             >
               Quem Somos
