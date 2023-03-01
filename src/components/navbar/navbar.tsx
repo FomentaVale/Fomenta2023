@@ -40,18 +40,18 @@ export default function Navbar() {
             caminhoQuemSomos="/quemSomos"
           />
           <Botao
-            descricao="Realizações"
             to="/realizacoes"
+            descricao="Realizações"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
           />
           <Botao
-            descricao="Coworking"
             to="/coworking"
+            descricao="Coworking"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
           />
           <Botao
-            descricao="Faça Parte"
             to="/facaParte"
+            descricao="Faça Parte"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
           />
         </Flex>

@@ -17,7 +17,7 @@ interface Props {
 
 export default function Dropdown(props: Props) {
   return (
-    <Menu>
+    <Menu matchWidth={true}>
       <MenuButton
         as={Button}
         w="150px"
@@ -26,6 +26,8 @@ export default function Dropdown(props: Props) {
         borderRadius="10px"
         border="2px solid rgba(255, 255, 255, 0.5)"
         bg="cor.P2"
+        _hover={{ bg: 'cor.P3' }}
+        _active={{ bg: 'cor.P3' }}
         rightIcon={
           <Icon
             icon="material-symbols:arrow-drop-down-rounded"
@@ -44,8 +46,13 @@ export default function Dropdown(props: Props) {
         </Text>
       </MenuButton>
 
-      <MenuList bg="cor.P1">
-        <MenuItem bg="cor.P1">
+      <MenuList minWidth="150px" p="0" bg="transparent">
+        <MenuItem
+          margin="0"
+          borderTopRadius="10px"
+          bg="cor.P2"
+          _hover={{ bg: 'cor.P3' }}
+        >
           <Link to={props.caminhoOqueSomos}>
             <Text
               color="#ffff"
@@ -58,7 +65,11 @@ export default function Dropdown(props: Props) {
           </Link>
         </MenuItem>
         <Link to={props.caminhoQuemSomos}>
-          <MenuItem bg="cor.P1">
+          <MenuItem
+            borderBottomRadius="10px"
+            bg="cor.P2"
+            _hover={{ bg: 'cor.P3' }}
+          >
             <Text
               color="#ffff"
               fontSize="15px"
