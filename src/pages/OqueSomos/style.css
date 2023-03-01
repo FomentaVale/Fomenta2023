@@ -1,0 +1,31 @@
+.oqueSomos-container {
+    background-image: url('/public/img/oqueSomos/bgOqueSomos.png');
+}
+
+.oqueSomos-Fomenta {
+    border-radius: 10px;
+}
+
+.oqueSomos-video {
+    border-radius: 10px;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .oqueSomos-video {
+        width: 500px;
+        height: 100%;
+    }
+
+    .oqueSomos-Fomenta {
+        border-radius: 10px 0px 0px 10px;
+    }
+}
+
+@media screen and (min-width: 1238px) {
+    .oqueSomos-video {
+        width: 641px;
+        height: 290px;
+    }
+}

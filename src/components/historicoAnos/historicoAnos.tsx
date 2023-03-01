@@ -5,43 +5,41 @@ interface Props {
   temaClaro: boolean;
   id: string;
   ano?: string;
+  imagemPQuadro1: string;
+  imagemSQuadro1A: string;
+  imagemSQuadro1B: string;
   tituloQuadro1: string;
   textQuadro1: string;
+  imagemPQuadro2: string;
+  imagemSQuadro2A: string;
+  imagemSQuadro2B: string;
   tituloQuadro2: string;
   textQuadro2: string;
 }
 
-export default function HistoricoAnos({
-  temaClaro,
-  id,
-  ano,
-  tituloQuadro1,
-  textQuadro1,
-  tituloQuadro2,
-  textQuadro2,
-}: Props) {
+export default function HistoricoAnos(props: Props) {
   const [eMaiorQue768] = useMediaQuery('screen and (min-width:768px');
 
   return (
     <>
       <Flex
-        id={id}
-        className={temaClaro ? 'temaClaro' : 'temaEscuro'}
-        backgroundColor={temaClaro ? 'white' : 'cor.S1'}
-        color={temaClaro ? 'black' : 'white'}
+        id={props.id}
+        className={props.temaClaro ? 'temaClaro' : 'temaEscuro'}
+        backgroundColor={props.temaClaro ? 'white' : 'cor.S1'}
+        color={props.temaClaro ? 'black' : 'white'}
         flexDir={{ base: 'column' }}
         gap={{ base: '20px' }}
-        padding={{ base: '10px 0px', lg: '50px' }}
+        padding={{ base: '15px', lg: '50px' }}
         w="100%"
         alignItems={{ base: 'center' }}
       >
-        {ano ? (
+        {props.ano ? (
           <Heading
             width="fit-content"
             borderBottom="2px solid"
             borderColor="cor.P2"
           >
-            {ano}
+            {props.ano}
           </Heading>
         ) : (
           ''
@@ -56,10 +54,10 @@ export default function HistoricoAnos({
           <Flex w={{ lg: '50%' }} flexDir={{ base: 'column', lg: 'row' }}>
             {eMaiorQue768 ? (
               <Flex flexDir={{ base: 'row' }} gap="10px">
-                <Image w="70%" src="/public/img/oqueSomos/Historico/5.jpeg" />
+                <Image w="70%" src={props.imagemPQuadro1} />
                 <Flex gap="10px" flexDir={{ base: 'column' }}>
-                  <Image src="/public/img/oqueSomos/Historico/4.JPG" />
-                  <Image src="/public/img/oqueSomos/Historico/3.JPG" />
+                  <Image src={props.imagemSQuadro1A} />
+                  <Image src={props.imagemSQuadro1B} />
                 </Flex>
               </Flex>
             ) : (
@@ -73,6 +71,7 @@ export default function HistoricoAnos({
             alignItems={{ base: 'center' }}
             gap={{ base: '10px' }}
             w={{ lg: '50%' }}
+            padding={{ lg: '0px 50px' }}
           >
             <Heading
               width="50%"
@@ -80,9 +79,9 @@ export default function HistoricoAnos({
               borderColor="cor.P2"
               textAlign="center"
             >
-              {tituloQuadro1}
+              {props.tituloQuadro1}
             </Heading>
-            <Text>{textQuadro1}</Text>
+            <Text textAlign={{ lg: 'justify' }}>{props.textQuadro1}</Text>
           </Flex>
         </Flex>
 
@@ -95,10 +94,10 @@ export default function HistoricoAnos({
           <Flex w={{ lg: '50%' }} flexDir={{ base: 'column', lg: 'row' }}>
             {eMaiorQue768 ? (
               <Flex flexDir={{ base: 'row' }} gap="10px">
-                <Image w="70%" src="/public/img/oqueSomos/Historico/5.jpeg" />
+                <Image w="70%" src={props.imagemPQuadro2} />
                 <Flex gap="10px" flexDir={{ base: 'column' }}>
-                  <Image src="/public/img/oqueSomos/Historico/4.JPG" />
-                  <Image src="/public/img/oqueSomos/Historico/3.JPG" />
+                  <Image src={props.imagemSQuadro2A} />
+                  <Image src={props.imagemSQuadro2B} />
                 </Flex>
               </Flex>
             ) : (
@@ -112,6 +111,7 @@ export default function HistoricoAnos({
             alignItems={{ base: 'center' }}
             gap={{ base: '10px' }}
             w={{ lg: '50%' }}
+            padding={{ lg: '0px 50px' }}
           >
             <Heading
               width="50%"
@@ -119,9 +119,9 @@ export default function HistoricoAnos({
               borderColor="cor.P2"
               textAlign="center"
             >
-              {tituloQuadro2}
+              {props.tituloQuadro2}
             </Heading>
-            <Text>{textQuadro2}</Text>
+            <Text textAlign={{ lg: 'justify' }}>{props.textQuadro2}</Text>
           </Flex>
         </Flex>
       </Flex>
