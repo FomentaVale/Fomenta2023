@@ -15,8 +15,8 @@ interface Props {
 const botaoEstilizado = (props: Props) => {
   return (
     <Button
-      w="150px"
-      h="50px"
+      w="100%"
+      h="100%"
       marginX="5px"
       borderRadius="10px"
       border={props.borda}
@@ -37,7 +37,11 @@ const botaoEstilizado = (props: Props) => {
 
 export default function Botao(props: Props): JSX.Element {
   if (props.to) {
-    return <LinkRouter to={props.to}>{botaoEstilizado(props)}</LinkRouter>;
+    return (
+      <Link as={LinkRouter} to={props.to}>
+        {botaoEstilizado(props)}
+      </Link>
+    );
   }
 
   if (props.href) {
