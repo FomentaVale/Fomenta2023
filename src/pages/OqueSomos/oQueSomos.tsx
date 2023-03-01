@@ -11,7 +11,7 @@ import HistoricoAnos from '../../components/historicoAnos/historicoAnos';
 import './style.css';
 
 export default function OqueSomos() {
-  const [eMaiorQue768] = useMediaQuery('(min-width:768px');
+  const [eMaiorQue768] = useMediaQuery('min-width:768px');
 
   const dadosAnosImpar = [
     {

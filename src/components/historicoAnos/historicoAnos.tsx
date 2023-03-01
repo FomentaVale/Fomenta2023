@@ -93,7 +93,7 @@ export default function HistoricoAnos(props: Props) {
         >
           <Flex w={{ lg: '50%' }} flexDir={{ base: 'column', lg: 'row' }}>
             {eMaiorQue768 ? (
-              <Flex flexDir={{ base: 'row' }} gap="10px">
+              <Flex flexDir={{ base: 'row', lg: 'row-reverse' }} gap="10px">
                 <Image w="70%" src={props.imagemPQuadro2} />
                 <Flex gap="10px" flexDir={{ base: 'column' }}>
                   <Image src={props.imagemSQuadro2A} />
