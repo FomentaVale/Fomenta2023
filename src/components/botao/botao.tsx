@@ -19,7 +19,7 @@ const botaoEstilizado = (props: Props) => {
       h="50px"
       marginX="5px"
       borderRadius="10px"
-      border={props.borda}
+      border={props.borda || '2 px solid rgba(255, 255, 255, 0.5)'}
       bg={props.cor || 'cor.P2'}
       _hover={{ bg: props.corHover || 'cor.P3' }}
     >

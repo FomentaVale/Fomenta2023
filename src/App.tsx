@@ -4,7 +4,7 @@ import Home from './pages/Home/home';
 import QuemSomos from './pages/QuemSomos/quemSomos';
 import Rodape from './components/rodape/rodape';
 import Realizacoes from './pages/Realizacoes/realizacoes';
-import FacaParte from './pages/FacaParte';
+import FacaParte from './pages/FacaParte/facaParte';
 
 export default function App() {
   return (
