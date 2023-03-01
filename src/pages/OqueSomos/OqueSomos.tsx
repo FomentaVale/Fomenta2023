@@ -96,6 +96,7 @@ export default function OqueSomos() {
   const historico2019 = [
     {
       ano: '2019',
+      id: '2019',
       imagemPrincipalQuadro1: '',
       imagemSecundariaQuadro1: '',
       tituloQuadro1: 'teste1',
@@ -111,6 +112,7 @@ export default function OqueSomos() {
   const historico2020 = [
     {
       ano: '2020',
+      id: '2020',
       imagemPrincipalQuadro1: '',
       imagemSecundariaQuadro1: '',
       tituloQuadro1: 'teste1',
@@ -120,6 +122,54 @@ export default function OqueSomos() {
       tituloQuadro2: 'teste2',
       textQuadro2: 'lorem ipsum lorem ipsum lorem ipsum',
       temaClaro: false,
+    },
+  ];
+
+  const historico2021 = [
+    {
+      ano: '2021',
+      id: '2021',
+      imagemPrincipalQuadro1: '',
+      imagemSecundariaQuadro1: '',
+      tituloQuadro1: 'teste1',
+      textQuadro1: 'lorem ipsum lorem ipsum lorem ipsum',
+      imagemPrincipalQuadro2: '',
+      imagemSecundariaQuadro2: '',
+      tituloQuadro2: 'teste2',
+      textQuadro2: 'lorem ipsum lorem ipsum lorem ipsum',
+      temaClaro: true,
+    },
+  ];
+
+  const historico2022 = [
+    {
+      ano: '2022',
+      id: '2022',
+      imagemPrincipalQuadro1: '',
+      imagemSecundariaQuadro1: '',
+      tituloQuadro1: 'teste1',
+      textQuadro1: 'lorem ipsum lorem ipsum lorem ipsum',
+      imagemPrincipalQuadro2: '',
+      imagemSecundariaQuadro2: '',
+      tituloQuadro2: 'teste2',
+      textQuadro2: 'lorem ipsum lorem ipsum lorem ipsum',
+      temaClaro: false,
+    },
+  ];
+
+  const historico2023 = [
+    {
+      ano: '2023',
+      id: '2023',
+      imagemPrincipalQuadro1: '',
+      imagemSecundariaQuadro1: '',
+      tituloQuadro1: 'teste1',
+      textQuadro1: 'lorem ipsum lorem ipsum lorem ipsum',
+      imagemPrincipalQuadro2: '',
+      imagemSecundariaQuadro2: '',
+      tituloQuadro2: 'teste2',
+      textQuadro2: 'lorem ipsum lorem ipsum lorem ipsum',
+      temaClaro: true,
     },
   ];
 
@@ -441,6 +491,7 @@ export default function OqueSomos() {
         {historico2019.map((item, index) => (
           <HistoricoAnos
             key={index}
+            id={item.id}
             ano={item.ano}
             temaClaro={item.temaClaro}
             tituloQuadro1={item.tituloQuadro1}
@@ -452,6 +503,43 @@ export default function OqueSomos() {
         {historico2020.map((item, index) => (
           <HistoricoAnos
             key={index}
+            id={item.id}
+            ano={item.ano}
+            temaClaro={item.temaClaro}
+            tituloQuadro1={item.tituloQuadro1}
+            textQuadro1={item.textQuadro1}
+            tituloQuadro2={item.tituloQuadro2}
+            textQuadro2={item.textQuadro2}
+          />
+        ))}
+        {historico2021.map((item, index) => (
+          <HistoricoAnos
+            key={index}
+            id={item.id}
+            ano={item.ano}
+            temaClaro={item.temaClaro}
+            tituloQuadro1={item.tituloQuadro1}
+            textQuadro1={item.textQuadro1}
+            tituloQuadro2={item.tituloQuadro2}
+            textQuadro2={item.textQuadro2}
+          />
+        ))}
+        {historico2022.map((item, index) => (
+          <HistoricoAnos
+            key={index}
+            id={item.id}
+            ano={item.ano}
+            temaClaro={item.temaClaro}
+            tituloQuadro1={item.tituloQuadro1}
+            textQuadro1={item.textQuadro1}
+            tituloQuadro2={item.tituloQuadro2}
+            textQuadro2={item.textQuadro2}
+          />
+        ))}
+        {historico2023.map((item, index) => (
+          <HistoricoAnos
+            key={index}
+            id={item.id}
             ano={item.ano}
             temaClaro={item.temaClaro}
             tituloQuadro1={item.tituloQuadro1}

@@ -3,6 +3,7 @@ import './style.css';
 
 interface Props {
   temaClaro: boolean;
+  id: string;
   ano?: string;
   tituloQuadro1: string;
   textQuadro1: string;
@@ -12,6 +13,7 @@ interface Props {
 
 export default function HistoricoAnos({
   temaClaro,
+  id,
   ano,
   tituloQuadro1,
   textQuadro1,
@@ -23,12 +25,14 @@ export default function HistoricoAnos({
   return (
     <>
       <Flex
+        id={id}
         className={temaClaro ? 'temaClaro' : 'temaEscuro'}
         backgroundColor={temaClaro ? 'white' : 'cor.S1'}
         color={temaClaro ? 'black' : 'white'}
         flexDir={{ base: 'column' }}
         gap={{ base: '20px' }}
-        padding={{ base: '10px 0px' }}
+        padding={{ base: '10px 0px', lg: '50px' }}
+        border="1px solid red"
         w="100%"
         alignItems={{ base: 'center' }}
       >
