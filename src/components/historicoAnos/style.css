@@ -1,0 +1,20 @@
+.temaClaro {
+    background-image: url('/public/img/oqueSomos/bgAnos.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.temaEscuro {
+    background-image: url('/public/img/oqueSomos/bgAnos2Opacity.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:768px) {
+    .temaEscuro {
+        background-image: url('/public/img/oqueSomos/bgAnos2.png');
+    }
+}
