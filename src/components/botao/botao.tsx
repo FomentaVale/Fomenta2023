@@ -10,33 +10,28 @@ interface Props {
   borda?: string;
   fonteTexto?: string;
   corHover?: string;
+  larguraBotao?: string;
+  alturaBotao?: string;
 }
 
-const botaoEstilizado = ({
-  descricao,
-  cor,
-  corTexto,
-  borda,
-  fonteTexto,
-  corHover
-}: Props) => {
+const botaoEstilizado = (props: Props) => {
   return (
     <Button
-      w="9vw"
-      h="6.5vh"
+      w={props.larguraBotao || '9vw'}
+      h={props.alturaBotao || '6.5vh'}
       marginX="5px"
       borderRadius="10px"
-      border={borda || '2px solid rgba(255, 255, 255, 0.5)'}
-      bg={cor || 'cor.P2'}
-      _hover={{ bg: { corHover } }}
+      border={props.borda}
+      bg={props.cor || 'cor.P2'}
+      _hover={{ bg: props.corHover || 'cor.P3' }}
     >
       <Text
-        color={corTexto || '#ffff'}
+        color={props.corTexto || '#ffff'}
         fontSize="15px"
-        fontFamily={fonteTexto || 'Gotham-Light'}
+        fontFamily={props.fonteTexto || 'Gotham-Light'}
         fontWeight="900"
       >
-        {descricao}
+        {props.descricao}
       </Text>
     </Button>
   );
@@ -46,5 +41,10 @@ export default function Botao(props: Props): JSX.Element {
   if (props.to) {
     return <LinkRouter to={props.to}>{botaoEstilizado(props)}</LinkRouter>;
   }
-  return <Link href={props.href}>{botaoEstilizado(props)}</Link>;
+
+  if (props.href) {
+    return <Link href={props.href}>{botaoEstilizado(props)}</Link>;
+  }
+
+  return botaoEstilizado(props);
 }

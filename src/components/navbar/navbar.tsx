@@ -1,29 +1,20 @@
 import {
+  useMediaQuery,
   Flex,
   IconButton,
   Image,
   Menu,
   MenuButton,
   MenuItem,
-  MenuList
+  MenuList,
 } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Botao from '../botao';
-import Dropdown from './dropdown';
+import Botao from '../botao/botao';
+import Dropdown from './dropdown/dropdown';
 
 export default function Navbar() {
-  const [larguraTela, setLarguraTela] = useState(window.innerWidth > 768);
-
-  const pegarLarguraTela = () => {
-    setLarguraTela(window.innerWidth > 768);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', pegarLarguraTela);
-    return () => window.removeEventListener('resize', pegarLarguraTela);
-  });
+  const [larguraTelaMaior768] = useMediaQuery('(min-width: 768px)');
 
   return (
     <Flex
@@ -41,7 +32,7 @@ export default function Navbar() {
           />
         </Link>
       </Flex>
-      {larguraTela ? (
+      {larguraTelaMaior768 ? (
         <Flex>
           <Dropdown
             descricao="A Fomenta"
@@ -49,18 +40,18 @@ export default function Navbar() {
             caminhoQuemSomos="/quemSomos"
           />
           <Botao
-            descricao="Realizações"
             to="/realizacoes"
+            descricao="Realizações"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
           />
           <Botao
-            descricao="Coworking"
             to="/coworking"
+            descricao="Coworking"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
           />
           <Botao
-            descricao="Faça Parte"
             to="/facaParte"
+            descricao="Faça Parte"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
           />
         </Flex>

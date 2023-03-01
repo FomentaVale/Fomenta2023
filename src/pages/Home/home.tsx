@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Text h="100vh" color={{ base: 'red', lg: 'blue' }}>
-        HOME -  Teste
+        HOME - Teste
       </Text>
     </div>
   );
