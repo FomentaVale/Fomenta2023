@@ -1,4 +1,4 @@
-import { Button, Link, Text } from '@chakra-ui/react';
+import { Button, Flex, Link, Text } from '@chakra-ui/react';
 import { Link as LinkRouter } from 'react-router-dom';
 
 interface Props {
@@ -10,14 +10,16 @@ interface Props {
   borda?: string;
   fonteTexto?: string;
   corHover?: string;
+  wLink?: string;
+  target?: string;
+  marginX?: string;
 }
 
 const botaoEstilizado = (props: Props) => {
   return (
     <Button
       w="100%"
-      h="100%"
-      marginX="5px"
+      h="50px"
       borderRadius="10px"
       border={props.borda}
       bg={props.cor || 'cor.P2'}
@@ -38,15 +40,24 @@ const botaoEstilizado = (props: Props) => {
 export default function Botao(props: Props): JSX.Element {
   if (props.to) {
     return (
-      <Link as={LinkRouter} to={props.to}>
+      <Link
+        w={props.wLink}
+        marginX={props.marginX}
+        as={LinkRouter}
+        to={props.to}
+      >
         {botaoEstilizado(props)}
       </Link>
     );
   }
 
   if (props.href) {
-    return <Link href={props.href}>{botaoEstilizado(props)}</Link>;
+    return (
+      <Link w={props.wLink} href={props.href} target={props.target}>
+        {botaoEstilizado(props)}
+      </Link>
+    );
   }
 
-  return botaoEstilizado(props);
+  return <Flex w={props.wLink}>{botaoEstilizado(props)}</Flex>;
 }
