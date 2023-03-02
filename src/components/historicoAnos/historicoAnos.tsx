@@ -1,127 +1,291 @@
-import { Flex, Heading, Image, Text, useMediaQuery } from '@chakra-ui/react';
+import {
+  border,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useMediaQuery,
+} from '@chakra-ui/react';
+import { useState } from 'react';
 import './style.css';
 
 interface Props {
   temaClaro: boolean;
   id: string;
   ano?: string;
+  imagemSecundariaQuadro1A: string;
+  imagemSecundariaQuadro1B: string;
+  imagemSecundariaQuadro1C: string;
   tituloQuadro1: string;
   textQuadro1: string;
+  imagemSecundariaQuadro2A: string;
+  imagemSecundariaQuadro2B: string;
+  imagemSecundariaQuadro2C: string;
   tituloQuadro2: string;
   textQuadro2: string;
 }
 
-export default function HistoricoAnos({
-  temaClaro,
-  id,
-  ano,
-  tituloQuadro1,
-  textQuadro1,
-  tituloQuadro2,
-  textQuadro2,
-}: Props) {
-  const [eMaiorQue768] = useMediaQuery('screen and (min-width:768px');
+export default function HistoricoAnos(props: Props) {
+  const [larguraTelaMaior768] = useMediaQuery('screen and (min-width:768px');
+
+  const [imagemPrincipalQuadro1, setImagemPrincipalQuadro1] = useState(
+    props.imagemSecundariaQuadro1A
+  );
+
+  const [imagemPrincipalQuadro2, setImagemPrincipalQuadro2] = useState(
+    props.imagemSecundariaQuadro2A
+  );
 
   return (
     <>
       <Flex
-        id={id}
-        className={temaClaro ? 'temaClaro' : 'temaEscuro'}
-        backgroundColor={temaClaro ? 'white' : 'cor.S1'}
-        color={temaClaro ? 'black' : 'white'}
+        id={props.id}
+        className={props.temaClaro ? 'temaClaro' : 'temaEscuro'}
+        backgroundColor={props.temaClaro ? 'white' : 'cor.S1'}
+        color={props.temaClaro ? 'black' : 'white'}
         flexDir={{ base: 'column' }}
         gap={{ base: '20px' }}
-        padding={{ base: '10px 0px', lg: '50px' }}
+        padding={{ base: '15px', lg: '50px' }}
         w="100%"
         alignItems={{ base: 'center' }}
       >
-        {ano ? (
-          <Heading
-            width="fit-content"
-            borderBottom="2px solid"
-            borderColor="cor.P2"
-          >
-            {ano}
-          </Heading>
-        ) : (
-          ''
-        )}
-
-        <Flex
-          justifyContent={{ base: 'center' }}
-          flexDir={{ base: 'column', lg: 'row' }}
-          gap={{ base: '20px' }}
-          padding={{ lg: '50px' }}
+        <Heading
+          width="fit-content"
+          borderBottom="2px solid"
+          borderColor="cor.P2"
         >
-          <Flex w={{ lg: '50%' }} flexDir={{ base: 'column', lg: 'row' }}>
-            {eMaiorQue768 ? (
-              <Flex flexDir={{ base: 'row' }} gap="10px">
-                <Image w="70%" src="/public/img/oqueSomos/Historico/5.jpeg" />
-                <Flex gap="10px" flexDir={{ base: 'column' }}>
-                  <Image src="/public/img/oqueSomos/Historico/4.JPG" />
-                  <Image src="/public/img/oqueSomos/Historico/3.JPG" />
-                </Flex>
-              </Flex>
-            ) : (
-              <Flex>
-                <Image src="/public/img/oqueSomos/Historico/5.jpeg" />
-              </Flex>
-            )}
-          </Flex>
-          <Flex
-            flexDir={{ base: 'column' }}
-            alignItems={{ base: 'center' }}
-            gap={{ base: '10px' }}
-            w={{ lg: '50%' }}
-          >
-            <Heading
-              width="50%"
-              borderBottom="3px solid"
-              borderColor="cor.P2"
-              textAlign="center"
-            >
-              {tituloQuadro1}
-            </Heading>
-            <Text>{textQuadro1}</Text>
-          </Flex>
-        </Flex>
-
+          {props.ano}
+        </Heading>
         <Flex
-          justifyContent={{ base: 'center' }}
-          flexDir={{ base: 'column', lg: 'row-reverse' }}
-          gap={{ base: '20px' }}
-          padding={{ lg: '50px' }}
+          flexDir={{ base: 'column' }}
+          gap={{ base: '20px', lg: '100px' }}
+          w="100%"
         >
-          <Flex w={{ lg: '50%' }} flexDir={{ base: 'column', lg: 'row' }}>
-            {eMaiorQue768 ? (
-              <Flex flexDir={{ base: 'row' }} gap="10px">
-                <Image w="70%" src="/public/img/oqueSomos/Historico/5.jpeg" />
-                <Flex gap="10px" flexDir={{ base: 'column' }}>
-                  <Image src="/public/img/oqueSomos/Historico/4.JPG" />
-                  <Image src="/public/img/oqueSomos/Historico/3.JPG" />
-                </Flex>
-              </Flex>
-            ) : (
-              <Flex>
-                <Image src="/public/img/oqueSomos/Historico/5.jpeg" />
-              </Flex>
-            )}
-          </Flex>
           <Flex
-            flexDir={{ base: 'column' }}
-            alignItems={{ base: 'center' }}
-            gap={{ base: '10px' }}
-            w={{ lg: '50%' }}
+            justifyContent={{ base: 'center' }}
+            flexDir={{ base: 'column', lg: 'row' }}
+            gap={{ base: '20px' }}
+            padding={{ lg: '20px' }}
           >
-            <Heading
-              width="50%"
-              borderBottom="3px solid"
-              borderColor="cor.P2"
-              textAlign="center"
+            <Flex w={{ lg: '100%' }} flexDir={{ base: 'column', lg: 'row' }}>
+              {larguraTelaMaior768 ? (
+                <Flex flexDir={{ base: 'row' }} gap="10px">
+                  <Flex w="100%">
+                    <Image
+                      w="100%"
+                      src={
+                        imagemPrincipalQuadro1 || props.imagemSecundariaQuadro1A
+                      }
+                    />
+                  </Flex>
+
+                  <Flex
+                    w="30%"
+                    gap="10px"
+                    flexDir={{ base: 'column' }}
+                    justifyContent="space-around"
+                  >
+                    <Image
+                      src={props.imagemSecundariaQuadro1A}
+                      h="30%"
+                      cursor="pointer"
+                      onClick={() => {
+                        setImagemPrincipalQuadro1(
+                          props.imagemSecundariaQuadro1A
+                        );
+                      }}
+                      outline={
+                        imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1A
+                          ? '6px solid'
+                          : ''
+                      }
+                      outlineColor={
+                        imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1A
+                          ? 'cor.P3'
+                          : ''
+                      }
+                    />
+                    <Image
+                      src={props.imagemSecundariaQuadro1B}
+                      h="30%"
+                      cursor="pointer"
+                      onClick={() => {
+                        setImagemPrincipalQuadro1(
+                          props.imagemSecundariaQuadro1B
+                        );
+                      }}
+                      outline={
+                        imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1B
+                          ? '6px solid'
+                          : ''
+                      }
+                      outlineColor={
+                        imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1B
+                          ? 'cor.P3'
+                          : ''
+                      }
+                    />
+                    <Image
+                      src={props.imagemSecundariaQuadro1C}
+                      h="30%"
+                      cursor="pointer"
+                      onClick={() => {
+                        setImagemPrincipalQuadro1(
+                          props.imagemSecundariaQuadro1C
+                        );
+                      }}
+                      outline={
+                        imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1C
+                          ? '6px solid'
+                          : ''
+                      }
+                      outlineColor={
+                        imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1C
+                          ? 'cor.P3'
+                          : ''
+                      }
+                    />
+                  </Flex>
+                </Flex>
+              ) : (
+                <Flex>
+                  <Image src={props.imagemSecundariaQuadro1A} />
+                </Flex>
+              )}
+            </Flex>
+            <Flex
+              flexDir={{ base: 'column' }}
+              alignItems={{ base: 'center' }}
+              gap={{ base: '10px' }}
+              w={{ lg: '50%' }}
+              padding={{ lg: '0px 50px' }}
             >
-              {tituloQuadro2}
-            </Heading>
-            <Text>{textQuadro2}</Text>
+              <Heading
+                width="50%"
+                borderBottom="3px solid"
+                borderColor="cor.P2"
+                textAlign="center"
+              >
+                {props.tituloQuadro1}
+              </Heading>
+              <Text textAlign={{ lg: 'justify' }}>{props.textQuadro1}</Text>
+            </Flex>
+          </Flex>
+
+          <Flex
+            justifyContent={{ base: 'center' }}
+            flexDir={{ base: 'column', lg: 'row-reverse' }}
+            gap={{ base: '20px' }}
+            padding={{ lg: '20px' }}
+          >
+            <Flex w="100%" flexDir={{ base: 'column', lg: 'row' }}>
+              {larguraTelaMaior768 ? (
+                <Flex
+                  w="100%"
+                  h="100%"
+                  flexDir={{ base: 'row', lg: 'row-reverse' }}
+                  gap="10px"
+                >
+                  <Flex w="80%">
+                    <Image
+                      w="100%"
+                      src={
+                        imagemPrincipalQuadro2 || props.imagemSecundariaQuadro2A
+                      }
+                    />
+                  </Flex>
+
+                  <Flex
+                    w="30%"
+                    gap="10px"
+                    flexDir={{ base: 'column' }}
+                    justifyContent="space-around"
+                  >
+                    <Image
+                      src={props.imagemSecundariaQuadro2A}
+                      h="30%"
+                      cursor="pointer"
+                      onClick={() => {
+                        setImagemPrincipalQuadro2(
+                          props.imagemSecundariaQuadro2A
+                        );
+                      }}
+                      outline={
+                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2A
+                          ? '6px solid'
+                          : ''
+                      }
+                      outlineColor={
+                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2A
+                          ? 'cor.P3'
+                          : ''
+                      }
+                    />
+                    <Image
+                      src={props.imagemSecundariaQuadro2B}
+                      h="30%"
+                      cursor="pointer"
+                      onClick={() => {
+                        setImagemPrincipalQuadro2(
+                          props.imagemSecundariaQuadro2B
+                        );
+                      }}
+                      outline={
+                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2B
+                          ? '6px solid'
+                          : ''
+                      }
+                      outlineColor={
+                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2B
+                          ? 'cor.P3'
+                          : ''
+                      }
+                    />
+                    <Image
+                      src={props.imagemSecundariaQuadro2C}
+                      h="30%"
+                      cursor="pointer"
+                      onClick={() => {
+                        setImagemPrincipalQuadro2(
+                          props.imagemSecundariaQuadro2C
+                        );
+                      }}
+                      outline={
+                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2C
+                          ? '6px solid'
+                          : ''
+                      }
+                      outlineColor={
+                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2C
+                          ? 'cor.P3'
+                          : ''
+                      }
+                    />
+                  </Flex>
+                </Flex>
+              ) : (
+                <Flex>
+                  <Image src={props.imagemSecundariaQuadro2A} />
+                </Flex>
+              )}
+            </Flex>
+            <Flex
+              flexDir={{ base: 'column' }}
+              alignItems={{ base: 'center' }}
+              gap={{ base: '10px' }}
+              w={{ lg: '50%' }}
+              padding={{ lg: '0px 50px' }}
+            >
+              <Heading
+                width="50%"
+                borderBottom="3px solid"
+                borderColor="cor.P2"
+                textAlign="center"
+              >
+                {props.tituloQuadro2}
+              </Heading>
+              <Text textAlign={{ lg: 'justify' }}>{props.textQuadro2}</Text>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

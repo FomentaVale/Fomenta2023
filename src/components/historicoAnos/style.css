@@ -13,6 +13,8 @@
     background-repeat: no-repeat;
 }
 
+
+
 @media screen and (min-width:768px) {
     .temaEscuro {
         background-image: url('/public/img/oqueSomos/bgAnos2.png');
