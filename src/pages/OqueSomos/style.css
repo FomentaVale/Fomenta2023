@@ -1,5 +1,12 @@
 .oqueSomos-container {
     background-image: url('/public/img/oqueSomos/bgOqueSomos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.oqueSomos-Fomenta {
+    border-radius: 10px;
 }
 
 .oqueSomos-video {
@@ -12,6 +19,10 @@
     .oqueSomos-video {
         width: 500px;
         height: 100%;
+    }
+
+    .oqueSomos-Fomenta {
+        border-radius: 10px 0px 0px 10px;
     }
 }
 
