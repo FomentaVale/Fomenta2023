@@ -5,56 +5,45 @@ import { Button, ButtonGroup } from '@chakra-ui/react';
 import Botao from '../botao/botao';
 import { Grid, GridItem } from '@chakra-ui/react';
 
-export default function annerNavegacao() {
+interface PropiedadadesInformacoesBotoes {
+  conteudoReferencia: string;
+  tituloBotao: string;
+}
+
+interface BannerNavegacaoProps {
+  tituloBanner: string;
+  subtituloBanner: string;
+  informacoesBotoesNavegacao: Array<PropiedadadesInformacoesBotoes>;
+}
+
+export default function BannerNavegacao(props: BannerNavegacaoProps) {
   return (
     <>
       <Container>
         <Flex flexDirection="column" alignItems="center">
-          <Heading textAlign="center" fontSize="25px">
-            FAÇA PARTE DA FOMENTA VALE
+          <Heading textAlign="center" fontSize="25px" padding="5">
+            {props.tituloBanner}
           </Heading>
-
-          <Text textAlign="center" fontSize="13px" marginTop="20px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
+          <Text fontSize="10px">{props.subtituloBanner}</Text>
 
           <Grid
-            templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
+            templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
+            templateRows={{ base: 'repeat(2, 1fr)', lg: '' }}
             gap="3"
             marginTop="20px"
             padding="1"
           >
-            <GridItem>
-              <Botao
-                href="CaminhoDaInformacao"
-                descricao="Banco de Talentos"
-                cor="cor.P3"
-              />
-            </GridItem>
-
-            <GridItem>
-              <Botao
-                href="CaminhoDaInformacao"
-                descricao="Apoiadores"
-                cor="cor.P3"
-              />
-            </GridItem>
-
-            <GridItem>
-              <Botao
-                href="CaminhoDaInformacao"
-                descricao="Estagiários"
-                cor="cor.P3"
-              />
-            </GridItem>
-
-            <GridItem>
-              <Botao
-                href="CaminhoDaInformacao"
-                descricao="Incubação"
-                cor="cor.P3"
-              />
-            </GridItem>
+            {props.informacoesBotoesNavegacao.map((item, index) => {
+              return (
+                <GridItem key={index}>
+                  <Botao
+                    href={item.conteudoReferencia}
+                    descricao={item.tituloBotao}
+                    cor="cor.P3"
+                  />
+                </GridItem>
+              );
+            })}
           </Grid>
         </Flex>
       </Container>
