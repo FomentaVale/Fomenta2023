@@ -2,12 +2,31 @@ import { Box, Heading, Flex, Button, Text } from '@chakra-ui/react';
 import BannerNavegacao from '../../components/bannerNavegacao/bannerNavegacao';
 
 export default function FacaParte() {
+  const informacoesBotoesNavegacao = [
+    {
+      tituloBotao: 'Banco de Talentos',
+      conteudoReferencia: '#bancodetalentos',
+    },
+    {
+      tituloBotao: 'Apoiadores',
+      conteudoReferencia: '#apoiadores',
+    },
+    {
+      tituloBotao: 'Estagiários',
+      conteudoReferencia: '#estagiaros',
+    },
+    {
+      tituloBotao: 'Incubação',
+      conteudoReferencia: '#incubacao',
+    },
+  ];
+
   return (
     <Box>
       <BannerNavegacao
         tituloBanner="Faça Parte da Fomenta Vale"
         subtituloBanner="Lorem"
-        tipoPagina="facaParte"
+        informacoesBotoesNavegacao={informacoesBotoesNavegacao}
       />
 
       <Flex justifyContent="left" marginTop="20px">

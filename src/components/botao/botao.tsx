@@ -39,11 +39,19 @@ const botaoEstilizado = (props: Props) => {
 
 export default function Botao(props: Props): JSX.Element {
   if (props.to) {
-    return <LinkRouter to={props.to}>{botaoEstilizado(props)}</LinkRouter>;
+    return (
+      <Link as={LinkRouter} to={props.to} _hover={{ textDecoration: 'none' }}>
+        {botaoEstilizado(props)}
+      </Link>
+    );
   }
 
   if (props.href) {
-    return <Link href={props.href}>{botaoEstilizado(props)}</Link>;
+    return (
+      <Link href={props.href} _hover={{ textDecoration: 'none' }}>
+        {botaoEstilizado(props)}
+      </Link>
+    );
   }
 
   return botaoEstilizado(props);
