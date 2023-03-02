@@ -26,8 +26,8 @@ export default function Realizacoes() {
   ];
 
   return (
-    <Flex color="red.400" justifyContent="center" flexDir={{ base: 'column' }}>
-      <Center>
+    <Flex color="white" justifyContent="center" flexDir={{ base: 'column' }}>
+      <Center bg="cor.S1">
         <BannerNavegacao
           tituloBanner="Realizações da Fomenta Vale"
           informacoesBotoesNavegacao={informacoesBotoesNavegacao}
