@@ -23,8 +23,8 @@ const botaoEstilizado = (props: Props) => {
       marginX="5px"
       borderRadius="10px"
       border={props.borda}
-      bg={props.cor || 'cor.P2'}
-      _hover={{ bg: props.corHover || 'cor.P3' }}
+      bg={props.corFundo || 'cor.P2'}
+      _hover={{ bg: props.corFundoHover || 'cor.P3' }}
     >
       <Text
         fontSize={{ base: '16px', lg: '18px' }}
