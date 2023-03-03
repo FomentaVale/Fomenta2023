@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import Botao from '../../components/botao/botao';
 import Carrossel from '../../components/carrossel';
 
@@ -11,7 +11,7 @@ export default function Home() {
       <Flex
         flexDir={{ base: 'column', lg: 'row' }}
         bg="cor.S1"
-        paddingBottom="15px"
+        paddingBottom="30px"
       >
         <Flex
           w={{ base: '100%', lg: '50%' }}
@@ -27,7 +27,7 @@ export default function Home() {
             <Text
               textAlign="center"
               color="#ffff"
-              fontFamily="Gotham-Light"
+              fontFamily="Gotham-Black"
               fontSize={{ base: '25px', md: '30px', lg: '35px' }}
             >
               O que somos ?
@@ -35,9 +35,11 @@ export default function Home() {
           </Flex>
 
           <Flex
+            padding={{ base: '25px', lg: '25px 100px' }}
             color="#ffff"
             fontSize={{ base: '16px', lg: '18px' }}
-            padding="25px"
+            fontFamily="Gotham-Book"
+            textAlign="justify"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -49,9 +51,17 @@ export default function Home() {
           </Flex>
 
           <Flex w="100%" justifyContent="center">
-            <Botao descricao="Saiba Mais" cor="cor.P3" wLink="200px" />
+            <Botao
+              to="/"
+              descricao="SAIBA MAIS"
+              corFundo="cor.P3"
+              corFundoHover="cor.S3"
+              tamanhoBotao={{ base: '50%', lg: '25%' }}
+              borda="3px solid white"
+            />
           </Flex>
         </Flex>
+
         <Flex
           w={{ base: '100%', lg: '50%' }}
           paddingX="25px"
@@ -71,16 +81,19 @@ export default function Home() {
         bg="#ffff"
         paddingBottom="15px"
       >
-        <Flex
-          w={{ base: '100%', lg: '50%' }}
-          paddingX="25px"
-          justifyContent="center"
-        >
-          <Image
-            alt="Raizes Fomenta Vale"
-            src="/img/figuras/figurasHome/figuraRaizesHome.png"
-            w={{ lg: '70%' }}
-          />
+        <Flex w={{ base: '100%', lg: '50%' }} justifyContent="center">
+          {/* <Grid
+            w="100%"
+            h="400px"
+            templateRows="repeat(2, 1fr)"
+            templateColumns="repeat(6, 1fr)"
+            gap={2}
+          >
+            <GridItem colSpan={4} bg="tomato" />
+            <GridItem colSpan={2} bg="tomato" />
+            <GridItem colSpan={2} bg="tomato" />
+            <GridItem colSpan={4} bg="tomato" />
+          </Grid> */}
         </Flex>
 
         <Flex
@@ -97,7 +110,7 @@ export default function Home() {
             <Text
               textAlign="center"
               color="cor.P2"
-              fontFamily="Gotham-Light"
+              fontFamily="Gotham-Black"
               fontSize={{ base: '25px', md: '30px', lg: '35px' }}
             >
               Realizações
@@ -108,6 +121,7 @@ export default function Home() {
             color="black"
             fontSize={{ base: '16px', lg: '18px' }}
             padding="25px"
+            fontFamily="Gotham-Bold"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -118,16 +132,7 @@ export default function Home() {
             tincidunt.
           </Flex>
 
-          <Flex w="100%" justifyContent="center">
-            <Botao
-              descricao="Acompanhe"
-              cor="#ffff"
-              corTexto="cor.P2"
-              wLink="200px"
-              borda="3px solid #00A99D"
-              corHover="cor.S2"
-            />
-          </Flex>
+          <Flex w="100%" justifyContent="center"></Flex>
         </Flex>
       </Flex>
     </Box>
