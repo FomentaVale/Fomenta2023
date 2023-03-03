@@ -271,7 +271,7 @@ export default function OqueSomos() {
                 flexDir={{ base: 'column', lg: 'row' }}
                 justifyContent="space-around"
                 alignItems={{ base: 'flex-start' }}
-                w={{ base: '100%', lg: '80%' }}
+                w={{ base: '100%', lg: '90%' }}
                 h={{ base: '80%', lg: '100%' }}
               >
                 {dadosAnosImpar.map((item, index) => (
@@ -286,12 +286,11 @@ export default function OqueSomos() {
                     <Botao
                       href={`#${item.caminho}`}
                       borda="2px solid white"
-                      cor={item.temaLaranja ? 'cor.P3' : 'cor.P2'}
+                      corFundo={item.temaLaranja ? 'cor.P3' : 'cor.P2'}
                       corTexto={item.temaLaranja ? 'black' : 'white'}
-                      corHover={item.temaLaranja ? 'cor.S4' : 'cor.P1'}
-                      fonteTexto="Gotham-Black"
+                      corFundoHover={item.temaLaranja ? 'cor.S4' : 'cor.P1'}
                       descricao={item.ano}
-                      wLink="45%"
+                      larguraBotao={{ base: '60%', lg: '45%' }}
                     />
 
                     {larguraTelaMaior768 ? (
@@ -348,7 +347,7 @@ export default function OqueSomos() {
                 flexDir={{ base: 'column', lg: 'row' }}
                 justifyContent="space-between"
                 alignItems={{ base: 'flex-end' }}
-                w={{ base: '100%', lg: '80%' }}
+                w={{ base: '100%', lg: '85%' }}
                 h={{ base: '80%', lg: '100%' }}
               >
                 {dadosAnosPar.map((item, index) => (
@@ -368,12 +367,11 @@ export default function OqueSomos() {
                     <Botao
                       href={`#${item.caminho}`}
                       borda="2px solid white"
-                      cor={item.temaLaranja ? 'cor.P3' : 'cor.P2'}
+                      corFundo={item.temaLaranja ? 'cor.P3' : 'cor.P2'}
                       corTexto={item.temaLaranja ? 'black' : 'white'}
-                      corHover={item.temaLaranja ? 'cor.S4' : 'cor.P1'}
-                      fonteTexto="Gotham-Black"
+                      corFundoHover={item.temaLaranja ? 'cor.S4' : 'cor.P1'}
                       descricao={item.ano}
-                      wLink="45%"
+                      larguraBotao={{ base: '60%', lg: '45%' }}
                     />
                   </Flex>
                 ))}
@@ -409,9 +407,8 @@ export default function OqueSomos() {
                       href={item.caminho}
                       corTexto="black"
                       borda="2px solid white"
-                      cor="cor.P3"
-                      corHover="cor.S4"
-                      fonteTexto="Gotham-Black"
+                      corFundo="cor.P3"
+                      corFundoHover="cor.S4"
                       descricao={item.titulo}
                       target="_blank"
                     />
@@ -434,10 +431,9 @@ export default function OqueSomos() {
                     <Botao
                       href={item.caminho}
                       borda="2px solid white"
-                      cor="cor.P2"
-                      corHover="cor.P1"
+                      corFundo="cor.P2"
+                      corFundoHover="cor.P1"
                       corTexto="white"
-                      fonteTexto="Gotham-Black"
                       descricao={item.titulo}
                       target="_blank"
                     />
