@@ -134,6 +134,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Gotham-Black';
   src: url(/public/fonts/Gotham/Gotham-Black.otf);
@@ -142,4 +146,19 @@ a {
 @font-face {
   font-family: 'Gotham-Light';
   src: url(/public/fonts/Gotham/Gotham-Light.otf);
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url(/public/fonts/Gotham/Gotham-Medium.otf);
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url(/public/fonts/Gotham/Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url(/public/fonts/Gotham/Gotham-Book.otf);
 }

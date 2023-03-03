@@ -1,36 +1,35 @@
-import { Button, Link, Text } from '@chakra-ui/react';
+import { Button, Flex, Link, Text } from '@chakra-ui/react';
 import { Link as LinkRouter } from 'react-router-dom';
 
 interface Props {
   to?: string;
   href?: string;
+  target?: string;
   descricao: string;
-  cor?: string;
-  corTexto?: string;
   borda?: string;
-  fonteTexto?: string;
-  corHover?: string;
-  larguraBotao?: string;
-  alturaBotao?: string;
+  corFundo?: string;
+  corTexto?: string;
+  corFundoHover?: string;
+  corTextoHover?: string;
+  marginX?: string;
+  tamanhoBotao?: object;
 }
 
 const botaoEstilizado = (props: Props) => {
   return (
     <Button
-      w={props.larguraBotao || '9vw'}
-      h={props.alturaBotao || '6.5vh'}
+      w="150px"
+      h="50px"
       marginX="5px"
       borderRadius="10px"
       border={props.borda}
       bg={props.cor || 'cor.P2'}
       _hover={{ bg: props.corHover || 'cor.P3' }}
-      p="1.5"
     >
       <Text
-        color={props.corTexto || '#ffff'}
-        fontSize="15px"
-        fontFamily={props.fonteTexto || 'Gotham-Light'}
-        fontWeight="900"
+        fontSize={{ base: '16px', lg: '18px' }}
+        fontFamily={'Gotham-Bold'}
+        fontWeight={900}
       >
         {props.descricao}
       </Text>
@@ -40,12 +39,36 @@ const botaoEstilizado = (props: Props) => {
 
 export default function Botao(props: Props): JSX.Element {
   if (props.to) {
-    return <LinkRouter to={props.to}>{botaoEstilizado(props)}</LinkRouter>;
+    return (
+      <Link
+        as={LinkRouter}
+        to={props.to}
+        w={props.tamanhoBotao}
+        marginX={props.marginX}
+        _hover={{ textDecoration: 'none' }}
+      >
+        {botaoEstilizado(props)}
+      </Link>
+    );
   }
 
   if (props.href) {
-    return <Link href={props.href}>{botaoEstilizado(props)}</Link>;
+    return (
+      <Link
+        href={props.href}
+        target={props.target}
+        w={props.tamanhoBotao}
+        marginX={props.marginX}
+        _hover={{ textDecoration: 'none' }}
+      >
+        {botaoEstilizado(props)}
+      </Link>
+    );
   }
 
-  return botaoEstilizado(props);
+  return (
+    <Flex w={props.tamanhoBotao} _hover={{ textDecoration: 'none' }}>
+      {botaoEstilizado(props)}
+    </Flex>
+  );
 }
