@@ -12,7 +12,7 @@ interface Props {
   corFundoHover?: string;
   corTextoHover?: string;
   marginX?: string;
-  tamanhoBotao?: object;
+  larguraBotao?: object;
 }
 
 const botaoEstilizado = (props: Props) => {
@@ -47,7 +47,7 @@ export default function Botao(props: Props): JSX.Element {
       <Link
         as={LinkRouter}
         to={props.to}
-        w={props.tamanhoBotao}
+        w={props.larguraBotao}
         marginX={props.marginX}
         _hover={{ textDecoration: 'none' }}
       >
@@ -61,7 +61,7 @@ export default function Botao(props: Props): JSX.Element {
       <Link
         href={props.href}
         target={props.target}
-        w={props.tamanhoBotao}
+        w={props.larguraBotao}
         marginX={props.marginX}
         _hover={{ textDecoration: 'none' }}
       >
@@ -71,7 +71,7 @@ export default function Botao(props: Props): JSX.Element {
   }
 
   return (
-    <Flex w={props.tamanhoBotao} _hover={{ textDecoration: 'none' }}>
+    <Flex w={props.larguraBotao} _hover={{ textDecoration: 'none' }}>
       {botaoEstilizado(props)}
     </Flex>
   );
