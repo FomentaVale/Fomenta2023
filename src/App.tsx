@@ -4,7 +4,7 @@ import Home from './pages/Home/home';
 import QuemSomos from './pages/QuemSomos/quemSomos';
 import Rodape from './components/rodape/rodape';
 import Realizacoes from './pages/Realizacoes/realizacoes';
-import FacaParte from './pages/FacaParte/facaParte';
+import OqueSomos from './pages/OqueSomos/oQueSomos';
 
 export default function App() {
   return (
@@ -12,6 +12,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/oqueSomos" element={<OqueSomos />} />
         <Route path="/quemSomos" element={<QuemSomos />} />
         <Route path="/realizacoes" element={<Realizacoes />} />
         <Route path="/facaParte" element={<FacaParte />} />

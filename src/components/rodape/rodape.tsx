@@ -23,7 +23,7 @@ export default function Rodape() {
         w="100%"
         color="white"
         fontSize={{ base: '9px', sm: '10px', lg: '11px', '2xl': '14px' }}
-        fontFamily="gotham"
+        fontFamily="Gotham-Light"
         alignItems={{ base: ' ', md: 'center' }}
       >
         <Flex
@@ -106,6 +106,7 @@ export default function Rodape() {
                         p={3}
                         bg="cor.P3"
                         borderRadius="8px"
+                        fontFamily="Gotham-Light"
                       >
                         <Icon
                           fontSize="20px"
@@ -232,11 +233,6 @@ export default function Rodape() {
             <LinkPage to="/realizacoes">
               <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
                 REALIZAÇÕES
-              </ListItem>
-            </LinkPage>
-            <LinkPage to="/startups">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                STARTUPS
               </ListItem>
             </LinkPage>
             <LinkPage to="/facaParte">
