@@ -1,11 +1,4 @@
-import {
-  border,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  useMediaQuery,
-} from '@chakra-ui/react';
+import { Flex, Heading, Image, Text, useMediaQuery } from '@chakra-ui/react';
 import { useState } from 'react';
 import './style.css';
 
@@ -16,9 +9,7 @@ interface Props {
   imagemsSecundariasQuadro1: Array<string>;
   tituloQuadro1: string;
   textQuadro1: string;
-  imagemSecundariaQuadro2A: string;
-  imagemSecundariaQuadro2B: string;
-  imagemSecundariaQuadro2C: string;
+  imagemsSecundariasQuadro2: Array<string>;
   tituloQuadro2: string;
   textQuadro2: string;
 }
@@ -31,7 +22,7 @@ export default function HistoricoAnos(props: Props) {
   );
 
   const [imagemPrincipalQuadro2, setImagemPrincipalQuadro2] = useState(
-    props.imagemSecundariaQuadro2A
+    props.imagemsSecundariasQuadro2[0]
   );
 
   return (
@@ -132,19 +123,9 @@ export default function HistoricoAnos(props: Props) {
           >
             <Flex w="100%" flexDir={{ base: 'column', lg: 'row' }}>
               {larguraTelaMaior768 ? (
-                <Flex
-                  w="100%"
-                  h="100%"
-                  flexDir={{ base: 'row', lg: 'row-reverse' }}
-                  gap="10px"
-                >
-                  <Flex w="80%">
-                    <Image
-                      w="100%"
-                      src={
-                        imagemPrincipalQuadro2 || props.imagemSecundariaQuadro2A
-                      }
-                    />
+                <Flex flexDir={{ base: 'row', lg: 'row-reverse' }} gap="10px">
+                  <Flex w="100%">
+                    <Image w="100%" src={imagemPrincipalQuadro2} />
                   </Flex>
 
                   <Flex
@@ -153,71 +134,30 @@ export default function HistoricoAnos(props: Props) {
                     flexDir={{ base: 'column' }}
                     justifyContent="space-around"
                   >
-                    <Image
-                      src={props.imagemSecundariaQuadro2A}
-                      h="30%"
-                      cursor="pointer"
-                      onClick={() => {
-                        setImagemPrincipalQuadro2(
-                          props.imagemSecundariaQuadro2A
-                        );
-                      }}
-                      border={
-                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2A
-                          ? '6px solid'
-                          : ''
-                      }
-                      borderColor={
-                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2A
-                          ? 'cor.P3'
-                          : ''
-                      }
-                    />
-                    <Image
-                      src={props.imagemSecundariaQuadro2B}
-                      h="30%"
-                      cursor="pointer"
-                      onClick={() => {
-                        setImagemPrincipalQuadro2(
-                          props.imagemSecundariaQuadro2B
-                        );
-                      }}
-                      border={
-                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2B
-                          ? '6px solid'
-                          : ''
-                      }
-                      borderColor={
-                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2B
-                          ? 'cor.P3'
-                          : ''
-                      }
-                    />
-                    <Image
-                      src={props.imagemSecundariaQuadro2C}
-                      h="30%"
-                      cursor="pointer"
-                      onClick={() => {
-                        setImagemPrincipalQuadro2(
-                          props.imagemSecundariaQuadro2C
-                        );
-                      }}
-                      border={
-                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2C
-                          ? '6px solid'
-                          : ''
-                      }
-                      borderColor={
-                        imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2C
-                          ? 'cor.P3'
-                          : ''
-                      }
-                    />
+                    {props.imagemsSecundariasQuadro2.map((item, index) => {
+                      return (
+                        <Image
+                          key={index}
+                          src={item}
+                          h="30%"
+                          cursor="pointer"
+                          onClick={() => {
+                            setImagemPrincipalQuadro2(item);
+                          }}
+                          border={
+                            imagemPrincipalQuadro2 == item ? '6px solid' : ''
+                          }
+                          borderColor={
+                            imagemPrincipalQuadro2 == item ? 'cor.P3' : ''
+                          }
+                        />
+                      );
+                    })}
                   </Flex>
                 </Flex>
               ) : (
                 <Flex>
-                  <Image src={props.imagemSecundariaQuadro2A} />
+                  <Image src={props.imagemsSecundariasQuadro2[0]} />
                 </Flex>
               )}
             </Flex>
