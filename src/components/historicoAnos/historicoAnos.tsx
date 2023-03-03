@@ -94,12 +94,12 @@ export default function HistoricoAnos(props: Props) {
                           props.imagemSecundariaQuadro1A
                         );
                       }}
-                      outline={
+                      border={
                         imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1A
                           ? '6px solid'
                           : ''
                       }
-                      outlineColor={
+                      borderColor={
                         imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1A
                           ? 'cor.P3'
                           : ''
@@ -114,12 +114,12 @@ export default function HistoricoAnos(props: Props) {
                           props.imagemSecundariaQuadro1B
                         );
                       }}
-                      outline={
+                      border={
                         imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1B
                           ? '6px solid'
                           : ''
                       }
-                      outlineColor={
+                      borderColor={
                         imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1B
                           ? 'cor.P3'
                           : ''
@@ -134,12 +134,12 @@ export default function HistoricoAnos(props: Props) {
                           props.imagemSecundariaQuadro1C
                         );
                       }}
-                      outline={
+                      border={
                         imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1C
                           ? '6px solid'
                           : ''
                       }
-                      outlineColor={
+                      borderColor={
                         imagemPrincipalQuadro1 == props.imagemSecundariaQuadro1C
                           ? 'cor.P3'
                           : ''
@@ -210,12 +210,12 @@ export default function HistoricoAnos(props: Props) {
                           props.imagemSecundariaQuadro2A
                         );
                       }}
-                      outline={
+                      border={
                         imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2A
                           ? '6px solid'
                           : ''
                       }
-                      outlineColor={
+                      borderColor={
                         imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2A
                           ? 'cor.P3'
                           : ''
@@ -230,12 +230,12 @@ export default function HistoricoAnos(props: Props) {
                           props.imagemSecundariaQuadro2B
                         );
                       }}
-                      outline={
+                      border={
                         imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2B
                           ? '6px solid'
                           : ''
                       }
-                      outlineColor={
+                      borderColor={
                         imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2B
                           ? 'cor.P3'
                           : ''
@@ -250,12 +250,12 @@ export default function HistoricoAnos(props: Props) {
                           props.imagemSecundariaQuadro2C
                         );
                       }}
-                      outline={
+                      border={
                         imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2C
                           ? '6px solid'
                           : ''
                       }
-                      outlineColor={
+                      borderColor={
                         imagemPrincipalQuadro2 == props.imagemSecundariaQuadro2C
                           ? 'cor.P3'
                           : ''
