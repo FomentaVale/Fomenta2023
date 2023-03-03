@@ -134,17 +134,31 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Gotham-Black';
-  src: url(/public/fonts/Gotham/Gotham-Black.otf);
+  src: url(/fonts/Gotham/Gotham-Black.otf);
 }
 
 @font-face {
   font-family: 'Gotham-Light';
-  src: url(/public/fonts/Gotham/Gotham-Light.otf);
+  src: url(/fonts/Gotham/Gotham-Light.otf);
 }
 
 @font-face {
   font-family: 'Gotham-Medium';
-  src: url(/public/fonts/Gotham/Gotham-Medium.otf);
+  src: url(/fonts/Gotham/Gotham-Medium.otf);
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url(/fonts/Gotham/Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url(/fonts/Gotham/Gotham-Book.otf);
 }
