@@ -4,15 +4,15 @@ import { Link as LinkRouter } from 'react-router-dom';
 interface Props {
   to?: string;
   href?: string;
-  descricao: string;
-  cor?: string;
-  corTexto?: string;
-  borda?: string;
-  fonteTexto?: string;
-  corHover?: string;
-  wLink?: string;
   target?: string;
+  descricao: string;
+  borda?: string;
+  corFundo?: string;
+  corTexto?: string;
+  corFundoHover?: string;
+  corTextoHover?: string;
   marginX?: string;
+  tamanhoBotao?: object;
 }
 
 const botaoEstilizado = (props: Props) => {
@@ -22,14 +22,18 @@ const botaoEstilizado = (props: Props) => {
       h="50px"
       borderRadius="10px"
       border={props.borda}
-      bg={props.cor || 'cor.P2'}
-      _hover={{ bg: props.corHover || 'cor.P3' }}
+      fontWeight="900"
+      color={props.corTexto || '#ffff'}
+      bgColor={props.corFundo || 'cor.P3'}
+      _hover={{
+        bgColor: props.corFundoHover || 'cor.S3',
+        color: props.corTextoHover || '#ffff',
+      }}
     >
       <Text
-        color={props.corTexto || '#ffff'}
-        fontSize="15px"
-        fontFamily={props.fonteTexto || 'Gotham-Light'}
-        fontWeight="900"
+        fontSize={{ base: '16px', lg: '18px' }}
+        fontFamily={'Gotham-Bold'}
+        fontWeight={900}
       >
         {props.descricao}
       </Text>
@@ -41,10 +45,11 @@ export default function Botao(props: Props): JSX.Element {
   if (props.to) {
     return (
       <Link
-        w={props.wLink}
-        marginX={props.marginX}
         as={LinkRouter}
         to={props.to}
+        w={props.tamanhoBotao}
+        marginX={props.marginX}
+        _hover={{ textDecoration: 'none' }}
       >
         {botaoEstilizado(props)}
       </Link>
@@ -53,11 +58,21 @@ export default function Botao(props: Props): JSX.Element {
 
   if (props.href) {
     return (
-      <Link w={props.wLink} href={props.href} target={props.target}>
+      <Link
+        href={props.href}
+        target={props.target}
+        w={props.tamanhoBotao}
+        marginX={props.marginX}
+        _hover={{ textDecoration: 'none' }}
+      >
         {botaoEstilizado(props)}
       </Link>
     );
   }
 
-  return <Flex w={props.wLink}>{botaoEstilizado(props)}</Flex>;
+  return (
+    <Flex w={props.tamanhoBotao} _hover={{ textDecoration: 'none' }}>
+      {botaoEstilizado(props)}
+    </Flex>
+  );
 }
