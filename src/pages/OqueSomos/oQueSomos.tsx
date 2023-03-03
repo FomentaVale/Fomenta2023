@@ -177,11 +177,12 @@ export default function OqueSomos() {
         <Flex
           flexDir={{ base: 'column', lg: 'row' }}
           gap={{ base: '20px', lg: '0px' }}
+          w={{ lg: '80%' }}
         >
           <Flex
             flexDir="column"
             alignItems={{ base: 'center' }}
-            justifyContent={{ base: 'center', lg: 'flex-start' }}
+            justifyContent={{ base: 'center' }}
             padding={{ base: '10px', lg: '0px' }}
             w={{ lg: '50%' }}
           >
@@ -204,6 +205,7 @@ export default function OqueSomos() {
               gap={{ base: '15px' }}
               padding={{ base: '20px' }}
               textAlign={{ base: 'left' }}
+              fontSize={{ lg: '13px' }}
             >
               <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
