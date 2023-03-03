@@ -1,14 +1,28 @@
 import { Box, Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import Botao from '../../components/botao/botao';
 import Carrossel from '../../components/carrossel';
+import CaixaInformacoes from '../../components/caixaInformacoes';
 
 export default function Home() {
+  const informacoes = {
+    titulo: 'O que somos?',
+    descricao:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. Nisl suscipit adipiscing bibendum est ultricies integer quis. Adipiscing elit ut aliquam purus sit. Adipiscing elit duis tristique sollicitudin nibh sit. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt.',
+  };
+
+  const informacoesBotao = {
+    to: '/',
+    descricao: 'SAIBA MAIS',
+    corFundo: 'cor.P3',
+    corFundoHover: 'cor.S3',
+  };
+
   return (
     <Box overflowX={'hidden'}>
       <Carrossel />
 
       {/* Section O que somos */}
-      <Flex
+      {/* <Flex
         flexDir={{ base: 'column', lg: 'row' }}
         bg="cor.S1"
         paddingBottom="30px"
@@ -73,7 +87,8 @@ export default function Home() {
             w={{ lg: '70%' }}
           />
         </Flex>
-      </Flex>
+      </Flex> */}
+      <CaixaInformacoes informacoes={informacoes} />
 
       {/* Section O que somos */}
       <Flex
