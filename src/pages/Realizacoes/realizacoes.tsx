@@ -1,46 +1,55 @@
-import { Center, Text, Flex, GridItem, Grid } from '@chakra-ui/react';
+import { Center, Flex, GridItem, Grid } from '@chakra-ui/react';
 import { useState } from 'react';
-import BannerNavegacao from '../../components/bannerNavegacao/bannerNavegacao';
+import SecaoNavegacao from '../../components/secaoNavegacao/secaoNavegacao';
 import Botao from '../../components/botao/botao';
-import CartaoApresentacao from '../../components/cartaoApresemtacao/cartaoApresentacao';
+import CartaoConteudo from '../../components/cartaoConteudo/cartaoConteudo';
 
 export default function Realizacoes() {
-  const [referenciaDiv, setReferenciaDiv] = useState();
+  const [indice, setIndice] = useState(0);
 
   const informacoesBotoesNavegacao = [
     {
       tituloBotao: 'Cursos',
-      conteudoReferencia: '#cursos'
+      conteudoReferencia: '#cursos',
     },
     {
       tituloBotao: 'Hackathon',
-      conteudoReferencia: '#hackathon'
+      conteudoReferencia: '#hackathon',
     },
     {
       tituloBotao: 'Geladatech',
-      conteudoReferencia: '#geladatech'
+      conteudoReferencia: '#geladatech',
     },
     {
       tituloBotao: 'Podcast',
-      conteudoReferencia: '#podcast'
+      conteudoReferencia: '#podcast',
     },
     {
       tituloBotao: 'Formação de Inovadores',
-      conteudoReferencia: '#formacaoDeInovadores'
-    }
+      conteudoReferencia: '#formacaoDeInovadores',
+    },
   ];
 
-  const informacoesBannerNavegacao = {
-    tituloBanner: 'Realizações da Fomenta Vale',
-    descricaoBanner: 'Lorem'
+  const conteudoSecao = {
+    titulo: 'Realizações da Fomenta Vale',
+    descricao: 'Lorem',
   };
+
+  const conteudoPagina = [
+    {
+      titulo: 'Curso',
+      descricao: 'lorem ipsum',
+    },
+    {
+      titulo: 'Hackaton',
+      descricao: 'lorem ipsum2',
+    },
+  ];
 
   return (
     <Flex color="white" justifyContent="center" flexDir={{ base: 'column' }}>
       <Center bg="cor.S1">
-        <BannerNavegacao
-          informacoesBannerNavegacao={informacoesBannerNavegacao}
-        >
+        <SecaoNavegacao conteudoSecao={conteudoSecao}>
           <Grid
             templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(5, 1fr)' }}
             templateRows={{ base: 'repeat(2, 1fr)', lg: 'repeat(1, 1fr)' }}
@@ -57,18 +66,18 @@ export default function Realizacoes() {
                     href={item.conteudoReferencia}
                     descricao={item.tituloBotao}
                     corFundo="cor.P3"
-                    funcaoEvento={() => {
-                      console.log('teste');
+                    aoClicar={() => {
+                      setIndice(index);
                     }}
                   />
                 </GridItem>
               );
             })}
           </Grid>
-        </BannerNavegacao>
+        </SecaoNavegacao>
       </Center>
       <Center>
-        <CartaoApresentacao />
+        <CartaoConteudo conteudo={conteudoPagina[indice]} />
       </Center>
     </Flex>
   );

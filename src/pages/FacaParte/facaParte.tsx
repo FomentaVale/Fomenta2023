@@ -1,5 +1,5 @@
 import { Box, Heading, Flex, Button, Text } from '@chakra-ui/react';
-import BannerNavegacao from '../../components/bannerNavegacao/bannerNavegacao';
+import BannerNavegacao from '../../components/secaoNavegacao/secaoNavegacao';
 
 export default function FacaParte() {
   return (

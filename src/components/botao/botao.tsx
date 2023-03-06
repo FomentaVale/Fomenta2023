@@ -13,7 +13,7 @@ interface Props {
   corTextoHover?: string;
   marginX?: string;
   tamanhoBotao?: object;
-  funcaoEvento: () => void;
+  aoClicar?: () => void;
 }
 
 const botaoEstilizado = (props: Props) => {
@@ -26,7 +26,7 @@ const botaoEstilizado = (props: Props) => {
       border={props.borda}
       bg={props.corFundo || 'cor.P2'}
       _hover={{ bg: props.corFundoHover || 'cor.P3' }}
-      onClick={props.funcaoEvento}
+      onClick={props.aoClicar}
     >
       <Text
         fontSize={{ base: '16px', lg: '18px' }}
