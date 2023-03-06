@@ -101,7 +101,6 @@ export default function QuemSomos() {
       <Flex
         as="section"
         h="100vh"
-        w="100%"
         bg="cor.S1"
         flexDir={{ base: 'column' }}
         alignItems={{ base: 'center' }}
@@ -123,6 +122,7 @@ export default function QuemSomos() {
           delectus distinctio accusamus, suscipit minima.
         </Text>
       </Flex>
+
       {/* Section Equipe Atual */}
       <Flex
         as="section"
@@ -281,8 +281,8 @@ export default function QuemSomos() {
           fontFamily="Gotham-Black"
           fontSize={{ base: '24px', lg: '48px' }}
           w={{ base: '100%', lg: '70%' }}
-          borderBottom="2px solid"
-          borderColor="cor.P2"
+          borderBottom="3px solid"
+          borderColor="cor.S3"
           textAlign="center"
         >
           GRANDES EMPRESAS CONOSCO!
@@ -326,7 +326,7 @@ export default function QuemSomos() {
           fontFamily="Gotham-Black"
           fontSize={{ base: '24px', lg: '48px' }}
           w={{ base: '100%', lg: '60%' }}
-          borderBottom="2px solid"
+          borderBottom="3px solid"
           borderColor="cor.P2"
           textAlign="center"
         >
