@@ -1,14 +1,24 @@
-import { Flex, Image, Text } from '@chakra-ui/react';
+import { Flex, Image, Link, Text } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 
-export default function EquipeCard() {
+interface Props {
+  imagemMembro: string;
+  top: string;
+  left: string;
+  nomeMembro: string;
+  cargoMembro: string;
+  linkedin: string;
+  github: string;
+}
+
+export default function EquipeCard(props: Props) {
   return (
-    <Flex position="relative">
-      <Image src="/img/quemSomos/Guilherme.png" />
+    <Flex position="relative" alignItems="center" justifyContent="center">
+      <Image src={props.imagemMembro} />
       <Flex
         position="absolute"
-        top="200px"
-        left="95px"
+        top={props.top}
+        left={props.left}
         h="60px"
         w="110px"
         bgColor="cor.S3"
@@ -19,8 +29,8 @@ export default function EquipeCard() {
         gap={{ base: '8px' }}
       >
         <Flex flexDir="column" alignItems="center">
-          <Text>Guilherme C.</Text>
-          <Text>Estagiário</Text>
+          <Text>{props.nomeMembro}</Text>
+          <Text>{props.cargoMembro}</Text>
         </Flex>
         <Flex
           w="100%"
@@ -28,30 +38,22 @@ export default function EquipeCard() {
           justifyContent={{ base: 'center' }}
           gap={{ base: '8px' }}
         >
-          <Icon
-            className="facebook"
-            icon="ri:facebook-box-fill"
-            color="white"
-            height="20px"
-          />
-          <Icon
-            className="instagram"
-            icon="mdi:instagram"
-            color="white"
-            height="20px"
-          />
-          <Icon
-            className="linkedin"
-            icon="mdi:linkedin"
-            color="white"
-            height="20px"
-          />
-          <Icon
-            className="github"
-            icon="mdi:github"
-            color="white"
-            height="20px"
-          />
+          <Link target="_blank" href={props.linkedin}>
+            <Icon
+              className="linkedin"
+              icon="mdi:linkedin"
+              color="white"
+              height="20px"
+            />
+          </Link>
+          <Link target="_blank" href={props.github}>
+            <Icon
+              className="github"
+              icon="mdi:github"
+              color="white"
+              height="20px"
+            />
+          </Link>
         </Flex>
       </Flex>
     </Flex>
