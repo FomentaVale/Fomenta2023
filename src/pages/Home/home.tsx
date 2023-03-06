@@ -1,13 +1,12 @@
-import { Box, Flex, Image } from '@chakra-ui/react';
+import { Flex, Image } from '@chakra-ui/react';
 import Botao from '../../components/botao/botao';
-import Carrossel from '../../components/carrossel/carrossel';
 import CaixaInformacoes from '../../components/caixaInformacoes/caixaInformacoes';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 
 export default function Home() {
   const imagensCarrosselPrincipal = [
