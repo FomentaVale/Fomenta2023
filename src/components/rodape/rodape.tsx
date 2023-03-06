@@ -1,10 +1,13 @@
 import {
   Flex,
+  Grid,
+  GridItem,
   Image,
   Link,
   ListItem,
   Text,
   UnorderedList,
+  useMediaQuery,
   useToast,
 } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
@@ -13,6 +16,7 @@ import './style.css';
 
 export default function Rodape() {
   const toast = useToast();
+  const [larguraTelaMaior768] = useMediaQuery('(min-width:768px)');
   return (
     <>
       <Flex
@@ -205,47 +209,131 @@ export default function Rodape() {
           gap="50px"
           alignItems="center"
         >
-          <UnorderedList
-            listStyleType="none"
-            display="flex"
-            flexDirection={{ base: 'column', md: 'row' }}
-            gap={{ base: '10px', md: '0px' }}
-            mt={{ base: '20px', md: '10px' }}
-            w="100%"
-            alignItems={{ base: 'center' }}
-            justifyContent={{ md: 'space-evenly' }}
-          >
-            <LinkPage to="/">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                HOME
-              </ListItem>
-            </LinkPage>
-            <LinkPage to="/oqueSomos">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                O QUE SOMOS
-              </ListItem>
-            </LinkPage>
-            <LinkPage to="/quemSomos">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                QUEM SOMOS
-              </ListItem>
-            </LinkPage>
-            <LinkPage to="/realizacoes">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                REALIZAÇÕES
-              </ListItem>
-            </LinkPage>
-            <LinkPage to="/facaParte">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                FAÇA PARTE
-              </ListItem>
-            </LinkPage>
-            <LinkPage to="/politica">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                POLÍTICAS DE PRIVICIDADE
-              </ListItem>
-            </LinkPage>
-          </UnorderedList>
+          {larguraTelaMaior768 ? (
+            <UnorderedList
+              listStyleType="none"
+              display="flex"
+              flexDirection={{ base: 'column', md: 'row' }}
+              gap={{ base: '10px', md: '0px' }}
+              mt={{ base: '20px', md: '10px' }}
+              w="100%"
+              alignItems={{ base: 'center' }}
+              justifyContent={{ md: 'space-evenly' }}
+            >
+              <LinkPage to="/">
+                <ListItem
+                  textDecoration="underline"
+                  _hover={{ color: 'cor.P3' }}
+                >
+                  HOME
+                </ListItem>
+              </LinkPage>
+              <LinkPage to="/oqueSomos">
+                <ListItem
+                  textDecoration="underline"
+                  _hover={{ color: 'cor.P3' }}
+                >
+                  O QUE SOMOS
+                </ListItem>
+              </LinkPage>
+              <LinkPage to="/quemSomos">
+                <ListItem
+                  textDecoration="underline"
+                  _hover={{ color: 'cor.P3' }}
+                >
+                  QUEM SOMOS
+                </ListItem>
+              </LinkPage>
+              <LinkPage to="/realizacoes">
+                <ListItem
+                  textDecoration="underline"
+                  _hover={{ color: 'cor.P3' }}
+                >
+                  REALIZAÇÕES
+                </ListItem>
+              </LinkPage>
+              <LinkPage to="/facaParte">
+                <ListItem
+                  textDecoration="underline"
+                  _hover={{ color: 'cor.P3' }}
+                >
+                  FAÇA PARTE
+                </ListItem>
+              </LinkPage>
+              <LinkPage to="/politica">
+                <ListItem
+                  textDecoration="underline"
+                  _hover={{ color: 'cor.P3' }}
+                >
+                  POLÍTICAS DE PRIVICIDADE
+                </ListItem>
+              </LinkPage>
+            </UnorderedList>
+          ) : (
+            <Grid
+              textAlign="center"
+              mt={{ base: '20px', md: '10px' }}
+              h="100%"
+              as="ul"
+              listStyleType="none"
+              templateRows="repeat(2, 1fr)"
+              templateColumns="repeat(2, 1fr)"
+              gap={4}
+            >
+              <GridItem
+                as="li"
+                colSpan={2}
+                textDecoration="underline"
+                _hover={{ color: 'cor.P3' }}
+              >
+                <LinkPage to="/">HOME</LinkPage>
+              </GridItem>
+              <GridItem
+                as="li"
+                colSpan={2}
+                textDecoration="underline"
+                _hover={{ color: 'cor.P3' }}
+              >
+                <LinkPage to="/">O QUE SOMOS</LinkPage>
+              </GridItem>
+              <GridItem
+                as="li"
+                colSpan={2}
+                textDecoration="underline"
+                _hover={{ color: 'cor.P3' }}
+              >
+                <LinkPage to="/"> QUEM SOMOS</LinkPage>
+              </GridItem>
+              <GridItem
+                as="li"
+                colSpan={2}
+                textDecoration="underline"
+                _hover={{ color: 'cor.P3' }}
+              >
+                <LinkPage to="/"> REALIZAÇÕES</LinkPage>
+              </GridItem>
+              <GridItem
+                as="li"
+                colSpan={2}
+                textDecoration="underline"
+                _hover={{ color: 'cor.P3' }}
+              >
+                <LinkPage to="/"> FAÇA PARTE</LinkPage>
+              </GridItem>
+              <GridItem
+                as="li"
+                colSpan={2}
+                textDecoration="underline"
+                _hover={{ color: 'cor.P3' }}
+              >
+                <LinkPage to="/"> POLÍTICAS DE PRIVICIDADE</LinkPage>
+              </GridItem>
+
+              <GridItem colSpan={2} bg="papayawhip" />
+              <GridItem colSpan={4} bg="tomato" />
+            </Grid>
+          )}
+
           <Text
             textAlign="center"
             fontSize={{ base: '8px', sm: '12px' }}
