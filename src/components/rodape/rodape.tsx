@@ -20,6 +20,7 @@ export default function Rodape() {
   return (
     <>
       <Flex
+        as="section"
         bg="cor.S1"
         h="100%"
         flexDir={{ base: 'column' }}

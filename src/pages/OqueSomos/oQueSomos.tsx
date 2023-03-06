@@ -187,6 +187,7 @@ export default function OqueSomos() {
     <>
       {/* Section O que somos */}
       <Flex
+        as="section"
         className="oqueSomos-container"
         h={{ base: '100%', lg: '100vh' }}
         alignItems="center"
@@ -259,6 +260,7 @@ export default function OqueSomos() {
       {/* Section Trajetoria */}
 
       <Flex
+        as="section"
         bg="cor.S1"
         flexDir={{ base: 'column', lg: 'column' }}
         padding={{ base: '20px 10px', lg: '50px 0px' }}
@@ -399,6 +401,7 @@ export default function OqueSomos() {
             </Flex>
           </Flex>
           <Flex
+            as="section"
             alignItems={{ base: 'center' }}
             flexDir={{ base: 'column' }}
             fontFamily="Gotham-Medium"
@@ -466,7 +469,7 @@ export default function OqueSomos() {
       </Flex>
 
       {/* Section Anos */}
-      <Flex h="100%" flexDir={{ base: 'column' }}>
+      <Flex as="section" h="100%" flexDir={{ base: 'column' }}>
         {historico.map((item, index) => (
           <HistoricoAnos
             key={index}
