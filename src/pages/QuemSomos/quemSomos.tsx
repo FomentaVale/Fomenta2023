@@ -1,33 +1,75 @@
-import { Flex, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react';
+import {
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 import EquipeCard from '../../components/equipeCard/equipeCard';
 
 export default function QuemSomos() {
   const empresas = [
     {
       logo: '/public/img/logos/Parceiros/avatar-removebg-preview.png',
-      caminho: '',
+      site: '',
     },
     {
       logo: '/public/img/logos/Parceiros/Casa_Di_Conti_logo cdc azul.png',
-      caminho: '',
+      site: '',
     },
     {
       logo: '/public/img/logos/Parceiros/download-removebg-preview 1.png',
-      caminho: '',
+      site: '',
     },
     {
       logo: '/public/img/logos/Parceiros/Sandrin - Logo-01.png',
-      caminho: '',
+      site: '',
     },
     {
       logo: '/public/img/logos/Parceiros/verkom 1.png',
-      caminho: '',
+      site: '',
     },
     {
       logo: '/public/img/logos/Parceiros/wm10.png',
-      caminho: '',
+      site: '',
     },
   ];
+
+  const historicoEquipe = [
+    {
+      nome: 'Kelvin B.',
+      cargo: 'Tech Lead',
+      linkedin: 'https://www.linkedin.com/in/kelvin-brancalh%C3%A3o/',
+    },
+    {
+      nome: 'Fulaninho',
+      cargo: 'Estagiário',
+      linkedin: '',
+    },
+    {
+      nome: 'Fulanão',
+      cargo: 'Gestor',
+      linkedin: '',
+    },
+    {
+      nome: 'Siclano',
+      cargo: 'Estagiário',
+      linkedin: '',
+    },
+    {
+      nome: 'Beltrano',
+      cargo: 'Estagiário',
+      linkedin: '',
+    },
+    {
+      nome: 'Jorge',
+      cargo: 'Agilista',
+      linkedin: '',
+    },
+  ];
+
   return (
     <>
       {/* Section O que Somos*/}
@@ -43,8 +85,9 @@ export default function QuemSomos() {
         padding={{ base: '20px' }}
         color="white"
         textAlign={{ base: 'justify' }}
+        fontFamily="Gotham-Light"
       >
-        <Heading>QUEM SOMOS</Heading>
+        <Heading fontFamily="Gotham-Black">QUEM SOMOS</Heading>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
           recusandae quaerat cumque rem. Inventore repudiandae, odit magnam vel,
@@ -63,19 +106,21 @@ export default function QuemSomos() {
         alignItems={{ base: 'center' }}
         justifyContent={{ base: 'center' }}
         padding={{ base: '20px' }}
+        fontFamily="Gotham-Light"
       >
         <Flex
           flexDir="column"
           alignItems={{ base: 'center' }}
           justifyContent={{ base: 'center' }}
-          textAlign={{ base: 'justify' }}
+          textAlign={{ base: 'center' }}
           gap={{ base: '10px' }}
         >
           <Heading
-            w="80%"
+            w="100%"
             borderBottom="2px solid"
             borderColor="cor.P2"
             textAlign="center"
+            fontFamily="Gotham-Black"
           >
             EQUIPE ATUAL
           </Heading>
@@ -121,7 +166,7 @@ export default function QuemSomos() {
               github="https://github.com/TNDNS"
             />
             <Heading fontFamily="POLYA" textAlign="center" color="cor.P1">
-              Nosso Vale é Um ambiente Fértil De Oportunidades
+              NOSSO VALE É UM AMBIENTE FÉRTIL DE OPORTUNIDADES
             </Heading>
             <EquipeCard
               imagemMembro="/img/quemSomos/JoaoPedro.png"
@@ -177,8 +222,10 @@ export default function QuemSomos() {
         color="white"
         padding={{ base: '20px' }}
         gap={{ base: '20px' }}
+        fontFamily="Gotham-Light"
       >
         <Heading
+          fontFamily="Gotham-Black"
           fontSize={{ base: '24px' }}
           w="100%"
           borderBottom="2px solid"
@@ -197,7 +244,7 @@ export default function QuemSomos() {
               key={index}
               as="a"
               target="_blank"
-              href={item.caminho}
+              href={item.site}
               colSpan={{ base: 1, lg: 2 }}
               bg="#D9D9D9"
               borderRadius="16px"
@@ -214,13 +261,16 @@ export default function QuemSomos() {
       <Flex
         as="section"
         mt="50px"
+        mb="50px"
         flexDir="column"
         justifyContent={{ base: 'center' }}
         alignItems={{ base: 'center' }}
         padding={{ base: '20px' }}
         gap={{ base: '20px' }}
+        fontFamily="Gotham-Light"
       >
         <Heading
+          fontFamily="Gotham-Black"
           fontSize={{ base: '24px' }}
           w="100%"
           borderBottom="2px solid"
@@ -229,6 +279,30 @@ export default function QuemSomos() {
         >
           QUEM PASSOU POR AQUI
         </Heading>
+        <Grid
+          templateRows="repeat(2, 1fr)"
+          templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
+          gap={6}
+        >
+          {historicoEquipe.map((item, index) => (
+            <GridItem
+              key={index}
+              as="a"
+              target="_blank"
+              href={item.linkedin}
+              colSpan={{ base: 1, lg: 2 }}
+              bgColor="cor.P2"
+              padding="10px"
+              color="white"
+              _hover={{ bgColor: 'cor.S3' }}
+            >
+              <Stack textAlign="center">
+                <Text fontSize="16px">{item.nome}</Text>
+                <Text fontSize="12px">{item.cargo}</Text>
+              </Stack>
+            </GridItem>
+          ))}
+        </Grid>
       </Flex>
     </>
   );
