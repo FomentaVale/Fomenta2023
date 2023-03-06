@@ -81,14 +81,14 @@ export default function QuemSomos() {
         flexDir={{ base: 'column' }}
         alignItems={{ base: 'center' }}
         justifyContent={{ base: 'center' }}
-        gap={{ base: '40px' }}
-        padding={{ base: '20px' }}
+        gap={{ base: '40px', lg: '60px' }}
+        padding={{ base: '20px', lg: '0px 150px' }}
         color="white"
         textAlign={{ base: 'justify' }}
         fontFamily="Gotham-Light"
       >
         <Heading fontFamily="Gotham-Black">QUEM SOMOS</Heading>
-        <Text>
+        <Text w={{ lg: '70%' }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
           recusandae quaerat cumque rem. Inventore repudiandae, odit magnam vel,
           laudantium at mollitia, veritatis iusto error quam reprehenderit illum
@@ -105,26 +105,28 @@ export default function QuemSomos() {
         flexDir="column"
         alignItems={{ base: 'center' }}
         justifyContent={{ base: 'center' }}
-        padding={{ base: '20px' }}
+        padding={{ base: '20px', lg: '0px 40px' }}
         fontFamily="Gotham-Light"
       >
         <Flex
           flexDir="column"
           alignItems={{ base: 'center' }}
           justifyContent={{ base: 'center' }}
-          textAlign={{ base: 'center' }}
+          textAlign={{ base: 'center', lg: 'justify' }}
           gap={{ base: '10px' }}
+          w={{ lg: '50%' }}
         >
           <Heading
-            w="100%"
+            w="80%"
             borderBottom="2px solid"
             borderColor="cor.P2"
-            textAlign="center"
+            textAlign={{ base: 'center' }}
             fontFamily="Gotham-Black"
+            fontSize={{ lg: '48px' }}
           >
             EQUIPE ATUAL
           </Heading>
-          <Text>
+          <Text fontSize={{ lg: '20px' }}>
             Composto por 3 especialistas na área de educação, tecnologia e
             gestão de pessoas, e um grupo de jovens universitários em processo
             de aceleração profissional.
@@ -135,11 +137,17 @@ export default function QuemSomos() {
           flexDirection={{ base: 'column' }}
           gap={{ base: '50px' }}
         >
-          <Flex flexDirection={{ base: 'column' }} gap={{ base: '50px' }}>
+          <Flex
+            flexDirection={{ base: 'column', lg: 'row' }}
+            justifyContent={{ lg: 'space-around' }}
+            gap={{ base: '50px' }}
+          >
             <EquipeCard
               imagemMembro="/img/quemSomos/Guilherme.png"
-              top="230px"
-              left="100px"
+              topMobile="230px"
+              leftMobile="100px"
+              topDesktop="275px"
+              leftDesktop="110px"
               nomeMembro="Guilherme C."
               cargoMembro="Estagiário"
               linkedin="https://www.linkedin.com/in/guicardososilva/"
@@ -147,19 +155,27 @@ export default function QuemSomos() {
             />
             <EquipeCard
               imagemMembro="/img/quemSomos/Lucas.png"
-              top="160px"
-              left="100px"
+              topMobile="160px"
+              leftMobile="100px"
+              topDesktop="180px"
+              leftDesktop="120px"
               nomeMembro="Lucas B."
               cargoMembro="Estagiário"
               linkedin="https://www.linkedin.com/in/lucas-brancalhao/"
               github="https://github.com/lucas51512"
             />
           </Flex>
-          <Flex flexDirection={{ base: 'column' }} gap={{ base: '50px' }}>
+          <Flex
+            flexDirection={{ base: 'column', lg: 'row' }}
+            alignItems={{ lg: 'center' }}
+            gap={{ base: '50px' }}
+          >
             <EquipeCard
               imagemMembro="/img/quemSomos/Nicolas.png"
-              top="170px"
-              left="100px"
+              topMobile="170px"
+              leftMobile="100px"
+              topDesktop="210px"
+              leftDesktop="120px"
               nomeMembro="Nicolas P."
               cargoMembro="Estagiário"
               linkedin="https://www.linkedin.com/in/nicolasppenga/"
@@ -170,19 +186,27 @@ export default function QuemSomos() {
             </Heading>
             <EquipeCard
               imagemMembro="/img/quemSomos/JoaoPedro.png"
-              top="200px"
-              left="120px"
+              topMobile="200px"
+              leftMobile="120px"
+              topDesktop="230px"
+              leftDesktop="145px"
               nomeMembro="João Pedro C."
               cargoMembro="Estagiário"
               linkedin="https://www.linkedin.com/in/caetanojpo/"
               github="https://github.com/caetanojpo"
             />
           </Flex>
-          <Flex flexDirection={{ base: 'column' }} gap={{ base: '50px' }}>
+          <Flex
+            flexDirection={{ base: 'column', lg: 'row' }}
+            justifyContent={{ lg: 'space-around' }}
+            gap={{ base: '50px' }}
+          >
             <EquipeCard
               imagemMembro="/img/quemSomos/Rodrigo.png"
-              top="160px"
-              left="100px"
+              topMobile="160px"
+              leftMobile="100px"
+              topDesktop="170px"
+              leftDesktop="115px"
               nomeMembro="Rodrigo R."
               cargoMembro="Estagiário"
               linkedin="https://www.linkedin.com/in/rodrigorochajose/"
@@ -190,8 +214,10 @@ export default function QuemSomos() {
             />
             <EquipeCard
               imagemMembro="/img/quemSomos/Almir.png"
-              top="220px"
-              left="100px"
+              topMobile="220px"
+              leftMobile="100px"
+              topDesktop="270px"
+              leftDesktop="120px"
               nomeMembro="Almir C."
               cargoMembro="Gestor"
               linkedin="https://www.linkedin.com/in/almircamolesi/"
@@ -199,8 +225,10 @@ export default function QuemSomos() {
             />
             <EquipeCard
               imagemMembro="/img/quemSomos/Daniela.png"
-              top="190px"
-              left="100px"
+              topMobile="190px"
+              leftMobile="100px"
+              topDesktop="180px"
+              leftDesktop="110px"
               nomeMembro="Daniela C."
               cargoMembro="Agilista"
               linkedin="https://www.linkedin.com/in/danielaantoniocamolesi/"

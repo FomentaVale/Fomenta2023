@@ -3,8 +3,10 @@ import { Icon } from '@iconify/react';
 
 interface Props {
   imagemMembro: string;
-  top: string;
-  left: string;
+  topMobile: string;
+  topDesktop: string;
+  leftMobile: string;
+  leftDesktop: string;
   nomeMembro: string;
   cargoMembro: string;
   linkedin: string;
@@ -14,11 +16,11 @@ interface Props {
 export default function EquipeCard(props: Props) {
   return (
     <Flex position="relative" alignItems="center" justifyContent="center">
-      <Image src={props.imagemMembro} />
+      <Image maxW="315px" maxH="315px" src={props.imagemMembro} />
       <Flex
         position="absolute"
-        top={props.top}
-        left={props.left}
+        top={{ base: props.topMobile, lg: props.topDesktop }}
+        left={{ base: props.leftMobile, lg: props.leftDesktop }}
         h="60px"
         w="110px"
         bgColor="cor.S3"
