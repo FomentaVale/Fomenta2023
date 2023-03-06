@@ -13,6 +13,7 @@ interface Props {
   corTextoHover?: string;
   marginX?: string;
   tamanhoBotao?: object;
+  funcaoEvento: () => void;
 }
 
 const botaoEstilizado = (props: Props) => {
@@ -25,11 +26,13 @@ const botaoEstilizado = (props: Props) => {
       border={props.borda}
       bg={props.corFundo || 'cor.P2'}
       _hover={{ bg: props.corFundoHover || 'cor.P3' }}
+      onClick={props.funcaoEvento}
     >
       <Text
         fontSize={{ base: '16px', lg: '18px' }}
         fontFamily={'Gotham-Bold'}
         fontWeight={900}
+        whiteSpace="pre-wrap"
       >
         {props.descricao}
       </Text>
