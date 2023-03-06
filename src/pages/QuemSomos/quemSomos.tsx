@@ -1,14 +1,31 @@
-import { Flex, Heading, Text } from '@chakra-ui/react';
+import { Flex, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react';
 import EquipeCard from '../../components/equipeCard/equipeCard';
 
 export default function QuemSomos() {
-  const equipeAtual = [
+  const empresas = [
     {
-      imagemMembro: '/img/quemSomos/Guilherme.png',
-      nomeMembro: 'Guilherme C.',
-      cargoMembro: 'Estagiário',
-      linkedin: 'https://www.linkedin.com/in/guicardososilva/',
-      github: 'https://github.com/Relayzinho',
+      logo: '/public/img/logos/Parceiros/avatar-removebg-preview.png',
+      caminho: '',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/Casa_Di_Conti_logo cdc azul.png',
+      caminho: '',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/download-removebg-preview 1.png',
+      caminho: '',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/Sandrin - Logo-01.png',
+      caminho: '',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/verkom 1.png',
+      caminho: '',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/wm10.png',
+      caminho: '',
     },
   ];
   return (
@@ -17,7 +34,7 @@ export default function QuemSomos() {
       <Flex
         as="section"
         h="100vh"
-        w="100vw"
+        w="100%"
         bg="cor.S1"
         flexDir={{ base: 'column' }}
         alignItems={{ base: 'center' }}
@@ -41,6 +58,7 @@ export default function QuemSomos() {
       {/* Section Equipe Atual */}
       <Flex
         as="section"
+        mt="50px"
         flexDir="column"
         alignItems={{ base: 'center' }}
         justifyContent={{ base: 'center' }}
@@ -75,7 +93,7 @@ export default function QuemSomos() {
           <Flex flexDirection={{ base: 'column' }} gap={{ base: '50px' }}>
             <EquipeCard
               imagemMembro="/img/quemSomos/Guilherme.png"
-              top="250px"
+              top="230px"
               left="100px"
               nomeMembro="Guilherme C."
               cargoMembro="Estagiário"
@@ -84,7 +102,7 @@ export default function QuemSomos() {
             />
             <EquipeCard
               imagemMembro="/img/quemSomos/Lucas.png"
-              top="180px"
+              top="160px"
               left="100px"
               nomeMembro="Lucas B."
               cargoMembro="Estagiário"
@@ -95,8 +113,8 @@ export default function QuemSomos() {
           <Flex flexDirection={{ base: 'column' }} gap={{ base: '50px' }}>
             <EquipeCard
               imagemMembro="/img/quemSomos/Nicolas.png"
-              top="180px"
-              left="110px"
+              top="170px"
+              left="100px"
               nomeMembro="Nicolas P."
               cargoMembro="Estagiário"
               linkedin="https://www.linkedin.com/in/nicolasppenga/"
@@ -118,7 +136,7 @@ export default function QuemSomos() {
           <Flex flexDirection={{ base: 'column' }} gap={{ base: '50px' }}>
             <EquipeCard
               imagemMembro="/img/quemSomos/Rodrigo.png"
-              top="175px"
+              top="160px"
               left="100px"
               nomeMembro="Rodrigo R."
               cargoMembro="Estagiário"
@@ -127,7 +145,7 @@ export default function QuemSomos() {
             />
             <EquipeCard
               imagemMembro="/img/quemSomos/Almir.png"
-              top="250px"
+              top="220px"
               left="100px"
               nomeMembro="Almir C."
               cargoMembro="Gestor"
@@ -139,12 +157,78 @@ export default function QuemSomos() {
               top="190px"
               left="100px"
               nomeMembro="Daniela C."
-              cargoMembro="Scrum Master"
+              cargoMembro="Agilista"
               linkedin="https://www.linkedin.com/in/danielaantoniocamolesi/"
               github=""
             />
           </Flex>
         </Flex>
+      </Flex>
+
+      {/* Section Empresas */}
+
+      <Flex
+        as="section"
+        mt="50px"
+        flexDir="column"
+        justifyContent={{ base: 'center' }}
+        alignItems={{ base: 'center' }}
+        bgColor="cor.S1"
+        color="white"
+        padding={{ base: '20px' }}
+        gap={{ base: '20px' }}
+      >
+        <Heading
+          fontSize={{ base: '24px' }}
+          w="100%"
+          borderBottom="2px solid"
+          borderColor="cor.P2"
+          textAlign="center"
+        >
+          GRANDES EMPRESAS CONOSCO!
+        </Heading>
+        <Grid
+          templateRows="repeat(2, 1fr)"
+          templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(5, 1fr)' }}
+          gap={6}
+        >
+          {empresas.map((item, index) => (
+            <GridItem
+              key={index}
+              as="a"
+              target="_blank"
+              href={item.caminho}
+              colSpan={{ base: 1, lg: 2 }}
+              bg="#D9D9D9"
+              borderRadius="16px"
+              padding="10px"
+            >
+              <Image src={item.logo} />
+            </GridItem>
+          ))}
+        </Grid>
+      </Flex>
+
+      {/* Section Histórico */}
+
+      <Flex
+        as="section"
+        mt="50px"
+        flexDir="column"
+        justifyContent={{ base: 'center' }}
+        alignItems={{ base: 'center' }}
+        padding={{ base: '20px' }}
+        gap={{ base: '20px' }}
+      >
+        <Heading
+          fontSize={{ base: '24px' }}
+          w="100%"
+          borderBottom="2px solid"
+          borderColor="cor.P2"
+          textAlign="center"
+        >
+          QUEM PASSOU POR AQUI
+        </Heading>
       </Flex>
     </>
   );
