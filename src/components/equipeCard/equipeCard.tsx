@@ -16,9 +16,13 @@ interface Props {
 export default function EquipeCard(props: Props) {
   return (
     <Flex position="relative" alignItems="center" justifyContent="center">
-      <Image maxW="315px" maxH="315px" src={props.imagemMembro} />
+      <Image
+        maxW={{ lg: '315px' }}
+        maxH={{ lg: '315px' }}
+        src={props.imagemMembro}
+      />
       <Flex
-        position="absolute"
+        position={{ base: 'absolute' }}
         top={{ base: props.topMobile, lg: props.topDesktop }}
         left={{ base: props.leftMobile, lg: props.leftDesktop }}
         h="60px"

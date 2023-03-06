@@ -68,6 +68,31 @@ export default function QuemSomos() {
       cargo: 'Agilista',
       linkedin: '',
     },
+    {
+      nome: 'Fulaninho',
+      cargo: 'Estagiário',
+      linkedin: '',
+    },
+    {
+      nome: 'Fulanão',
+      cargo: 'Gestor',
+      linkedin: '',
+    },
+    {
+      nome: 'Siclano',
+      cargo: 'Estagiário',
+      linkedin: '',
+    },
+    {
+      nome: 'Beltrano',
+      cargo: 'Estagiário',
+      linkedin: '',
+    },
+    {
+      nome: 'Jorge',
+      cargo: 'Agilista',
+      linkedin: '',
+    },
   ];
 
   return (
@@ -249,13 +274,13 @@ export default function QuemSomos() {
         bgColor="cor.S1"
         color="white"
         padding={{ base: '20px' }}
-        gap={{ base: '20px' }}
+        gap={{ base: '20px', lg: '50px' }}
         fontFamily="Gotham-Light"
       >
         <Heading
           fontFamily="Gotham-Black"
-          fontSize={{ base: '24px' }}
-          w="100%"
+          fontSize={{ base: '24px', lg: '48px' }}
+          w={{ base: '100%', lg: '70%' }}
           borderBottom="2px solid"
           borderColor="cor.P2"
           textAlign="center"
@@ -263,9 +288,9 @@ export default function QuemSomos() {
           GRANDES EMPRESAS CONOSCO!
         </Heading>
         <Grid
-          templateRows="repeat(2, 1fr)"
+          templateRows="repeat(auto, 1fr)"
           templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(5, 1fr)' }}
-          gap={6}
+          gap={{ base: 6, lg: 20 }}
         >
           {empresas.map((item, index) => (
             <GridItem
@@ -273,12 +298,12 @@ export default function QuemSomos() {
               as="a"
               target="_blank"
               href={item.site}
-              colSpan={{ base: 1, lg: 2 }}
+              colSpan={{ base: 1, lg: 1 }}
               bg="#D9D9D9"
               borderRadius="16px"
               padding="10px"
             >
-              <Image src={item.logo} />
+              <Image maxH={'120px'} maxW={'120px'} src={item.logo} />
             </GridItem>
           ))}
         </Grid>
@@ -294,13 +319,13 @@ export default function QuemSomos() {
         justifyContent={{ base: 'center' }}
         alignItems={{ base: 'center' }}
         padding={{ base: '20px' }}
-        gap={{ base: '20px' }}
+        gap={{ base: '20px', lg: '50px' }}
         fontFamily="Gotham-Light"
       >
         <Heading
           fontFamily="Gotham-Black"
-          fontSize={{ base: '24px' }}
-          w="100%"
+          fontSize={{ base: '24px', lg: '48px' }}
+          w={{ base: '100%', lg: '60%' }}
           borderBottom="2px solid"
           borderColor="cor.P2"
           textAlign="center"
@@ -308,9 +333,9 @@ export default function QuemSomos() {
           QUEM PASSOU POR AQUI
         </Heading>
         <Grid
-          templateRows="repeat(2, 1fr)"
-          templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
-          gap={6}
+          templateRows="repeat(auto, 1fr)"
+          templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(6, 1fr)' }}
+          gap={{ base: 6, lg: 10 }}
         >
           {historicoEquipe.map((item, index) => (
             <GridItem
@@ -318,11 +343,12 @@ export default function QuemSomos() {
               as="a"
               target="_blank"
               href={item.linkedin}
-              colSpan={{ base: 1, lg: 2 }}
+              colSpan={{ base: 1 }}
               bgColor="cor.P2"
               padding="10px"
               color="white"
               _hover={{ bgColor: 'cor.S3' }}
+              w={{ lg: '120px' }}
             >
               <Stack textAlign="center">
                 <Text fontSize="16px">{item.nome}</Text>
