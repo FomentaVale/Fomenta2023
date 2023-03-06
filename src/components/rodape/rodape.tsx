@@ -295,7 +295,7 @@ export default function Rodape() {
                 textDecoration="underline"
                 _hover={{ color: 'cor.P3' }}
               >
-                <LinkPage to="/">O QUE SOMOS</LinkPage>
+                <LinkPage to="/oqueSomos">O QUE SOMOS</LinkPage>
               </GridItem>
               <GridItem
                 as="li"
@@ -303,7 +303,7 @@ export default function Rodape() {
                 textDecoration="underline"
                 _hover={{ color: 'cor.P3' }}
               >
-                <LinkPage to="/"> QUEM SOMOS</LinkPage>
+                <LinkPage to="/quemSomos"> QUEM SOMOS</LinkPage>
               </GridItem>
               <GridItem
                 as="li"
@@ -311,7 +311,7 @@ export default function Rodape() {
                 textDecoration="underline"
                 _hover={{ color: 'cor.P3' }}
               >
-                <LinkPage to="/"> REALIZAÇÕES</LinkPage>
+                <LinkPage to="/realizacoes"> REALIZAÇÕES</LinkPage>
               </GridItem>
               <GridItem
                 as="li"
@@ -319,7 +319,7 @@ export default function Rodape() {
                 textDecoration="underline"
                 _hover={{ color: 'cor.P3' }}
               >
-                <LinkPage to="/"> FAÇA PARTE</LinkPage>
+                <LinkPage to="/facaparte"> FAÇA PARTE</LinkPage>
               </GridItem>
               <GridItem
                 as="li"
@@ -327,7 +327,7 @@ export default function Rodape() {
                 textDecoration="underline"
                 _hover={{ color: 'cor.P3' }}
               >
-                <LinkPage to="/"> POLÍTICAS DE PRIVICIDADE</LinkPage>
+                <LinkPage to="/politica"> POLÍTICAS DE PRIVICIDADE</LinkPage>
               </GridItem>
 
               <GridItem colSpan={2} bg="papayawhip" />
