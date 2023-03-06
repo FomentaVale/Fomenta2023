@@ -164,7 +164,7 @@ export default function QuemSomos() {
         >
           <Flex
             flexDirection={{ base: 'column', lg: 'row' }}
-            justifyContent={{ lg: 'space-around' }}
+            justifyContent={{ lg: 'space-evenly' }}
             gap={{ base: '50px' }}
           >
             <EquipeCard
