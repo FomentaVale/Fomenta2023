@@ -42,34 +42,28 @@ export default function Navbar() {
           <Botao
             to="/realizacoes"
             descricao="Realizações"
-            wLink="150px"
             marginX="5px"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
             corFundo="cor.P2"
             corFundoHover="cor.P3"
-            marginX="5px"
             tamanhoBotao={{ md: '100px', lg: '150px' }}
           />
           <Botao
             to="/coworking"
             descricao="Coworking"
-            wLink="150px"
             marginX="5px"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
             corFundo="cor.P2"
             corFundoHover="cor.P3"
-            marginX="5px"
             tamanhoBotao={{ md: '100px', lg: '150px' }}
           />
           <Botao
             to="/facaParte"
             descricao="Faça Parte"
-            wLink="150px"
             marginX="5px"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
             corFundo="cor.P2"
             corFundoHover="cor.P3"
-            marginX="5px"
             tamanhoBotao={{ md: '100px', lg: '150px' }}
           />
         </Flex>
