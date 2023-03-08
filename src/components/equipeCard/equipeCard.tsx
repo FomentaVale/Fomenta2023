@@ -52,14 +52,6 @@ export default function EquipeCard(props: Props) {
       setTamanhoImagem('70vh');
       setMostraFiltro('0.3');
     }
-
-    if (mostraInformacoes == 'none') {
-      setTimeout(() => {
-        setMostraInformacoes('flex');
-      }, 200);
-    } else {
-      setMostraInformacoes('none');
-    }
   }
 
   useEffect(() => {
@@ -67,6 +59,14 @@ export default function EquipeCard(props: Props) {
       setArredondaBorda('10px 10px 0px 0px');
     } else {
       setArredondaBorda('10px');
+    }
+
+    if (imagemEquipe == props.imagemContainer) {
+      setTimeout(() => {
+        setMostraInformacoes('flex');
+      }, 340);
+    } else {
+      setMostraInformacoes('none');
     }
   });
 
@@ -103,9 +103,14 @@ export default function EquipeCard(props: Props) {
               gap="50px"
               padding="20px 10px"
             >
-              <Flex flexDir="column" alignItems="center" gap="20px">
-                <Heading>{props.nome}</Heading>
-                <Text>{props.cargo}</Text>
+              <Flex
+                flexDir="column"
+                alignItems="center"
+                gap="20px"
+                textAlign="center"
+              >
+                <Heading fontSize="44px">{props.nome}</Heading>
+                <Text fontSize="28px">{props.cargo}</Text>
               </Flex>
               <Flex w="80%" justifyContent="space-around" alignItems="center">
                 <Link target="_blank" href={props.linkedin}>
