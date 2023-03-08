@@ -1,67 +1,59 @@
-import { Flex, Image, Link, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Text,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 
 interface Props {
-  imagemMembro: string;
+  imagem: string;
+  imagemMobile: string;
   topMobile: string;
   topDesktop: string;
   leftMobile: string;
   leftDesktop: string;
-  nomeMembro: string;
-  cargoMembro: string;
+  nome: string;
+  cargo: string;
   linkedin: string;
   github: string;
 }
 
 export default function EquipeCard(props: Props) {
+  const [larguraTelaMaior768] = useMediaQuery('screen and (min-width:768px');
   return (
-    <Flex position="relative" alignItems="center" justifyContent="center">
-      <Image
-        maxW={{ lg: '315px' }}
-        maxH={{ lg: '315px' }}
-        src={props.imagemMembro}
-      />
+    <>
       <Flex
-        position={{ base: 'absolute' }}
-        top={{ base: props.topMobile, lg: props.topDesktop }}
-        left={{ base: props.leftMobile, lg: props.leftDesktop }}
-        h="60px"
-        w="110px"
-        bgColor="cor.S3"
-        flexDir="column"
-        fontSize="10px"
+        flexDir={{ base: 'row' }}
+        bgColor="cor.P3"
+        w={{ base: '90vw' }}
+        h="70px"
         color="white"
         alignItems="center"
-        gap={{ base: '8px' }}
+        justifyContent="space-around"
       >
-        <Flex flexDir="column" alignItems="center">
-          <Text>{props.nomeMembro}</Text>
-          <Text>{props.cargoMembro}</Text>
-        </Flex>
         <Flex
-          w="100%"
+          flexDir={{ base: 'column' }}
           alignItems="center"
-          justifyContent={{ base: 'center' }}
-          gap={{ base: '8px' }}
+          justifyContent="center"
+          w="70%"
         >
-          <Link target="_blank" href={props.linkedin}>
-            <Icon
-              className="linkedin"
-              icon="mdi:linkedin"
-              color="white"
-              height="20px"
-            />
-          </Link>
-          <Link target="_blank" href={props.github}>
-            <Icon
-              className="github"
-              icon="mdi:github"
-              color="white"
-              height="20px"
-            />
-          </Link>
+          <Heading as="h4" fontSize={{ base: '18px' }}>
+            {props.nome}
+          </Heading>
+          <Text>{props.cargo}</Text>
+        </Flex>
+        <Flex w="30%" justifyContent="center">
+          <Icon
+            width="40px"
+            icon="material-symbols:arrow-circle-down-outline"
+            color="white"
+          />
         </Flex>
       </Flex>
-    </Flex>
+    </>
   );
 }

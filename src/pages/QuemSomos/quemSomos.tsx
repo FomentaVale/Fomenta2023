@@ -6,10 +6,13 @@ import {
   Image,
   Stack,
   Text,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import EquipeCard from '../../components/equipeCard/equipeCard';
 
 export default function QuemSomos() {
+  const [larguraTelaMaior768] = useMediaQuery('screen and (min-width:768px');
+
   const empresas = [
     {
       logo: '/public/img/logos/Parceiros/avatar-removebg-preview.png',
@@ -100,7 +103,7 @@ export default function QuemSomos() {
       {/* Section O que Somos*/}
       <Flex
         as="section"
-        h="100vh"
+        h={{ base: '100%', lg: '100vh' }}
         bg="cor.S1"
         flexDir={{ base: 'column' }}
         alignItems={{ base: 'center' }}
@@ -132,6 +135,7 @@ export default function QuemSomos() {
         justifyContent={{ base: 'center' }}
         padding={{ base: '20px', lg: '0px 40px' }}
         fontFamily="Gotham-Light"
+        gap={{ lg: '50px' }}
       >
         <Flex
           flexDir="column"
@@ -147,7 +151,7 @@ export default function QuemSomos() {
             borderColor="cor.P2"
             textAlign={{ base: 'center' }}
             fontFamily="Gotham-Black"
-            fontSize={{ lg: '48px' }}
+            fontSize={{ base: '28px', lg: '48px' }}
           >
             EQUIPE ATUAL
           </Heading>
@@ -167,99 +171,52 @@ export default function QuemSomos() {
             justifyContent={{ lg: 'space-evenly' }}
             gap={{ base: '50px' }}
           >
-            <EquipeCard
-              imagemMembro="/img/quemSomos/Guilherme.png"
-              topMobile="230px"
-              leftMobile="100px"
-              topDesktop="275px"
-              leftDesktop="110px"
-              nomeMembro="Guilherme C."
-              cargoMembro="Estagiário"
-              linkedin="https://www.linkedin.com/in/guicardososilva/"
-              github="https://github.com/Relayzinho"
-            />
-            <EquipeCard
-              imagemMembro="/img/quemSomos/Lucas.png"
-              topMobile="160px"
-              leftMobile="100px"
-              topDesktop="180px"
-              leftDesktop="120px"
-              nomeMembro="Lucas B."
-              cargoMembro="Estagiário"
-              linkedin="https://www.linkedin.com/in/lucas-brancalhao/"
-              github="https://github.com/lucas51512"
-            />
+            <Grid
+              w="100%"
+              templateRows="repeat(1, 1fr)"
+              templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
+              gap={{ base: 6, lg: 6 }}
+            >
+              <GridItem colSpan={{ base: 1, lg: 1 }}>
+                <EquipeCard
+                  imagem="/img/quemSomos/Equipe/Guilherme.png"
+                  imagemMobile="/img/quemSomos/Equipe/Mobile/GuilhermeMobile.png"
+                  topMobile="270px"
+                  leftMobile="120px"
+                  topDesktop="275px"
+                  leftDesktop="110px"
+                  nome="Guilherme C."
+                  cargo="Estagiário"
+                  linkedin="https://www.linkedin.com/in/guicardososilva/"
+                  github="https://github.com/Relayzinho"
+                />
+              </GridItem>
+              <GridItem colSpan={{ base: 1, lg: 1 }}>
+                <EquipeCard
+                  imagem="/img/quemSomos/Equipe/Lucas.png"
+                  imagemMobile="/img/quemSomos/Equipe/Mobile/LucasMobile.png"
+                  topMobile="190px"
+                  leftMobile="120px"
+                  topDesktop="180px"
+                  leftDesktop="120px"
+                  nome="Lucas B."
+                  cargo="Estagiário"
+                  linkedin="https://www.linkedin.com/in/lucas-brancalhao/"
+                  github="https://github.com/lucas51512"
+                />
+              </GridItem>
+            </Grid>
           </Flex>
-          <Flex
-            flexDirection={{ base: 'column', lg: 'row' }}
-            alignItems={{ lg: 'center' }}
-            gap={{ base: '50px' }}
+
+          <Heading
+            fontFamily="POLYA"
+            textAlign="center"
+            color="cor.P1"
+            fontSize={{ lg: '46', '2xl': '56' }}
+            fontWeight={400}
           >
-            <EquipeCard
-              imagemMembro="/img/quemSomos/Nicolas.png"
-              topMobile="170px"
-              leftMobile="100px"
-              topDesktop="210px"
-              leftDesktop="120px"
-              nomeMembro="Nicolas P."
-              cargoMembro="Estagiário"
-              linkedin="https://www.linkedin.com/in/nicolasppenga/"
-              github="https://github.com/TNDNS"
-            />
-            <Heading fontFamily="POLYA" textAlign="center" color="cor.P1">
-              NOSSO VALE É UM AMBIENTE FÉRTIL DE OPORTUNIDADES
-            </Heading>
-            <EquipeCard
-              imagemMembro="/img/quemSomos/JoaoPedro.png"
-              topMobile="200px"
-              leftMobile="120px"
-              topDesktop="230px"
-              leftDesktop="145px"
-              nomeMembro="João Pedro C."
-              cargoMembro="Estagiário"
-              linkedin="https://www.linkedin.com/in/caetanojpo/"
-              github="https://github.com/caetanojpo"
-            />
-          </Flex>
-          <Flex
-            flexDirection={{ base: 'column', lg: 'row' }}
-            justifyContent={{ lg: 'space-around' }}
-            gap={{ base: '50px' }}
-          >
-            <EquipeCard
-              imagemMembro="/img/quemSomos/Rodrigo.png"
-              topMobile="160px"
-              leftMobile="100px"
-              topDesktop="170px"
-              leftDesktop="115px"
-              nomeMembro="Rodrigo R."
-              cargoMembro="Estagiário"
-              linkedin="https://www.linkedin.com/in/rodrigorochajose/"
-              github="https://github.com/rodrigorochajose"
-            />
-            <EquipeCard
-              imagemMembro="/img/quemSomos/Almir.png"
-              topMobile="220px"
-              leftMobile="100px"
-              topDesktop="270px"
-              leftDesktop="120px"
-              nomeMembro="Almir C."
-              cargoMembro="Gestor"
-              linkedin="https://www.linkedin.com/in/almircamolesi/"
-              github=""
-            />
-            <EquipeCard
-              imagemMembro="/img/quemSomos/Daniela.png"
-              topMobile="190px"
-              leftMobile="100px"
-              topDesktop="180px"
-              leftDesktop="110px"
-              nomeMembro="Daniela C."
-              cargoMembro="Agilista"
-              linkedin="https://www.linkedin.com/in/danielaantoniocamolesi/"
-              github=""
-            />
-          </Flex>
+            NOSSO VALE É UM AMBIENTE FÉRTIL DE OPORTUNIDADES
+          </Heading>
         </Flex>
       </Flex>
 
