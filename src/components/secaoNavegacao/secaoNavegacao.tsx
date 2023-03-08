@@ -11,8 +11,10 @@ export default function SecaoNavegacao(props: SecaoNavegacaoProps) {
   return (
     <Container>
       <Flex flexDirection="column" alignItems="center">
-        <Heading>{titulo}</Heading>
-        <Text>{descricao}</Text>
+        <Heading size={{ base: 'xl', md: '2xl' }} textAlign="center">
+          {titulo}
+        </Heading>
+        <Text textAlign="justify">{descricao}</Text>
         {props.children}
       </Flex>
     </Container>

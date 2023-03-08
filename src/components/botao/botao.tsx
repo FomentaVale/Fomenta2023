@@ -19,7 +19,7 @@ interface Props {
 const botaoEstilizado = (props: Props) => {
   return (
     <Button
-      w="150px"
+      w={'150px' || props.tamanhoBotao}
       h="50px"
       marginX="5px"
       borderRadius="10px"
@@ -27,6 +27,7 @@ const botaoEstilizado = (props: Props) => {
       bg={props.corFundo || 'cor.P2'}
       _hover={{ bg: props.corFundoHover || 'cor.P3' }}
       onClick={props.aoClicar}
+      boxShadow="xl"
     >
       <Text
         fontSize={{ base: '16px', lg: '18px' }}
@@ -46,7 +47,6 @@ export default function Botao(props: Props): JSX.Element {
       <Link
         as={LinkRouter}
         to={props.to}
-        w={props.tamanhoBotao}
         marginX={props.marginX}
         _hover={{ textDecoration: 'none' }}
       >
@@ -60,7 +60,6 @@ export default function Botao(props: Props): JSX.Element {
       <Link
         href={props.href}
         target={props.target}
-        w={props.tamanhoBotao}
         marginX={props.marginX}
         _hover={{ textDecoration: 'none' }}
       >

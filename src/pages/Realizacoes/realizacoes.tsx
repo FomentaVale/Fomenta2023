@@ -10,40 +10,69 @@ export default function Realizacoes() {
   const informacoesBotoesNavegacao = [
     {
       tituloBotao: 'Cursos',
-      conteudoReferencia: '#cursos',
+      conteudoReferencia: '#cursos'
     },
     {
       tituloBotao: 'Hackathon',
-      conteudoReferencia: '#hackathon',
+      conteudoReferencia: '#hackathon'
     },
     {
       tituloBotao: 'Geladatech',
-      conteudoReferencia: '#geladatech',
+      conteudoReferencia: '#geladatech'
     },
     {
       tituloBotao: 'Podcast',
-      conteudoReferencia: '#podcast',
+      conteudoReferencia: '#podcast'
     },
     {
       tituloBotao: 'Formação de Inovadores',
-      conteudoReferencia: '#formacaoDeInovadores',
-    },
+      conteudoReferencia: '#formacaoDeInovadores'
+    }
   ];
 
   const conteudoSecao = {
     titulo: 'Realizações da Fomenta Vale',
-    descricao: 'Lorem',
+    descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Sint, magni distinctio dolores pariatur beatae iste repellendus 
+    harum qui molestiae, veniam sit cupiditate!`
   };
 
   const conteudoPagina = [
     {
-      titulo: 'Curso',
-      descricao: 'lorem ipsum',
+      titulo: 'Curso de Python',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Sint, magni distinctio dolores pariatur beatae iste repellendus 
+        harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+        laboriosam assumenda, sunt temporibus fuga. Quis.`
     },
     {
       titulo: 'Hackaton',
-      descricao: 'lorem ipsum2',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Sint, magni distinctio dolores pariatur beatae iste repellendus 
+      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+      laboriosam assumenda, sunt temporibus fuga. Quis.`
     },
+    {
+      titulo: 'Geladatech',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Sint, magni distinctio dolores pariatur beatae iste repellendus 
+      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+      laboriosam assumenda, sunt temporibus fuga. Quis.`
+    },
+    {
+      titulo: 'Podcast',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Sint, magni distinctio dolores pariatur beatae iste repellendus 
+      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+      laboriosam assumenda, sunt temporibus fuga. Quis.`
+    },
+    {
+      titulo: 'Formação de inovadores',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Sint, magni distinctio dolores pariatur beatae iste repellendus 
+      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+      laboriosam assumenda, sunt temporibus fuga. Quis.`
+    }
   ];
 
   return (
