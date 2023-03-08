@@ -16,6 +16,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Pagination, Autoplay, Navigation } from 'swiper';
 import './style.css';
+import CaixaInformacoesSecaoB from '../../components/caixaInformacoesSecaoB/caixaInformacoesSecaoB';
 
 export default function Home() {
   const [larguraTelaMaior768] = useMediaQuery('(min-width: 768px)');
@@ -60,6 +61,8 @@ export default function Home() {
     titulo: 'O que somos?',
     descricao:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. Nisl suscipit adipiscing bibendum est ultricies integer quis. Adipiscing elit ut aliquam purus sit. Adipiscing elit duis tristique sollicitudin nibh sit. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt.',
+    quantidadeLinhasGrid: { base: 'repeat(2, 1fr)', lg: 'repeat(2, 1fr)' },
+    quantidadeColunasGrid: { base: 'repeat(1, 1fr)', lg: 'repeat(1, 1fr)' },
   };
 
   const informacoesRealizacoes = {
@@ -68,6 +71,10 @@ export default function Home() {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. Nisl suscipit adipiscing bibendum est ultricies integer quis. Adipiscing elit ut aliquam purus sit. Adipiscing elit duis tristique sollicitudin nibh sit. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt.',
     corTitulo: 'cor.P2',
     corDescricao: '#000000',
+    foto: true,
+    ordem: -1,
+    quantidadeLinhasGrid: { base: 'repeat(3, 1fr)', lg: 'repeat(2, 1fr)' },
+    quantidadeColunasGrid: { base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' },
   };
 
   const informacoesCoworking = {
@@ -124,8 +131,9 @@ export default function Home() {
         </CaixaInformacoes>
         <Flex
           w={{ base: '100%', lg: '50%' }}
-          paddingX="25px"
+          height="100%"
           justifyContent="center"
+          paddingX="15px"
         >
           <Image
             alt="Raizes Fomenta Vale"
@@ -140,12 +148,30 @@ export default function Home() {
         as="section"
         className="secaoRealizacoes"
         flexDir={{ base: 'column', lg: 'row-reverse' }}
-        paddingTop={{ base: '10px' }}
-        paddingBottom="25px"
-        height={{ base: '650px' }}
+        border="2px solid green"
       >
-        <CaixaInformacoes informacoes={informacoesRealizacoes}>
-          <Botao
+        <CaixaInformacoesSecaoB informacoes={informacoesRealizacoes}>
+          <Flex
+            w={{ base: '100%', lg: '50%' }}
+            paddingX="25px"
+            justifyContent="center"
+            alignItems="center"
+          >
+            {larguraTelaMaior768 ? (
+              <Grid w="100%" h="400px" templateColumns="repeat(5, 1fr)" gap={5}>
+                <GridItem colSpan={3} bg="#D9D9D9" />
+                <GridItem colSpan={2} bg="#D9D9D9" />
+                <GridItem colSpan={2} bg="#D9D9D9" />
+                <GridItem colSpan={3} bg="#D9D9D9" />
+              </Grid>
+            ) : (
+              <Image
+                alt="Imagem Principal Realizações"
+                src="/img/banners/bannersHome/predio_Fomenta.jpg"
+              />
+            )}
+          </Flex>
+          {/* <Botao
             to="/"
             descricao="ACOMPANHE"
             corFundo="#ffff"
@@ -153,43 +179,12 @@ export default function Home() {
             corTexto="cor.P2"
             tamanhoBotao={{ base: '50%', lg: '25%' }}
             borda="3px solid #00A99D"
-          />
-        </CaixaInformacoes>
-        <Flex
-          w={{ base: '100%', lg: '50%' }}
-          paddingX="25px"
-          justifyContent="center"
-          alignItems="center"
-          paddingY="30px"
-        >
-          {larguraTelaMaior768 ? (
-            <Grid w="100%" h="400px" templateColumns="repeat(5, 1fr)" gap={5}>
-              <GridItem colSpan={3} bg="#D9D9D9" />
-              <GridItem colSpan={2} bg="#D9D9D9" />
-              <GridItem colSpan={2} bg="#D9D9D9" />
-              <GridItem colSpan={3} bg="#D9D9D9" />
-            </Grid>
-          ) : (
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              slidesPerView={1}
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 5500 }}
-            >
-              {imagensCarrosselPrincipal.map((item, index) => {
-                return (
-                  <SwiperSlide key={`swiper${index}`}>
-                    <Image alt={item.alt} src={item.src} width="100%" />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          )}
-        </Flex>
+          /> */}
+        </CaixaInformacoesSecaoB>
       </Flex>
 
       {/* Carrossel Apoiadores */}
-      <Flex as="section" padding={{ base: '10px' }} bgColor="cor.P2">
+      {/* <Flex as="section" padding={{ base: '10px' }} bgColor="cor.P2">
         <Swiper
           modules={[Autoplay, Navigation]}
           navigation
@@ -208,10 +203,10 @@ export default function Home() {
             );
           })}
         </Swiper>
-      </Flex>
+      </Flex> */}
 
       {/* Section Coworking */}
-      <Flex
+      {/* <Flex
         as="section"
         className="secaoCoworking"
         flexDir={{ base: 'column', lg: 'row' }}
@@ -241,12 +236,12 @@ export default function Home() {
             <GridItem colSpan={3} bg="#D9D9D9" />
           </Grid>
         </Flex>
-      </Flex>
+      </Flex> */}
 
       {/* Section O que somos */}
       <Flex
         as="section"
-        flexDir={{ base: 'column', lg: 'row-reverse' }}
+        flexDir={{ base: 'column', lg: 'row' }}
         bg="cor.S1"
         paddingTop={{ base: '10px' }}
       >
@@ -264,13 +259,21 @@ export default function Home() {
           w={{ base: '100%', lg: '50%' }}
           paddingX="25px"
           justifyContent="center"
-          paddingTop={{ base: '20px', lg: '0' }}
+          paddingTop={{ base: '0', lg: '0' }}
         >
-          <Image
-            alt="Raizes Fomenta Vale"
-            src="/img/figuras/figurasHome/figuraArvoreHome.png"
-            w={{ lg: '70%' }}
-          />
+          {larguraTelaMaior768 ? (
+            <Image
+              alt="Raizes Fomenta Vale"
+              src="/img/figuras/figurasHome/figuraArvoreHome.png"
+              w={{ lg: '70%' }}
+            />
+          ) : (
+            <Image
+              alt="Raizes Fomenta Vale"
+              src="/img/figuras/figurasHome/figuraArvoreHomeMobile.png"
+              w={{ lg: '70%' }}
+            />
+          )}
         </Flex>
       </Flex>
 
@@ -280,27 +283,36 @@ export default function Home() {
         w="100%"
         paddingTop={{ base: '10px' }}
         paddingBottom="25px"
-        flexDir={{ base: 'column' }}
+        flexDir="column"
         alignItems={{ base: 'center' }}
       >
-        <Flex borderBottom="3px solid #00A99D" w="70%" justifyContent="center">
-          <Text fontSize="25px" fontFamily="Gotham-Black" textAlign="center">
+        <Flex
+          borderBottom="3px solid #00A99D"
+          w={{ base: '70%', lg: '55%' }}
+          justifyContent="center"
+        >
+          <Text
+            fontSize={{ base: '23px', lg: '35px' }}
+            fontFamily="Gotham-Black"
+            textAlign="center"
+          >
             Venha Conhecer Nosso Espaço
           </Text>
         </Flex>
 
         <Flex
-          w="90%"
-          flexDir={{ base: 'column' }}
-          paddingTop={{ base: '20px' }}
+          w={{ base: '90%', lg: '100%' }}
+          flexDir={{ base: 'column', lg: 'row' }}
+          paddingTop={{ base: '35px' }}
+          justifyContent="space-evenly"
         >
-          <Flex>
+          <Flex w="50%">
             <Swiper
               modules={[Autoplay, Pagination]}
               pagination
               slidesPerView={1}
-              autoplay={{ delay: 2500, disableOnInteraction: false }}
-              speed={1000}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              speed={3000}
               loop
             >
               <SwiperSlide>
@@ -319,11 +331,15 @@ export default function Home() {
               </SwiperSlide>
             </Swiper>
           </Flex>
-          <Flex justifyContent="center">
+          <Flex
+            paddingY={{ base: '20px', lg: '0' }}
+            justifyContent="center"
+            alignItems="center"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14726.58661673757!2d-50.42049085!3d-22.66695925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1ff78ff8f343dbf!2sFomenta%20Vale!5e0!3m2!1spt-BR!2sbr!4v1649335896840!5m2!1spt-BR!2sbr"
-              width="300"
-              height="250"
+              width="100%"
+              height="80%"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
