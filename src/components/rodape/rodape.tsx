@@ -234,11 +234,6 @@ export default function Rodape() {
                 REALIZAÇÕES
               </ListItem>
             </LinkPage>
-            <LinkPage to="/startups">
-              <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
-                STARTUPS
-              </ListItem>
-            </LinkPage>
             <LinkPage to="/facaParte">
               <ListItem textDecoration="underline" _hover={{ color: 'cor.P3' }}>
                 FAÇA PARTE
