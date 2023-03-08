@@ -86,15 +86,15 @@ export default function OqueSomos() {
       ],
       tituloQuadro1: 'teste1',
       textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       imagemsSecundariasQuadro2: [
         '/img/oqueSomos/Historico/4.JPG',
         '/img/oqueSomos/Historico/5.jpeg',
         '/img/oqueSomos/Historico/1.JPG',
       ],
-      tituloQuadro2: 'teste2',
+      tituloQuadro2: 'Nosso vale é Fertil',
       textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       temaClaro: true,
     },
     {

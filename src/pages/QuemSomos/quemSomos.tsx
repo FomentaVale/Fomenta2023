@@ -98,6 +98,65 @@ export default function QuemSomos() {
     },
   ];
 
+  const cardEquipe = [
+    {
+      imagem: '/img/quemSomos/Equipe/Guilherme.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/GuilhermeContainer.png',
+      nome: 'Guilherme Cardoso',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/guicardososilva/',
+      github: 'https://github.com/Relayzinho',
+    },
+    {
+      imagem: '/img/quemSomos/Equipe/JoaoPedro.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/JoaoPedroContainer.png',
+      nome: 'João Pedro Caetano',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/caetanojpo/',
+      github: 'https://github.com/caetanojpo',
+    },
+    {
+      imagem: '/img/quemSomos/Equipe/Nicolas.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/NicolasContainer.png',
+      nome: 'Nicolas Penga',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/nicolasppenga/',
+      github: 'https://github.com/TNDNS',
+    },
+    {
+      imagem: '/img/quemSomos/Equipe/Lucas.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/LucasContainer.png',
+      nome: 'Lucas Brancalhão',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/lucas-brancalhao/',
+      github: 'https://github.com/lucas51512',
+    },
+    {
+      imagem: '/img/quemSomos/Equipe/Rodrigo.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/RodrigoContainer.png',
+      nome: 'Rodrigo Rocha',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/rodrigorochajose/',
+      github: 'https://github.com/rodrigorochajose',
+    },
+    {
+      imagem: '/img/quemSomos/Equipe/Almir.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/AlmirContainer.png',
+      nome: 'Almir Camolesi',
+      cargo: 'Gestor',
+      linkedin: 'https://www.linkedin.com/in/almircamolesi/',
+      github: 'https://github.com/arcamolesi',
+    },
+    {
+      imagem: '/img/quemSomos/Equipe/Daniela.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/DanielaContainer.png',
+      nome: 'Daniela Camolesi',
+      cargo: 'Agilista',
+      linkedin: 'https://www.linkedin.com/in/danielaantoniocamolesi/',
+      github: 'https://github.com/danycamolesi',
+    },
+  ];
+
   return (
     <>
       {/* Section O que Somos*/}
@@ -168,44 +227,21 @@ export default function QuemSomos() {
         >
           <Flex
             flexDirection={{ base: 'column', lg: 'row' }}
-            justifyContent={{ lg: 'space-evenly' }}
-            gap={{ base: '50px' }}
+            justifyContent={{ lg: 'center' }}
+            gap={{ base: '10px', lg: '0px' }}
           >
-            <Grid
-              w="100%"
-              templateRows="repeat(1, 1fr)"
-              templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
-              gap={{ base: 6, lg: 6 }}
-            >
-              <GridItem colSpan={{ base: 1, lg: 1 }}>
+            {cardEquipe.map((item, index) => (
+              <Flex key={index} flexDirection={{ base: 'column' }}>
                 <EquipeCard
-                  imagem="/img/quemSomos/Equipe/Guilherme.png"
-                  imagemMobile="/img/quemSomos/Equipe/Mobile/GuilhermeMobile.png"
-                  topMobile="270px"
-                  leftMobile="120px"
-                  topDesktop="275px"
-                  leftDesktop="110px"
-                  nome="Guilherme C."
-                  cargo="Estagiário"
-                  linkedin="https://www.linkedin.com/in/guicardososilva/"
-                  github="https://github.com/Relayzinho"
+                  imagem={item.imagem}
+                  imagemContainer={item.imagemContainer}
+                  nome={item.nome}
+                  cargo={item.cargo}
+                  linkedin={item.linkedin}
+                  github={item.github}
                 />
-              </GridItem>
-              <GridItem colSpan={{ base: 1, lg: 1 }}>
-                <EquipeCard
-                  imagem="/img/quemSomos/Equipe/Lucas.png"
-                  imagemMobile="/img/quemSomos/Equipe/Mobile/LucasMobile.png"
-                  topMobile="190px"
-                  leftMobile="120px"
-                  topDesktop="180px"
-                  leftDesktop="120px"
-                  nome="Lucas B."
-                  cargo="Estagiário"
-                  linkedin="https://www.linkedin.com/in/lucas-brancalhao/"
-                  github="https://github.com/lucas51512"
-                />
-              </GridItem>
-            </Grid>
+              </Flex>
+            ))}
           </Flex>
 
           <Heading
