@@ -1,15 +1,10 @@
 import {
   Box,
-  Button,
   Collapse,
   Flex,
   Heading,
   Image,
   Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Text,
   useDisclosure,
   useMediaQuery,
@@ -32,26 +27,26 @@ export default function EquipeCard(props: Props) {
   const { isOpen, onToggle } = useDisclosure();
   const [arredondaBorda, setArredondaBorda] = useState('10px');
   const [aberto, setAberto] = useState(false);
-  const [mostraFiltro, setMostraFiltro] = useState('0.3');
   const [imagemEquipe, setImagemEquipe] = useState(props.imagem);
   const [tamanhoImagem, setTamanhoImagem] = useState('70vh');
   const [mostraInformacoes, setMostraInformacoes] = useState('none');
+  const [posicaoFiltro, setPosicaoFiltro] = useState('flex');
 
   function observaClique() {
     onToggle();
     setAberto(!aberto);
   }
 
-  function hoverContainer() {
-    if (imagemEquipe == props.imagem) {
-      setImagemEquipe(props.imagemContainer);
-      setTamanhoImagem('45vh');
-      setMostraFiltro('0');
-    } else {
-      setImagemEquipe(props.imagem);
-      setTamanhoImagem('70vh');
-      setMostraFiltro('0.3');
-    }
+  function hoverContainerDentro() {
+    setImagemEquipe(props.imagemContainer);
+    setTamanhoImagem('45vh');
+    setPosicaoFiltro('none');
+  }
+
+  function hoverContainerFora() {
+    setImagemEquipe(props.imagem);
+    setTamanhoImagem('70vh');
+    setPosicaoFiltro('flex');
   }
 
   useEffect(() => {
@@ -61,7 +56,7 @@ export default function EquipeCard(props: Props) {
       setArredondaBorda('10px');
     }
 
-    if (imagemEquipe == props.imagemContainer) {
+    if (imagemEquipe === props.imagemContainer) {
       setTimeout(() => {
         setMostraInformacoes('flex');
       }, 340);
@@ -74,8 +69,8 @@ export default function EquipeCard(props: Props) {
     <>
       {larguraTelaMaior768 ? (
         <Flex
-          onMouseOver={() => hoverContainer()}
-          onMouseOut={() => hoverContainer()}
+          onMouseOver={() => hoverContainerDentro()}
+          onMouseOut={() => hoverContainerFora()}
           className="container-equipe"
           position="relative"
           w="150px"
@@ -86,14 +81,13 @@ export default function EquipeCard(props: Props) {
           bgRepeat="no-repeat"
           bgPosition="bottom"
         >
-          <Flex
-            onMouseOver={() => hoverContainer()}
-            onMouseOut={() => hoverContainer()}
+          <Box
+            display={posicaoFiltro}
             className="container-filtro"
             position="absolute"
             w="100%"
             h="100%"
-            bgColor={`rgba(247, 148, 29, ${mostraFiltro})`}
+            bgColor={`rgba(247, 148, 29, 0.3)`}
           />
           <Box display={mostraInformacoes} h="100%" w="100%" color="white">
             <Flex
@@ -109,15 +103,25 @@ export default function EquipeCard(props: Props) {
                 gap="20px"
                 textAlign="center"
               >
-                <Heading fontSize="44px">{props.nome}</Heading>
-                <Text fontSize="28px">{props.cargo}</Text>
+                <Heading fontSize="38px">{props.nome}</Heading>
+                <Text fontSize="26px">{props.cargo}</Text>
               </Flex>
               <Flex w="80%" justifyContent="space-around" alignItems="center">
                 <Link target="_blank" href={props.linkedin}>
-                  <Icon fontSize="64px" icon="mdi:linkedin" color="white" />
+                  <Icon
+                    className="linkedin"
+                    fontSize="52px"
+                    icon="mdi:linkedin"
+                    color="white"
+                  />
                 </Link>
                 <Link target="_blank" href={props.github}>
-                  <Icon fontSize="64px" icon="mdi:github" color="white" />
+                  <Icon
+                    className="github"
+                    fontSize="52px"
+                    icon="mdi:github"
+                    color="white"
+                  />
                 </Link>
               </Flex>
             </Flex>
@@ -197,14 +201,14 @@ export default function EquipeCard(props: Props) {
                   >
                     <Link target="_blank" href={props.linkedin}>
                       <Icon
-                        className="icone-equipe"
+                        className="icone-equipe linkedin"
                         icon="mdi:linkedin"
                         color="white"
                       />
                     </Link>
                     <Link target="_blank" href={props.github}>
                       <Icon
-                        className="icone-equipe"
+                        className="icone-equipe github"
                         icon="mdi:github"
                         color="white"
                       />
@@ -212,7 +216,7 @@ export default function EquipeCard(props: Props) {
                   </Flex>
                 </Flex>
                 <Box w={{ base: '60%' }}>
-                  <Image src={props.imagem} />
+                  <Image src={props.imagemContainer} />
                 </Box>
               </Flex>
             </Flex>

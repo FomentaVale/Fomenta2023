@@ -6,36 +6,49 @@ import {
   Image,
   Stack,
   Text,
-  useMediaQuery,
 } from '@chakra-ui/react';
 import EquipeCard from '../../components/equipeCard/equipeCard';
 
 export default function QuemSomos() {
-  const [larguraTelaMaior768] = useMediaQuery('screen and (min-width:768px');
-
   const empresas = [
     {
-      logo: '/public/img/logos/Parceiros/avatar-removebg-preview.png',
-      site: '',
+      logo: '/public/img/logos/Parceiros/Almeida_Nogueira.png',
+      site: 'https://almeidaenogueira.com.br/',
     },
     {
-      logo: '/public/img/logos/Parceiros/Casa_Di_Conti_logo cdc azul.png',
-      site: '',
+      logo: '/public/img/logos/Parceiros/CasaDiConti.png',
+      site: 'https://www.casadiconti.com.br/',
     },
     {
-      logo: '/public/img/logos/Parceiros/download-removebg-preview 1.png',
-      site: '',
+      logo: '/public/img/logos/Parceiros/LEVEROS.png',
+      site: 'https://www.leveros.com.br/',
     },
     {
-      logo: '/public/img/logos/Parceiros/Sandrin - Logo-01.png',
-      site: '',
+      logo: '/public/img/logos/Parceiros/NOVAMERICA.png',
+      site: 'https://www.novamerica.com.br/',
     },
     {
-      logo: '/public/img/logos/Parceiros/verkom 1.png',
-      site: '',
+      logo: '/public/img/logos/Parceiros/FATEC.png',
+      site: 'https://www.fatecassis.edu.br/',
     },
     {
-      logo: '/public/img/logos/Parceiros/wm10.png',
+      logo: '/public/img/logos/Parceiros/Cabonnet.png',
+      site: 'https://cabonnet.com.br/cidade/assis-sp',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/GAD.png',
+      site: 'https://gadarquiteturaedesign.com/',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/NOMADS.png',
+      site: 'https://www.nomads360.com/',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/SandrinPlanejados.png',
+      site: 'https://www.sandrin.com.br/',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/Verkrom.png',
       site: '',
     },
   ];
@@ -173,7 +186,12 @@ export default function QuemSomos() {
         textAlign={{ base: 'justify' }}
         fontFamily="Gotham-Light"
       >
-        <Heading fontFamily="Gotham-Black">QUEM SOMOS</Heading>
+        <Heading
+          fontSize={{ base: '28px', lg: '48px' }}
+          fontFamily="Gotham-Black"
+        >
+          QUEM SOMOS
+        </Heading>
         <Text w={{ lg: '70%' }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
           recusandae quaerat cumque rem. Inventore repudiandae, odit magnam vel,
@@ -215,7 +233,7 @@ export default function QuemSomos() {
             EQUIPE ATUAL
           </Heading>
           <Text fontSize={{ lg: '20px' }}>
-            Composto por 3 especialistas na área de educação, tecnologia e
+            Composto por 2 especialistas na área de educação, tecnologia e
             gestão de pessoas, e um grupo de jovens universitários em processo
             de aceleração profissional.
           </Text>
