@@ -1,5 +1,4 @@
 import {
-  Box,
   Flex,
   Grid,
   GridItem,
@@ -14,7 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { Pagination, Autoplay, Navigation } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 import './style.css';
 import CaixaInformacoesSecaoB from '../../components/caixaInformacoesSecaoB/caixaInformacoesSecaoB';
 
@@ -71,8 +70,8 @@ export default function Home() {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. Nisl suscipit adipiscing bibendum est ultricies integer quis. Adipiscing elit ut aliquam purus sit. Adipiscing elit duis tristique sollicitudin nibh sit. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt.',
     corTitulo: 'cor.P2',
     corDescricao: '#000000',
-    foto: true,
     ordem: -1,
+    quantidadeLinhasFoto: 2,
     quantidadeLinhasGrid: { base: 'repeat(3, 1fr)', lg: 'repeat(2, 1fr)' },
     quantidadeColunasGrid: { base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' },
   };
@@ -83,6 +82,7 @@ export default function Home() {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. Nisl suscipit adipiscing bibendum est ultricies integer quis. Adipiscing elit ut aliquam purus sit. Adipiscing elit duis tristique sollicitudin nibh sit. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt.',
     corTitulo: 'cor.P2',
     corDescricao: '#000000',
+    quantidadeLinhasFoto: 2,
   };
 
   const informacoesQuemSomos = {
@@ -147,18 +147,19 @@ export default function Home() {
       <Flex
         as="section"
         className="secaoRealizacoes"
-        flexDir={{ base: 'column', lg: 'row-reverse' }}
+        flexDir={{ base: 'column', lg: 'column' }}
         border="2px solid green"
       >
         <CaixaInformacoesSecaoB informacoes={informacoesRealizacoes}>
           <Flex
-            w={{ base: '100%', lg: '50%' }}
+            w="100%"
             paddingX="25px"
+            paddingTop={{ lg: '25px' }}
             justifyContent="center"
             alignItems="center"
           >
             {larguraTelaMaior768 ? (
-              <Grid w="100%" h="400px" templateColumns="repeat(5, 1fr)" gap={5}>
+              <Grid w="100%" h="500px" templateColumns="repeat(5, 1fr)" gap={5}>
                 <GridItem colSpan={3} bg="#D9D9D9" />
                 <GridItem colSpan={2} bg="#D9D9D9" />
                 <GridItem colSpan={2} bg="#D9D9D9" />
@@ -171,16 +172,20 @@ export default function Home() {
               />
             )}
           </Flex>
-          {/* <Botao
-            to="/"
-            descricao="ACOMPANHE"
-            corFundo="#ffff"
-            corFundoHover="cor.P1"
-            corTexto="cor.P2"
-            tamanhoBotao={{ base: '50%', lg: '25%' }}
-            borda="3px solid #00A99D"
-          /> */}
         </CaixaInformacoesSecaoB>
+        <Flex w="100%" justifyContent="flex-end" paddingBottom="15px">
+          <Flex w={{ base: '100%', lg: '50%' }} justifyContent="center">
+            <Botao
+              to="/"
+              descricao="ACOMPANHE"
+              corFundo="#ffff"
+              corFundoHover="cor.P1"
+              corTexto="cor.P2"
+              tamanhoBotao={{ base: '50%', lg: '25%' }}
+              borda="3px solid #00A99D"
+            />
+          </Flex>
+        </Flex>
       </Flex>
 
       {/* Carrossel Apoiadores */}
@@ -206,37 +211,71 @@ export default function Home() {
       </Flex> */}
 
       {/* Section Coworking */}
-      {/* <Flex
+      <Flex
         as="section"
         className="secaoCoworking"
-        flexDir={{ base: 'column', lg: 'row' }}
-        paddingTop={{ base: '10px' }}
-        paddingBottom="25px"
-        height="800px"
+        flexDir={{ base: 'column', lg: 'column' }}
       >
-        <CaixaInformacoes informacoes={informacoesCoworking}>
-          <Botao
-            to="/"
-            descricao="CONHEÇA"
-            corFundo="cor.P3"
-            corFundoHover="cor.S3"
-            tamanhoBotao={{ base: '50%', lg: '25%' }}
-          />
-        </CaixaInformacoes>
-        <Flex
-          w={{ base: '100%', lg: '50%' }}
-          paddingX="25px"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid w="100%" h="400px" templateColumns="repeat(5, 1fr)" gap={5}>
-            <GridItem colSpan={3} bg="#D9D9D9" />
-            <GridItem colSpan={2} bg="#D9D9D9" />
-            <GridItem colSpan={2} bg="#D9D9D9" />
-            <GridItem colSpan={3} bg="#D9D9D9" />
-          </Grid>
+        <CaixaInformacoesSecaoB informacoes={informacoesCoworking}>
+          <Flex
+            w="100%"
+            paddingX="25px"
+            justifyContent="center"
+            alignItems="center"
+          >
+            {larguraTelaMaior768 ? (
+              <Grid w="100%" h="400px" templateColumns="repeat(5, 1fr)" gap={5}>
+                <GridItem colSpan={3} bg="#D9D9D9" h="100%">
+                  {/* <Image
+                    src="/img/imagensPaginas/Home/Realizacoes-Curso.JPG"
+                    width="100%"
+                  /> */}
+                </GridItem>
+                <GridItem colSpan={2} bg="#D9D9D9" h="100%">
+                  {/* <Image
+                    src="/img/imagensPaginas/Home/Realizacoes-Curso.JPG"
+                    width="100%"
+                  /> */}
+                </GridItem>
+                <GridItem colSpan={2} bg="#D9D9D9" h="100%">
+                  {/* <Image
+                    src="/img/imagensPaginas/Home/Realizacoes-Curso.JPG"
+                    width="100%"
+                  /> */}
+                </GridItem>
+                <GridItem colSpan={3} bg="#D9D9D9" h="100%">
+                  {/* <Image
+                    src="/img/imagensPaginas/Home/Realizacoes-Curso.JPG"
+                    width="100%"
+                  /> */}
+                </GridItem>
+              </Grid>
+            ) : (
+              <Image
+                alt="Imagem Principal Realizações"
+                src="/img/banners/bannersHome/predio_Fomenta.jpg"
+              />
+            )}
+          </Flex>
+        </CaixaInformacoesSecaoB>
+        <Flex w="100%">
+          <Flex
+            w={{ base: '100%', lg: '50%' }}
+            justifyContent="center"
+            paddingBottom="15px"
+          >
+            <Botao
+              to="/"
+              descricao="SAIBA MAIS"
+              corFundo="#ffff"
+              corFundoHover="cor.P1"
+              corTexto="cor.P2"
+              tamanhoBotao={{ base: '50%', lg: '25%' }}
+              borda="3px solid #00A99D"
+            />
+          </Flex>
         </Flex>
-      </Flex> */}
+      </Flex>
 
       {/* Section O que somos */}
       <Flex

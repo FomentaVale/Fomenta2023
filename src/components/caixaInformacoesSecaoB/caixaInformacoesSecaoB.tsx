@@ -6,8 +6,10 @@ interface Props {
     descricao: string;
     corTitulo?: string;
     corDescricao?: string;
+    ordem?: number;
+    quantidadeLinhasFoto?: number;
   };
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element;
 }
 
 export default function CaixaInformacoesSecaoB(props: Props) {
@@ -16,9 +18,10 @@ export default function CaixaInformacoesSecaoB(props: Props) {
       templateRows={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
       templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
       w="100%"
-      alignItems="flex-end"
+      alignItems="center"
+      border="3px solid purple"
     >
-      <GridItem>
+      <GridItem border="1px solid blue">
         <Flex justifyContent="center" paddingY={{ base: '15px' }}>
           <Text
             textAlign="center"
@@ -26,16 +29,25 @@ export default function CaixaInformacoesSecaoB(props: Props) {
             fontFamily="Gotham-Black"
             fontSize={{ base: '25px', md: '30px', lg: '35px' }}
             borderBottom="3px solid #00A99D"
-            w="70%"
+            w="50%"
           >
             {props.informacoes.titulo}
           </Text>
         </Flex>
       </GridItem>
 
-      <GridItem>{props.children[0]}</GridItem>
+      {props.children ? (
+        <GridItem
+          order={{ base: 0, lg: props.informacoes.ordem }}
+          rowSpan={props.informacoes.quantidadeLinhasFoto}
+        >
+          {props.children}
+        </GridItem>
+      ) : (
+        ''
+      )}
 
-      <GridItem>
+      <GridItem border="1px solid red">
         <Flex
           padding={{ base: '25px', lg: '25px' }}
           color={'#00000'}
@@ -46,7 +58,6 @@ export default function CaixaInformacoesSecaoB(props: Props) {
           alignItems="center"
         >
           {props.informacoes.descricao}
-          {props.children[1]}
         </Flex>
       </GridItem>
     </Grid>
