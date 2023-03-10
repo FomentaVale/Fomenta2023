@@ -112,11 +112,16 @@ export default function HistoricoAnos(props: Props) {
                   </Flex>
                 </Flex>
               ) : (
-                <Flex>
+                <Flex flexDir="column">
                   <Image
                     src={props.imagemsSecundariasQuadro1[0].src}
                     alt={props.imagemsSecundariasQuadro1[0].alt}
                   />
+                  <Flex w="100%" justifyContent="flex-end">
+                    <Heading as="h5" fontSize="15px">
+                      {props.tituloQuadro1}
+                    </Heading>
+                  </Flex>
                 </Flex>
               )}
             </Flex>
@@ -127,14 +132,19 @@ export default function HistoricoAnos(props: Props) {
               w={{ lg: '50%' }}
               padding={{ lg: '0px 50px' }}
             >
-              <Heading
-                width="50%"
-                borderBottom="3px solid"
-                borderColor="cor.P2"
-                textAlign="center"
-              >
-                {props.tituloQuadro1}
-              </Heading>
+              {larguraTelaMaior768 ? (
+                <Heading
+                  width="50%"
+                  borderBottom="3px solid"
+                  borderColor="cor.P2"
+                  textAlign="center"
+                >
+                  {props.tituloQuadro1}
+                </Heading>
+              ) : (
+                ''
+              )}
+
               <Text textAlign={{ lg: 'justify' }}>{props.textQuadro1}</Text>
             </Flex>
           </Flex>
@@ -188,11 +198,16 @@ export default function HistoricoAnos(props: Props) {
                   </Flex>
                 </Flex>
               ) : (
-                <Flex>
+                <Flex flexDir="column">
                   <Image
                     src={props.imagemsSecundariasQuadro2[0].src}
                     alt={props.imagemsSecundariasQuadro2[0].alt}
                   />
+                  <Flex w="100%" justifyContent="flex-end">
+                    <Heading as="h5" fontSize="15px">
+                      {props.tituloQuadro2}
+                    </Heading>
+                  </Flex>
                 </Flex>
               )}
             </Flex>
@@ -203,20 +218,24 @@ export default function HistoricoAnos(props: Props) {
               w={{ lg: '50%' }}
               padding={{ lg: '0px 50px' }}
             >
-              <Heading
-                width="50%"
-                borderBottom="3px solid"
-                borderColor="cor.P2"
-                textAlign="center"
-              >
-                {props.tituloQuadro2}
-              </Heading>
+              {larguraTelaMaior768 ? (
+                <Heading
+                  width="100%"
+                  borderBottom="3px solid"
+                  borderColor="cor.P2"
+                  textAlign="center"
+                >
+                  {props.tituloQuadro2}
+                </Heading>
+              ) : (
+                ''
+              )}
+
               <Text textAlign={{ lg: 'justify' }}>{props.textQuadro2}</Text>
             </Flex>
           </Flex>
         </Flex>
       </Flex>
-      ;
     </>
   );
 }
