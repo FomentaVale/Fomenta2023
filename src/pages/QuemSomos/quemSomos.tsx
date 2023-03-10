@@ -13,100 +13,122 @@ export default function QuemSomos() {
   const empresas = [
     {
       logo: '/public/img/logos/Parceiros/Almeida_Nogueira.png',
+      alt: 'Logo Almeida e Nogueira',
       site: 'https://almeidaenogueira.com.br/',
+      fundo: 'black',
     },
     {
       logo: '/public/img/logos/Parceiros/CasaDiConti.png',
+      alt: 'Logo Casa di Conti',
       site: 'https://www.casadiconti.com.br/',
+      fundo: 'white',
     },
     {
       logo: '/public/img/logos/Parceiros/LEVEROS.png',
+      alt: 'Logo Leveros',
       site: 'https://www.leveros.com.br/',
+      fundo: 'white',
     },
     {
       logo: '/public/img/logos/Parceiros/NOVAMERICA.png',
+      alt: 'Logo NovAmerica',
       site: 'https://www.novamerica.com.br/',
+      fundo: 'white',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/fema.png',
+      alt: 'Logo FEMA',
+      site: 'https://fema.edu.br/',
+      fundo: 'white',
     },
     {
       logo: '/public/img/logos/Parceiros/FATEC.png',
+      alt: 'Logo FATEC',
       site: 'https://www.fatecassis.edu.br/',
+      fundo: 'white',
     },
     {
-      logo: '/public/img/logos/Parceiros/Cabonnet.png',
-      site: 'https://cabonnet.com.br/cidade/assis-sp',
+      logo: '/public/img/logos/Parceiros/unesp.png',
+      alt: 'Logo UNESP',
+      site: 'https://www.assis.unesp.br/',
+      fundo: 'white',
     },
     {
       logo: '/public/img/logos/Parceiros/GAD.png',
+      alt: 'Logo GAD',
       site: 'https://gadarquiteturaedesign.com/',
+      fundo: 'white',
+    },
+    {
+      logo: '/public/img/logos/Parceiros/Cabonnet.png',
+      alt: 'Logo Cabonnet',
+      site: 'https://cabonnet.com.br/cidade/assis-sp',
+      fundo: 'white',
+    },
+
+    {
+      logo: '/public/img/logos/Parceiros/SandrinPlanejados.png',
+      alt: 'Logo Sandrin Planejados',
+      site: 'https://www.sandrin.com.br/',
+      fundo: 'white',
     },
     {
       logo: '/public/img/logos/Parceiros/NOMADS.png',
+      alt: 'Logo Nomads360',
       site: 'https://www.nomads360.com/',
-    },
-    {
-      logo: '/public/img/logos/Parceiros/SandrinPlanejados.png',
-      site: 'https://www.sandrin.com.br/',
-    },
-    {
-      logo: '/public/img/logos/Parceiros/Verkrom.png',
-      site: '',
+      fundo: 'black',
     },
   ];
 
   const historicoEquipe = [
     {
-      nome: 'Kelvin B.',
-      cargo: 'Tech Lead',
+      nome: 'Kelvin Brancalhão',
+      cargo: 'Gestor Tecnologia',
       linkedin: 'https://www.linkedin.com/in/kelvin-brancalh%C3%A3o/',
     },
     {
-      nome: 'Fulaninho',
+      nome: 'Lucas Yudi',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/lucasyudi/',
+    },
+    {
+      nome: 'Maria Vitoria Macruz',
+      cargo: 'Estagiária',
+      linkedin: 'https://www.linkedin.com/in/vickmacruz/',
+    },
+    {
+      nome: 'Paulo Soares',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/paulo-soares-865951211/',
+    },
+    {
+      nome: 'João Pedro Vicentin',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/joaopedrovicentin/',
+    },
+    {
+      nome: 'Afonso José',
       cargo: 'Estagiário',
       linkedin: '',
     },
     {
-      nome: 'Fulanão',
+      nome: 'Wellington',
+      cargo: 'Gestor',
+      linkedin: '',
+    },
+    {
+      nome: 'Claudinei Santos',
+      cargo: 'Gestor',
+      linkedin: '',
+    },
+    {
+      nome: 'Fulano',
       cargo: 'Gestor',
       linkedin: '',
     },
     {
       nome: 'Siclano',
       cargo: 'Estagiário',
-      linkedin: '',
-    },
-    {
-      nome: 'Beltrano',
-      cargo: 'Estagiário',
-      linkedin: '',
-    },
-    {
-      nome: 'Jorge',
-      cargo: 'Agilista',
-      linkedin: '',
-    },
-    {
-      nome: 'Fulaninho',
-      cargo: 'Estagiário',
-      linkedin: '',
-    },
-    {
-      nome: 'Fulanão',
-      cargo: 'Gestor',
-      linkedin: '',
-    },
-    {
-      nome: 'Siclano',
-      cargo: 'Estagiário',
-      linkedin: '',
-    },
-    {
-      nome: 'Beltrano',
-      cargo: 'Estagiário',
-      linkedin: '',
-    },
-    {
-      nome: 'Jorge',
-      cargo: 'Agilista',
       linkedin: '',
     },
   ];
@@ -115,6 +137,7 @@ export default function QuemSomos() {
     {
       imagem: '/img/quemSomos/Equipe/Guilherme.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/GuilhermeContainer.png',
+      alt: 'Foto do estagiário Guilherme',
       nome: 'Guilherme Cardoso',
       cargo: 'Estagiário',
       linkedin: 'https://www.linkedin.com/in/guicardososilva/',
@@ -123,6 +146,7 @@ export default function QuemSomos() {
     {
       imagem: '/img/quemSomos/Equipe/JoaoPedro.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/JoaoPedroContainer.png',
+      alt: 'Foto do estagiário João Pedro',
       nome: 'João Pedro Caetano',
       cargo: 'Estagiário',
       linkedin: 'https://www.linkedin.com/in/caetanojpo/',
@@ -131,6 +155,7 @@ export default function QuemSomos() {
     {
       imagem: '/img/quemSomos/Equipe/Nicolas.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/NicolasContainer.png',
+      alt: 'Foto do estagiário Nicolas',
       nome: 'Nicolas Penga',
       cargo: 'Estagiário',
       linkedin: 'https://www.linkedin.com/in/nicolasppenga/',
@@ -139,6 +164,7 @@ export default function QuemSomos() {
     {
       imagem: '/img/quemSomos/Equipe/Lucas.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/LucasContainer.png',
+      alt: 'Foto do estagiário Lucas',
       nome: 'Lucas Brancalhão',
       cargo: 'Estagiário',
       linkedin: 'https://www.linkedin.com/in/lucas-brancalhao/',
@@ -147,6 +173,7 @@ export default function QuemSomos() {
     {
       imagem: '/img/quemSomos/Equipe/Rodrigo.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/RodrigoContainer.png',
+      alt: 'Foto do estagiário Rodrigo',
       nome: 'Rodrigo Rocha',
       cargo: 'Estagiário',
       linkedin: 'https://www.linkedin.com/in/rodrigorochajose/',
@@ -155,6 +182,7 @@ export default function QuemSomos() {
     {
       imagem: '/img/quemSomos/Equipe/Almir.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/AlmirContainer.png',
+      alt: 'Foto do gestor Almir',
       nome: 'Almir Camolesi',
       cargo: 'Gestor',
       linkedin: 'https://www.linkedin.com/in/almircamolesi/',
@@ -163,6 +191,7 @@ export default function QuemSomos() {
     {
       imagem: '/img/quemSomos/Equipe/Daniela.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/DanielaContainer.png',
+      alt: 'Foto da agilista Daniela',
       nome: 'Daniela Camolesi',
       cargo: 'Agilista',
       linkedin: 'https://www.linkedin.com/in/danielaantoniocamolesi/',
@@ -253,6 +282,7 @@ export default function QuemSomos() {
                 <EquipeCard
                   imagem={item.imagem}
                   imagemContainer={item.imagemContainer}
+                  alt={item.alt}
                   nome={item.nome}
                   cargo={item.cargo}
                   linkedin={item.linkedin}
@@ -284,7 +314,7 @@ export default function QuemSomos() {
         alignItems={{ base: 'center' }}
         bgColor="cor.S1"
         color="white"
-        padding={{ base: '20px' }}
+        padding={{ base: '20px', lg: '50px 20px' }}
         gap={{ base: '20px', lg: '50px' }}
         fontFamily="Gotham-Light"
       >
@@ -300,7 +330,7 @@ export default function QuemSomos() {
         </Heading>
         <Grid
           templateRows="repeat(auto, 1fr)"
-          templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(5, 1fr)' }}
+          templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
           gap={{ base: 6, lg: 20 }}
         >
           {empresas.map((item, index) => (
@@ -310,11 +340,18 @@ export default function QuemSomos() {
               target="_blank"
               href={item.site}
               colSpan={{ base: 1, lg: 1 }}
-              bg="#D9D9D9"
+              bg={item.fundo}
               borderRadius="16px"
-              padding="10px"
+              padding={{ base: '10px' }}
+              transition="0.5s"
+              _hover={{ transform: 'scale(1.2)' }}
             >
-              <Image maxH={'120px'} maxW={'120px'} src={item.logo} />
+              <Image
+                maxH={{ base: '100px', lg: '120px' }}
+                maxW={{ base: '100px', lg: '120px' }}
+                src={item.logo}
+                alt={item.alt}
+              />
             </GridItem>
           ))}
         </Grid>
@@ -345,7 +382,7 @@ export default function QuemSomos() {
         </Heading>
         <Grid
           templateRows="repeat(auto, 1fr)"
-          templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(6, 1fr)' }}
+          templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(5, 1fr)' }}
           gap={{ base: 6, lg: 10 }}
         >
           {historicoEquipe.map((item, index) => (
@@ -359,11 +396,14 @@ export default function QuemSomos() {
               padding="10px"
               color="white"
               _hover={{ bgColor: 'cor.S3' }}
-              w={{ lg: '120px' }}
+              w={{ lg: '100%' }}
+              minH={{ base: '90px', lg: '80px' }}
             >
-              <Stack textAlign="center">
-                <Text fontSize="16px">{item.nome}</Text>
-                <Text fontSize="12px">{item.cargo}</Text>
+              <Stack textAlign="center" h="100%">
+                <Text fontSize={{ base: '14px', lg: '16px' }}>{item.nome}</Text>
+                <Text fontSize={{ base: '12px', lg: '12px' }}>
+                  {item.cargo}
+                </Text>
               </Stack>
             </GridItem>
           ))}

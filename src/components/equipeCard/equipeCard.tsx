@@ -16,6 +16,7 @@ import './style.css';
 interface Props {
   imagem: string;
   imagemContainer: string;
+  alt: string;
   nome: string;
   cargo: string;
   linkedin: string;
@@ -216,7 +217,7 @@ export default function EquipeCard(props: Props) {
                   </Flex>
                 </Flex>
                 <Box w={{ base: '60%' }}>
-                  <Image src={props.imagemContainer} />
+                  <Image src={props.imagemContainer} alt={props.alt} />
                 </Box>
               </Flex>
             </Flex>

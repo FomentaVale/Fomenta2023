@@ -6,23 +6,36 @@ interface Props {
   temaClaro: boolean;
   id: string;
   ano?: string;
-  imagemsSecundariasQuadro1: Array<string>;
+  imagemsSecundariasQuadro1: Array<Imagens>;
   tituloQuadro1: string;
   textQuadro1: string;
-  imagemsSecundariasQuadro2: Array<string>;
+  imagemsSecundariasQuadro2: Array<Imagens>;
   tituloQuadro2: string;
   textQuadro2: string;
+}
+
+interface Imagens {
+  src: string;
+  alt: string;
 }
 
 export default function HistoricoAnos(props: Props) {
   const [larguraTelaMaior768] = useMediaQuery('screen and (min-width:768px');
 
   const [imagemPrincipalQuadro1, setImagemPrincipalQuadro1] = useState(
-    props.imagemsSecundariasQuadro1[0]
+    props.imagemsSecundariasQuadro1[0].src
+  );
+
+  const [altPrincipalQuadro1, setAltPrincipalQuadro1] = useState(
+    props.imagemsSecundariasQuadro1[0].alt
   );
 
   const [imagemPrincipalQuadro2, setImagemPrincipalQuadro2] = useState(
-    props.imagemsSecundariasQuadro2[0]
+    props.imagemsSecundariasQuadro2[0].src
+  );
+
+  const [altPrincipalQuadro2, setAltPrincipalQuadro2] = useState(
+    props.imagemsSecundariasQuadro2[0].alt
   );
 
   return (
@@ -60,7 +73,11 @@ export default function HistoricoAnos(props: Props) {
               {larguraTelaMaior768 ? (
                 <Flex flexDir={{ base: 'row' }} gap="10px">
                   <Flex w="100%">
-                    <Image w="100%" src={imagemPrincipalQuadro1} />
+                    <Image
+                      w="100%"
+                      src={imagemPrincipalQuadro1}
+                      alt={altPrincipalQuadro1}
+                    />
                   </Flex>
 
                   <Flex
@@ -73,18 +90,22 @@ export default function HistoricoAnos(props: Props) {
                       return (
                         <Image
                           key={index}
-                          src={item}
+                          src={item.src}
                           h="30%"
                           cursor="pointer"
                           onClick={() => {
-                            setImagemPrincipalQuadro1(item);
+                            setImagemPrincipalQuadro1(item.src);
+                            setAltPrincipalQuadro1(item.alt);
                           }}
                           border={
-                            imagemPrincipalQuadro1 == item ? '6px solid' : ''
+                            imagemPrincipalQuadro1 == item.src
+                              ? '6px solid'
+                              : ''
                           }
                           borderColor={
-                            imagemPrincipalQuadro1 == item ? 'cor.P3' : ''
+                            imagemPrincipalQuadro1 == item.src ? 'cor.P3' : ''
                           }
+                          alt={item.alt}
                         />
                       );
                     })}
@@ -92,7 +113,10 @@ export default function HistoricoAnos(props: Props) {
                 </Flex>
               ) : (
                 <Flex>
-                  <Image src={props.imagemsSecundariasQuadro1[0]} />
+                  <Image
+                    src={props.imagemsSecundariasQuadro1[0].src}
+                    alt={props.imagemsSecundariasQuadro1[0].alt}
+                  />
                 </Flex>
               )}
             </Flex>
@@ -125,7 +149,11 @@ export default function HistoricoAnos(props: Props) {
               {larguraTelaMaior768 ? (
                 <Flex flexDir={{ base: 'row', lg: 'row-reverse' }} gap="10px">
                   <Flex w="100%">
-                    <Image w="100%" src={imagemPrincipalQuadro2} />
+                    <Image
+                      w="100%"
+                      src={imagemPrincipalQuadro2}
+                      alt={altPrincipalQuadro2}
+                    />
                   </Flex>
 
                   <Flex
@@ -138,18 +166,22 @@ export default function HistoricoAnos(props: Props) {
                       return (
                         <Image
                           key={index}
-                          src={item}
+                          src={item.src}
                           h="30%"
                           cursor="pointer"
                           onClick={() => {
-                            setImagemPrincipalQuadro2(item);
+                            setImagemPrincipalQuadro2(item.src);
+                            setAltPrincipalQuadro2(item.alt);
                           }}
                           border={
-                            imagemPrincipalQuadro2 == item ? '6px solid' : ''
+                            imagemPrincipalQuadro2 == item.src
+                              ? '6px solid'
+                              : ''
                           }
                           borderColor={
-                            imagemPrincipalQuadro2 == item ? 'cor.P3' : ''
+                            imagemPrincipalQuadro2 == item.src ? 'cor.P3' : ''
                           }
+                          alt={item.alt}
                         />
                       );
                     })}
@@ -157,7 +189,10 @@ export default function HistoricoAnos(props: Props) {
                 </Flex>
               ) : (
                 <Flex>
-                  <Image src={props.imagemsSecundariasQuadro2[0]} />
+                  <Image
+                    src={props.imagemsSecundariasQuadro2[0].src}
+                    alt={props.imagemsSecundariasQuadro2[0].alt}
+                  />
                 </Flex>
               )}
             </Flex>

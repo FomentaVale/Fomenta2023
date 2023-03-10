@@ -80,17 +80,35 @@ export default function OqueSomos() {
       ano: '2019',
       id: '2019',
       imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
+        {
+          src: '/img/oqueSomos/Historico/1.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/2.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/3.JPG',
+          alt: 'alt da imagem',
+        },
       ],
       tituloQuadro1: 'teste1',
       textQuadro1:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
+        {
+          src: '/img/oqueSomos/Historico/4.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/5.jpeg',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/1.JPG',
+          alt: 'alt da imagem',
+        },
       ],
       tituloQuadro2: 'Nosso vale é Fertil',
       textQuadro2:
@@ -101,85 +119,40 @@ export default function OqueSomos() {
       ano: '2020',
       id: '2020',
       imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
+        {
+          src: '/img/oqueSomos/Historico/2.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/3.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/4.JPG',
+          alt: 'alt da imagem',
+        },
       ],
       tituloQuadro1: 'teste1',
       textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
+        {
+          src: '/img/oqueSomos/Historico/5.jpeg',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/1.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/2.JPG',
+          alt: 'alt da imagem',
+        },
       ],
-      tituloQuadro2: 'teste2',
+      tituloQuadro2: 'Nosso vale é Fertil',
       textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       temaClaro: false,
-    },
-    {
-      ano: '2021',
-      id: '2021',
-      imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-      ],
-      tituloQuadro1: 'teste1',
-      textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
-      ],
-      tituloQuadro2: 'teste2',
-      textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      temaClaro: true,
-    },
-    {
-      ano: '2022',
-      id: '2022',
-      imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
-      ],
-      tituloQuadro1: 'teste1',
-      textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
-      ],
-      tituloQuadro2: 'teste2',
-      textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      temaClaro: false,
-    },
-    {
-      ano: '2023',
-      id: '2023',
-      imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
-      ],
-      tituloQuadro1: 'teste1',
-      textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-      ],
-      tituloQuadro2: 'teste2',
-      textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      temaClaro: true,
     },
   ];
 
@@ -199,6 +172,7 @@ export default function OqueSomos() {
           flexDir={{ base: 'column', lg: 'row' }}
           gap={{ base: '20px', lg: '0px' }}
           w={{ lg: '80%' }}
+          justifyContent={{ lg: 'center' }}
         >
           <Flex
             flexDir="column"
@@ -207,7 +181,10 @@ export default function OqueSomos() {
             padding={{ base: '10px', lg: '0px' }}
             w={{ lg: '50%' }}
           >
-            <Heading fontFamily="Gotham-Black">
+            <Heading
+              className="titulo-containerPrincipal"
+              fontFamily="Gotham-Black"
+            >
               <Highlight
                 query="FOMENTA"
                 styles={{ fontFamily: 'Gotham-Light', color: 'cor.P2' }}
@@ -278,6 +255,7 @@ export default function OqueSomos() {
           <Heading>A nossa trajetória</Heading>
           <Flex
             h={{ base: '100%' }}
+            w={{ lg: '100%' }}
             alignItems="center"
             justifyContent="center"
             fontFamily="Gotham-Medium"
