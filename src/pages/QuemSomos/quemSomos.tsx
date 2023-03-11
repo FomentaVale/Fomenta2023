@@ -153,15 +153,6 @@ export default function QuemSomos() {
       github: 'https://github.com/caetanojpo',
     },
     {
-      imagem: '/img/quemSomos/Equipe/Nicolas.png',
-      imagemContainer: '/img/quemSomos/Equipe/Container/NicolasContainer.png',
-      alt: 'Foto do estagiário Nicolas',
-      nome: 'Nicolas Penga',
-      cargo: 'Estagiário',
-      linkedin: 'https://www.linkedin.com/in/nicolasppenga/',
-      github: 'https://github.com/TNDNS',
-    },
-    {
       imagem: '/img/quemSomos/Equipe/Lucas.png',
       imagemContainer: '/img/quemSomos/Equipe/Container/LucasContainer.png',
       alt: 'Foto do estagiário Lucas',
@@ -169,6 +160,15 @@ export default function QuemSomos() {
       cargo: 'Estagiário',
       linkedin: 'https://www.linkedin.com/in/lucas-brancalhao/',
       github: 'https://github.com/lucas51512',
+    },
+    {
+      imagem: '/img/quemSomos/Equipe/Nicolas.png',
+      imagemContainer: '/img/quemSomos/Equipe/Container/NicolasContainer.png',
+      alt: 'Foto do estagiário Nicolas',
+      nome: 'Nicolas Penga',
+      cargo: 'Estagiário',
+      linkedin: 'https://www.linkedin.com/in/nicolasppenga/',
+      github: 'https://github.com/TNDNS',
     },
     {
       imagem: '/img/quemSomos/Equipe/Rodrigo.png',
