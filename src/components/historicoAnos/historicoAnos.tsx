@@ -42,7 +42,6 @@ export default function HistoricoAnos(props: Props) {
     <>
       <Flex
         id={props.id}
-        className={props.temaClaro ? 'temaClaro' : 'temaEscuro'}
         backgroundColor={props.temaClaro ? 'white' : 'cor.S1'}
         color={props.temaClaro ? 'black' : 'white'}
         flexDir={{ base: 'column' }}
@@ -60,8 +59,9 @@ export default function HistoricoAnos(props: Props) {
         </Heading>
         <Flex
           flexDir={{ base: 'column' }}
-          gap={{ base: '20px', lg: '100px' }}
+          gap={{ base: '120px' }}
           w="100%"
+          className={props.temaClaro ? 'temaClaro' : 'temaEscuro'}
         >
           <Flex
             justifyContent={{ base: 'center' }}
