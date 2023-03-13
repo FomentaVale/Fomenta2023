@@ -43,16 +43,28 @@ export default function Navbar() {
             to="/realizacoes"
             descricao="Realizações"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
+            corFundo="cor.P2"
+            corFundoHover="cor.P3"
+            marginX="5px"
+            tamanhoBotao={{ md: '100px', lg: '150px' }}
           />
           <Botao
             to="/coworking"
             descricao="Coworking"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
+            corFundo="cor.P2"
+            corFundoHover="cor.P3"
+            marginX="5px"
+            tamanhoBotao={{ md: '100px', lg: '150px' }}
           />
           <Botao
             to="/facaParte"
             descricao="Faça Parte"
             borda="solid 2px rgba(255, 255, 255, 0.5)"
+            corFundo="cor.P2"
+            corFundoHover="cor.P3"
+            marginX="5px"
+            tamanhoBotao={{ md: '100px', lg: '150px' }}
           />
         </Flex>
       ) : (

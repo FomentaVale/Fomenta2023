@@ -20,7 +20,7 @@ export default function Dropdown(props: Props) {
     <Menu matchWidth={true}>
       <MenuButton
         as={Button}
-        w="150px"
+        w="160px"
         h="50px"
         marginX="5px"
         borderRadius="10px"
@@ -38,8 +38,8 @@ export default function Dropdown(props: Props) {
       >
         <Text
           color="#ffff"
-          fontSize="15px"
-          fontFamily="Gotham-Light"
+          fontSize="18px"
+          fontFamily="Gotham-Bold"
           fontWeight="900"
         >
           {props.descricao}
@@ -57,7 +57,7 @@ export default function Dropdown(props: Props) {
             <Text
               color="#ffff"
               fontSize="15px"
-              fontFamily="Gotham-Light"
+              fontFamily="Gotham-Bold"
               fontWeight="900"
             >
               O que Somos
@@ -73,7 +73,7 @@ export default function Dropdown(props: Props) {
             <Text
               color="#ffff"
               fontSize="15px"
-              fontFamily="Gotham-Light"
+              fontFamily="Gotham-Bold"
               fontWeight="900"
             >
               Quem Somos
