@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react';
 import Botao from '../../components/botao/botao';
 import HistoricoAnos from '../../components/historicoAnos/historicoAnos';
+import Navbar from '../../components/navbar/navbar';
 import './style.css';
 
 export default function OqueSomos() {
@@ -159,77 +160,80 @@ export default function OqueSomos() {
   return (
     <>
       {/* Section O que somos */}
-      <Flex
-        as="section"
-        className="oqueSomos-container"
-        h={{ base: '100%', lg: '100vh' }}
-        alignItems="center"
-        justifyContent="center"
-        margin={{ base: '30px 0px', lg: '0px' }}
-        padding="50px"
-      >
+      <Flex h="100%" flexDirection="column">
+        <Navbar bgColor="cor.S1" />
         <Flex
-          flexDir={{ base: 'column', lg: 'row' }}
-          gap={{ base: '20px', lg: '0px' }}
-          w={{ lg: '80%' }}
-          justifyContent={{ lg: 'center' }}
+          as="section"
+          className="oqueSomos-container"
+          h={{ base: '100%', lg: '100vh' }}
+          alignItems="center"
+          justifyContent="center"
+          margin={{ base: '30px 0px', lg: '0px' }}
+          padding="50px"
         >
           <Flex
-            flexDir="column"
-            alignItems={{ base: 'center' }}
-            justifyContent={{ base: 'center' }}
-            padding={{ base: '10px', lg: '0px' }}
-            w={{ lg: '50%' }}
+            flexDir={{ base: 'column', lg: 'row' }}
+            gap={{ base: '20px', lg: '0px' }}
+            w={{ lg: '80%' }}
+            justifyContent={{ lg: 'center' }}
           >
-            <Heading
-              className="titulo-containerPrincipal"
-              fontFamily="Gotham-Black"
-            >
-              <Highlight
-                query="FOMENTA"
-                styles={{ fontFamily: 'Gotham-Light', color: 'cor.P2' }}
-              >
-                O que é a FOMENTA
-              </Highlight>
-              <Highlight query="VALE?" styles={{ color: 'cor.P2' }}>
-                &nbsp;VALE?
-              </Highlight>
-            </Heading>
             <Flex
-              className="oqueSomos-Fomenta"
-              bg="cor.S1"
-              flexDir={{ base: 'column' }}
-              color="white"
-              gap={{ base: '15px' }}
-              padding={{ base: '20px' }}
-              textAlign={{ base: 'left' }}
-              fontSize={{ lg: '13px' }}
+              flexDir="column"
+              alignItems={{ base: 'center' }}
+              justifyContent={{ base: 'center' }}
+              padding={{ base: '10px', lg: '0px' }}
+              w={{ lg: '50%' }}
             >
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium eveniet quibusdam omnis magnam soluta harum tempora
-                voluptatibus maxime facere. Ducimus consectetur in quas.
-                Similique molestias enim impedit culpa quae. Mollitia.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, sapiente cupiditate odio voluptate ducimus minus
-                nobis esse aut mollitia ullam quaerat dolores inventore dolore
-                expedita minima laboriosam quam sint delectus.
-              </Text>
+              <Heading
+                className="titulo-containerPrincipal"
+                fontFamily="Gotham-Black"
+              >
+                <Highlight
+                  query="FOMENTA"
+                  styles={{ fontFamily: 'Gotham-Light', color: 'cor.P2' }}
+                >
+                  O que é a FOMENTA
+                </Highlight>
+                <Highlight query="VALE?" styles={{ color: 'cor.P2' }}>
+                  &nbsp;VALE?
+                </Highlight>
+              </Heading>
+              <Flex
+                className="oqueSomos-Fomenta"
+                bg="cor.S1"
+                flexDir={{ base: 'column' }}
+                color="white"
+                gap={{ base: '15px' }}
+                padding={{ base: '20px' }}
+                textAlign={{ base: 'left' }}
+                fontSize={{ lg: '13px' }}
+              >
+                <Text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium eveniet quibusdam omnis magnam soluta harum
+                  tempora voluptatibus maxime facere. Ducimus consectetur in
+                  quas. Similique molestias enim impedit culpa quae. Mollitia.
+                </Text>
+                <Text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus, sapiente cupiditate odio voluptate ducimus minus
+                  nobis esse aut mollitia ullam quaerat dolores inventore dolore
+                  expedita minima laboriosam quam sint delectus.
+                </Text>
+              </Flex>
             </Flex>
-          </Flex>
-          <Flex alignItems="center" justifyContent="center">
-            <iframe
-              className="oqueSomos-video"
-              height="290"
-              width="90%"
-              src="https://www.youtube.com/embed/gv_3Rt3Eq9o"
-              title="Legado Fomenta Vale: Começo de uma Ideia"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            <Flex alignItems="center" justifyContent="center">
+              <iframe
+                className="oqueSomos-video"
+                height="290"
+                width="90%"
+                src="https://www.youtube.com/embed/gv_3Rt3Eq9o"
+                title="Legado Fomenta Vale: Começo de uma Ideia"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

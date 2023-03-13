@@ -14,7 +14,7 @@ import Botao from '../botao/botao';
 import Dropdown from './dropdown/dropdown';
 
 interface Props {
-  bgColor: string;
+  bgColor?: string;
 }
 
 export default function Navbar(props: Props) {
@@ -25,7 +25,7 @@ export default function Navbar(props: Props) {
       h="100px"
       justifyContent="space-around"
       alignItems="center"
-      bg={props.bgColor}
+      bg={props.bgColor || 'transparent'}
       w="100%"
     >
       <Flex>
