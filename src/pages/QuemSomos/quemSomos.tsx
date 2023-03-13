@@ -7,7 +7,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { useState } from 'react';
+
 import EquipeCard from '../../components/equipeCard/equipeCard';
 import Navbar from '../../components/navbar/navbar';
 
