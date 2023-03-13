@@ -1,8 +1,13 @@
 import { Box, Heading, Flex, Button, Text } from '@chakra-ui/react';
-import BannerNavegacao from '../../components/bannerNavegacao/bannerNavegacao';
 import { Grid, GridItem } from '@chakra-ui/react';
+import SecaoNavegacao from '../../components/secaoNavegacao/secaoNavegacao';
+import { useState } from 'react';
+import Botao from '../../components/botao/botao';
+import ConteudoFacaParte from '../../components/ConteudoFacaParte/ConteudoFacaParte';
+import { Center, Square, Circle } from '@chakra-ui/react';
 
 export default function FacaParte() {
+  const [indice, setIndice] = useState(0);
   const informacoesBotoesNavegacao = [
     {
       tituloBotao: 'Banco de Talentos',
@@ -22,46 +27,77 @@ export default function FacaParte() {
     },
   ];
 
-  return (
-    <Box>
-      <BannerNavegacao
-        tituloBanner="FAÇA PARTE DA FOMENTA VALE"
-        subtituloBanner="LOREM SSIASBDL OAKSDKS IDOASJD"
-        informacoesBotoesNavegacao={informacoesBotoesNavegacao}
-      />
+  const conteudoSecao = {
+    titulo: 'FAÇA PARTE DA FOMENTA VALE',
+    descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Sint, magni distinctio dolores pariatur beatae iste repellendus 
+    harum qui molestiae, veniam sit cupiditate!`,
+  };
 
-      <Grid
-        templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(4, 1fr)' }}
-        templateRows={{ base: 'repeat(2, 1fr)', lg: '' }}
-        gap="3"
-        marginTop="20px"
-        padding="1"
-      >
-        {/*Barra*/}
-        <Flex justifyContent="left" marginTop="20px">
-          <Heading fontSize="20px" marginLeft="10">
-            TITULO
-          </Heading>
-        </Flex>
-        <Button
-          border="none"
-          bg="#F7941D"
-          width="23%"
-          height="2px"
-          marginLeft="7"
-          marginTop="-20px"
-        ></Button>
-        <Flex textAlign="center" padding="3">
-          <Text fontSize="10px" textAlign="justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            maximus a mi in tincidunt. Fusce consectetur convallis orci nec
-            interdum. Nunc mattis dolor dui, a rutrum purus varius eget. Cras
-            lectus ex, varius eget convallis in, posuere a est. Quisque at
-            lectus non quam dignissim pulvinar ut at nisl. Vivamus ut elit
-            porttitor, semper neque id, suscipit quam.
-          </Text>
-        </Flex>
-      </Grid>
-    </Box>
+  const conteudoPagina = [
+    {
+      titulo: 'Banco de Talentos',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Sint, magni distinctio dolores pariatur beatae iste repellendus 
+        harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+        laboriosam assumenda, sunt temporibus fuga. Quis.`,
+    },
+    {
+      titulo: 'Apoiadores',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Sint, magni distinctio dolores pariatur beatae iste repellendus 
+      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+      laboriosam assumenda, sunt temporibus fuga. Quis.`,
+    },
+    {
+      titulo: 'Estagiários',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Sint, magni distinctio dolores pariatur beatae iste repellendus 
+      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+      laboriosam assumenda, sunt temporibus fuga. Quis.`,
+    },
+    {
+      titulo: 'Incubação',
+      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Sint, magni distinctio dolores pariatur beatae iste repellendus 
+      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
+      laboriosam assumenda, sunt temporibus fuga. Quis.`,
+    },
+  ];
+
+  return (
+    <Flex color="white" justifyContent="center" flexDir={{ base: 'column' }}>
+      <Center bg="cor.S1">
+        <SecaoNavegacao conteudoSecao={conteudoSecao}>
+          <Grid
+            templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(5, 1fr)' }}
+            templateRows={{ base: 'repeat(2, 1fr)', lg: 'repeat(1, 1fr)' }}
+            gap={1}
+            rowGap={2}
+            marginTop="20px"
+            p="1"
+            m="2"
+          >
+            {informacoesBotoesNavegacao.map((item, index) => {
+              return (
+                <GridItem key={index}>
+                  <Botao
+                    href={item.conteudoReferencia}
+                    descricao={item.tituloBotao}
+                    corFundo="cor.P3"
+                    aoClicar={() => {
+                      setIndice(index);
+                    }}
+                  />
+                </GridItem>
+              );
+            })}
+          </Grid>
+        </SecaoNavegacao>
+      </Center>
+      <Center>
+        <ConteudoFacaParte conteudo={conteudoPagina[indice]} />
+      </Center>
+    </Flex>
   );
 }
