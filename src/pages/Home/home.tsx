@@ -8,18 +8,16 @@ import {
 } from '@chakra-ui/react';
 import Botao from '../../components/botao/botao';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper';
+import { Icon } from '@iconify/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { Pagination, Autoplay } from 'swiper';
 import './style.css';
-import { Icon } from '@iconify/react';
-import { useState } from 'react';
 
 export default function Home() {
   const [larguraTelaMaior768] = useMediaQuery('(min-width: 768px)');
-  const [pausarCarrossel, setPausarCarrossel] = useState(false);
 
   const imagensCarrosselPrincipal = [
     {
@@ -178,13 +176,18 @@ export default function Home() {
           <Image
             alt="Raizes Fomenta Vale"
             src="/img/figuras/figurasHome/figuraRaizesHome.png"
-            w={{ base: '90%', lg: '70%' }}
+            w={{ base: '100%', lg: '70%' }}
           />
         </Flex>
       </Flex>
 
       {/* Section Realizações */}
-      <Flex as="section" className="secaoRealizacoes" flexDir="column">
+      <Flex
+        as="section"
+        className="secaoRealizacoes"
+        flexDir="column"
+        paddingY={{ lg: '100px' }}
+      >
         <Grid
           templateRows={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
           templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
@@ -250,16 +253,12 @@ export default function Home() {
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Fringilla urna porttitor rhoncus dolor purus non. Nisl suscipit
-              adipiscing bibendum est ultricies integer quis. Adipiscing elit ut
-              aliquam purus sit. Adipiscing elit duis tristique sollicitudin
-              nibh sit. Convallis tellus id interdum velit laoreet id donec
-              ultrices tincidunt.
+              Fringilla urna porttitor rhoncus dolor purus non.
             </Flex>
           </GridItem>
 
           <GridItem>
-            <Flex w="100%" justifyContent="center" paddingY={{ base: '20px' }}>
+            <Flex w="100%" justifyContent="center" paddingY={{ base: '50px' }}>
               <Botao
                 to="/"
                 descricao="SAIBA MAIS"
@@ -275,34 +274,17 @@ export default function Home() {
       </Flex>
 
       {/* Carrossel Apoiadores */}
-      <Flex
-        as="section"
-        padding={{ base: '10px' }}
-        bgColor="cor.P2"
-        onMouseOver={() => setPausarCarrossel(true)}
-        onMouseOut={() => setPausarCarrossel(false)}
-      >
+      <Flex as="section" padding={{ base: '10px' }} bgColor="cor.P2">
         <Swiper
-          modules={[Autoplay]}
-          slidesPerView={1}
-          autoplay={{
-            delay: 2500,
-            pauseOnMouseEnter: true,
-          }}
-          speed={2000}
+          slidesPerView={2}
           loop
+          speed={2000}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 500,
+          }}
         >
-          <SwiperSlide>
-            <Flex w="50%" h="200px" bgColor="red">
-              oiasdasdasdasdasdasdasd
-            </Flex>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Flex w="50%" h="200px" bgColor="blue">
-              oiasdasdasdasdasdasdasd
-            </Flex>
-          </SwiperSlide>
-          {/* {imagensCarrosselApoiadores.map((item, index) => {
+          {imagensCarrosselApoiadores.map((item, index) => {
             return (
               <SwiperSlide key={`swiper${index}`}>
                 <Flex justifyContent="center" w={{ base: '100%', lg: '100%' }}>
@@ -318,12 +300,17 @@ export default function Home() {
                 </Flex>
               </SwiperSlide>
             );
-          })} */}
+          })}
         </Swiper>
       </Flex>
 
       {/* Section Coworking */}
-      <Flex as="section" className="secaoCoworking" flexDir="column">
+      <Flex
+        as="section"
+        className="secaoCoworking"
+        flexDir="column"
+        paddingY={{ lg: '100px' }}
+      >
         <Grid
           templateRows={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
           templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
@@ -389,16 +376,12 @@ export default function Home() {
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Fringilla urna porttitor rhoncus dolor purus non. Nisl suscipit
-              adipiscing bibendum est ultricies integer quis. Adipiscing elit ut
-              aliquam purus sit. Adipiscing elit duis tristique sollicitudin
-              nibh sit. Convallis tellus id interdum velit laoreet id donec
-              ultrices tincidunt.
+              Fringilla urna porttitor rhoncus dolor purus non.
             </Flex>
           </GridItem>
 
           <GridItem>
-            <Flex w="100%" justifyContent="center" paddingY={{ base: '20px' }}>
+            <Flex w="100%" justifyContent="center" paddingY={{ base: '50px' }}>
               <Botao
                 to="/"
                 descricao="SAIBA MAIS"

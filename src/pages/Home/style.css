@@ -1,5 +1,29 @@
 .secaoRealizacoes {
+  background-image: url('/img/background/home/background_fundo_realizacoes_mobile.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .secaoCoworking {
+  background-image: url('/img/background/home/background_fundo_coworking_mobile.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .secaoRealizacoes {
+    background-image: url('/img/background/home/background_fundo_realizacoes.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .secaoCoworking {
+    background-image: url('/img/background/home/background_fundo_coworking.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }

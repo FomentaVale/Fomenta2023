@@ -4,6 +4,7 @@ import Home from './pages/Home/home';
 import QuemSomos from './pages/QuemSomos/quemSomos';
 import Rodape from './components/rodape/rodape';
 import Realizacoes from './pages/Realizacoes/realizacoes';
+import FacaParte from './pages/FacaParte/facaParte';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/quemSomos" element={<QuemSomos />} />
         <Route path="/realizacoes" element={<Realizacoes />} />
+        <Route path="/facaParte" element={<FacaParte />} />
         <Route path="/*" element={<div>Página não encontrada</div>} />
       </Routes>
       <Rodape />
