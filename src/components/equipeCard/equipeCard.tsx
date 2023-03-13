@@ -74,7 +74,7 @@ export default function EquipeCard(props: Props) {
           onMouseOut={() => hoverContainerFora()}
           className="container-equipe"
           position="relative"
-          w="150px"
+          w="12vw"
           h="90vh"
           bgColor="cor.P3"
           bgImage={`url(${imagemEquipe})`}
