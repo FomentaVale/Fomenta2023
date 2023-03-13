@@ -7,7 +7,9 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
+import { useState } from 'react';
 import EquipeCard from '../../components/equipeCard/equipeCard';
+import Navbar from '../../components/navbar/navbar';
 
 export default function QuemSomos() {
   const empresas = [
@@ -201,36 +203,46 @@ export default function QuemSomos() {
 
   return (
     <>
-      {/* Section O que Somos*/}
+      {/* Section quem Somos*/}
       <Flex
         as="section"
         className="parallaxVerde"
-        h={{ base: '100%', lg: '90vh' }}
+        h={{ base: '100%', lg: '100vh' }}
         bg="cor.S1"
         flexDir={{ base: 'column' }}
         alignItems={{ base: 'center' }}
-        justifyContent={{ base: 'center' }}
-        gap={{ base: '40px', lg: '60px' }}
-        padding={{ base: '20px', lg: '0px 150px' }}
-        color="white"
-        textAlign={{ base: 'justify' }}
-        fontFamily="Gotham-Light"
+        justifyContent={{ base: 'space-between' }}
       >
-        <Heading
-          fontSize={{ base: '28px', lg: '48px' }}
-          fontFamily="Gotham-Black"
-        >
-          QUEM SOMOS
-        </Heading>
-        <Text w={{ lg: '70%' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-          recusandae quaerat cumque rem. Inventore repudiandae, odit magnam vel,
-          laudantium at mollitia, veritatis iusto error quam reprehenderit illum
-          maxime cupiditate Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Laboriosam ducimus at ut reprehenderit nisi placeat cum
-          praesentium iste earum iure, sapiente perspiciatis ad, voluptates nemo
-          delectus distinctio accusamus, suscipit minima.
-        </Text>
+        <Navbar bgColor="transparent" />
+        <Flex h="100%" w="100%" justifyContent="center" alignItems="center">
+          <Flex
+            flexDir={{ base: 'column' }}
+            alignItems={{ base: 'center' }}
+            justifyContent={{ base: 'center' }}
+            gap={{ base: '40px', lg: '60px' }}
+            padding={{ base: '20px', lg: '0px 150px' }}
+            color="white"
+            textAlign={{ base: 'justify' }}
+            fontFamily="Gotham-Light"
+          >
+            <Heading
+              fontSize={{ base: '28px', lg: '48px' }}
+              fontFamily="Gotham-Black"
+            >
+              QUEM SOMOS
+            </Heading>
+            <Text w={{ lg: '70%' }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              recusandae quaerat cumque rem. Inventore repudiandae, odit magnam
+              vel, laudantium at mollitia, veritatis iusto error quam
+              reprehenderit illum maxime cupiditate Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Laboriosam ducimus at ut
+              reprehenderit nisi placeat cum praesentium iste earum iure,
+              sapiente perspiciatis ad, voluptates nemo delectus distinctio
+              accusamus, suscipit minima.
+            </Text>
+          </Flex>
+        </Flex>
       </Flex>
 
       {/* Section Equipe Atual */}
@@ -294,10 +306,10 @@ export default function QuemSomos() {
           </Flex>
 
           <Heading
-            fontFamily="POLYA"
+            fontFamily="Gotham-Black"
             textAlign="center"
             color="cor.P1"
-            fontSize={{ lg: '46', '2xl': '56' }}
+            fontSize={{ base: '22', lg: '46', '2xl': '56' }}
             fontWeight={400}
           >
             NOSSO VALE É UM AMBIENTE FÉRTIL DE OPORTUNIDADES
