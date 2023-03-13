@@ -3,82 +3,38 @@ import { useState } from 'react';
 import SecaoNavegacao from '../../components/secaoNavegacao/secaoNavegacao';
 import Botao from '../../components/botao/botao';
 import CartaoConteudo from '../../components/cartaoConteudo/cartaoConteudo';
+import { conteudoRealizacoesJson } from './conteudoRealizacoes';
 
 export default function Realizacoes() {
-  const [indice, setIndice] = useState(0);
+  const [conteudo, setConteudo] = useState(`${conteudoRealizacoesJson.curso}`);
 
-  const informacoesBotoesNavegacao = [
-    {
-      tituloBotao: 'Cursos',
-      conteudoReferencia: '#cursos'
-    },
-    {
-      tituloBotao: 'Hackathon',
-      conteudoReferencia: '#hackathon'
-    },
-    {
-      tituloBotao: 'Geladatech',
-      conteudoReferencia: '#geladatech'
-    },
-    {
-      tituloBotao: 'Podcast',
-      conteudoReferencia: '#podcast'
-    },
-    {
-      tituloBotao: 'Formação de Inovadores',
-      conteudoReferencia: '#formacaoDeInovadores'
+  const informacoesVetor = conteudoRealizacoesJson ?? [];
+
+  const conteudoDescricaoTitulo = conteudoRealizacoesJson.descricaoPrincipal;
+
+  function transformaTexto(texto: string) {
+    return texto
+      .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+      })
+      .replace(/\s+/g, '')
+      .replace('ç', 'c')
+      .replace('ã', 'a')
+      .replace('O', 'o');
+  }
+
+  console.log(conteudo);
+
+  const renderizaCartao = (conteudo: typeof conteudoRealizacoesJson.curso) => {
+    if (conteudo.atual) {
+      return <CartaoConteudo conteudo={conteudo.atual} />;
     }
-  ];
-
-  const conteudoSecao = {
-    titulo: 'Realizações da Fomenta Vale',
-    descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-    Sint, magni distinctio dolores pariatur beatae iste repellendus 
-    harum qui molestiae, veniam sit cupiditate!`
   };
-
-  const conteudoPagina = [
-    {
-      titulo: 'Curso de Python',
-      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-        Sint, magni distinctio dolores pariatur beatae iste repellendus 
-        harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
-        laboriosam assumenda, sunt temporibus fuga. Quis.`
-    },
-    {
-      titulo: 'Hackaton',
-      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Sint, magni distinctio dolores pariatur beatae iste repellendus 
-      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
-      laboriosam assumenda, sunt temporibus fuga. Quis.`
-    },
-    {
-      titulo: 'Geladatech',
-      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Sint, magni distinctio dolores pariatur beatae iste repellendus 
-      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
-      laboriosam assumenda, sunt temporibus fuga. Quis.`
-    },
-    {
-      titulo: 'Podcast',
-      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Sint, magni distinctio dolores pariatur beatae iste repellendus 
-      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
-      laboriosam assumenda, sunt temporibus fuga. Quis.`
-    },
-    {
-      titulo: 'Formação de inovadores',
-      descricao: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Sint, magni distinctio dolores pariatur beatae iste repellendus 
-      harum qui molestiae, veniam sit cupiditate! Quibusdam unde 
-      laboriosam assumenda, sunt temporibus fuga. Quis.`
-    }
-  ];
 
   return (
     <Flex color="white" justifyContent="center" flexDir={{ base: 'column' }}>
       <Center bg="cor.S1">
-        <SecaoNavegacao conteudoSecao={conteudoSecao}>
+        <SecaoNavegacao conteudoSecao={conteudoDescricaoTitulo}>
           <Grid
             templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(5, 1fr)' }}
             templateRows={{ base: 'repeat(2, 1fr)', lg: 'repeat(1, 1fr)' }}
@@ -88,7 +44,7 @@ export default function Realizacoes() {
             p="1"
             m="2"
           >
-            {informacoesBotoesNavegacao.map((item, index) => {
+            {informacoesVetor.botoes.map((item, index) => {
               return (
                 <GridItem key={index}>
                   <Botao
@@ -96,7 +52,9 @@ export default function Realizacoes() {
                     descricao={item.tituloBotao}
                     corFundo="cor.P3"
                     aoClicar={() => {
-                      setIndice(index);
+                      setConteudo(
+                        `informacoesVetor.${transformaTexto(item.tituloBotao)}`
+                      );
                     }}
                   />
                 </GridItem>
@@ -105,9 +63,7 @@ export default function Realizacoes() {
           </Grid>
         </SecaoNavegacao>
       </Center>
-      <Center>
-        <CartaoConteudo conteudo={conteudoPagina[indice]} />
-      </Center>
+      <Center>{renderizaCartao(JSON.parse(conteudo))}</Center>
     </Flex>
   );
 }
