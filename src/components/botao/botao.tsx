@@ -13,27 +13,27 @@ interface Props {
   corTextoHover?: string;
   marginX?: string;
   tamanhoBotao?: object;
+  aoClicar?: () => void;
 }
 
 const botaoEstilizado = (props: Props) => {
   return (
     <Button
-      w="100%"
+      w={'150px' || props.tamanhoBotao}
       h="50px"
+      marginX="5px"
       borderRadius="10px"
       border={props.borda}
-      fontWeight="900"
-      color={props.corTexto || '#ffff'}
-      bgColor={props.corFundo || 'cor.P3'}
-      _hover={{
-        bgColor: props.corFundoHover || 'cor.S3',
-        color: props.corTextoHover || '#ffff',
-      }}
+      bg={props.corFundo || 'cor.P2'}
+      _hover={{ bg: props.corFundoHover || 'cor.P3' }}
+      onClick={props.aoClicar}
+      boxShadow="xl"
     >
       <Text
         fontSize={{ base: '16px', lg: '18px' }}
         fontFamily={'Gotham-Bold'}
         fontWeight={900}
+        whiteSpace="pre-wrap"
       >
         {props.descricao}
       </Text>
@@ -47,7 +47,6 @@ export default function Botao(props: Props): JSX.Element {
       <Link
         as={LinkRouter}
         to={props.to}
-        w={props.tamanhoBotao}
         marginX={props.marginX}
         _hover={{ textDecoration: 'none' }}
       >
@@ -61,7 +60,6 @@ export default function Botao(props: Props): JSX.Element {
       <Link
         href={props.href}
         target={props.target}
-        w={props.tamanhoBotao}
         marginX={props.marginX}
         _hover={{ textDecoration: 'none' }}
       >
