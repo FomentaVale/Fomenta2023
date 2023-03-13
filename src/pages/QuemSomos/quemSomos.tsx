@@ -204,7 +204,8 @@ export default function QuemSomos() {
       {/* Section O que Somos*/}
       <Flex
         as="section"
-        h={{ base: '100%', lg: '100vh' }}
+        className="parallaxVerde"
+        h={{ base: '100%', lg: '90vh' }}
         bg="cor.S1"
         flexDir={{ base: 'column' }}
         alignItems={{ base: 'center' }}
@@ -308,6 +309,7 @@ export default function QuemSomos() {
 
       <Flex
         as="section"
+        className="parallaxVerde"
         mt="50px"
         flexDir="column"
         justifyContent={{ base: 'center' }}

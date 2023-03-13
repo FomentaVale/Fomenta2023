@@ -171,6 +171,37 @@ a:hover {
   color: #171515 !important;
 }
 
+.parallaxLaranja {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxVerde {
+  /* The image used */
+  background-image: url("/img/parallaxVerde.png") !important;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.parallaxLaranja {
+  /* The image used */
+  background-image: url("../public/img/parallaxLaranja.png") !important;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
 @font-face {
   font-family: 'Gotham-Black';
   src: url(/fonts/Gotham/Gotham-Black.otf);
