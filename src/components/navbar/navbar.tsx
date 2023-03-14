@@ -13,7 +13,11 @@ import { Link } from 'react-router-dom';
 import Botao from '../botao/botao';
 import Dropdown from './dropdown/dropdown';
 
-export default function Navbar() {
+interface Props {
+  bgColor?: string;
+}
+
+export default function Navbar(props: Props) {
   const [larguraTelaMaior768] = useMediaQuery('(min-width: 768px)');
 
   return (
@@ -21,7 +25,8 @@ export default function Navbar() {
       h="100px"
       justifyContent="space-around"
       alignItems="center"
-      bg="cor.S1"
+      bg={props.bgColor || 'transparent'}
+      w="100%"
     >
       <Flex>
         <Link to="/">

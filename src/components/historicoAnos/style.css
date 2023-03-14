@@ -1,22 +1,39 @@
 .temaClaro {
-    background-image: url('/public/img/oqueSomos/bgAnos.png');
+    background-image: url('/public/img/oqueSomos/bgHistoricoMobile.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 
 }
 
 .temaEscuro {
-    background-image: url('/public/img/oqueSomos/bgAnos2Opacity.png');
+    background-image: url('/public/img/oqueSomos/bgHistoricoMobile2.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 
 
+
+
+
+
+
 @media screen and (min-width:768px) {
-    .temaEscuro {
-        background-image: url('/public/img/oqueSomos/bgAnos2.png');
+    .temaClaro {
+        background-image: url('/public/img/oqueSomos/bgHistorico.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
     }
+
+    .temaEscuro {
+        background-image: url('/public/img/oqueSomos/bgHistorico2.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
 }

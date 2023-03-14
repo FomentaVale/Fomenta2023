@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react';
 import Botao from '../../components/botao/botao';
 import HistoricoAnos from '../../components/historicoAnos/historicoAnos';
+import Navbar from '../../components/navbar/navbar';
 import './style.css';
 
 export default function OqueSomos() {
@@ -80,178 +81,159 @@ export default function OqueSomos() {
       ano: '2019',
       id: '2019',
       imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
+        {
+          src: '/img/oqueSomos/Historico/1.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/2.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/3.JPG',
+          alt: 'alt da imagem',
+        },
       ],
       tituloQuadro1: 'teste1',
       textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
+        {
+          src: '/img/oqueSomos/Historico/4.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/5.jpeg',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/1.JPG',
+          alt: 'alt da imagem',
+        },
       ],
-      tituloQuadro2: 'teste2',
+      tituloQuadro2: 'Nosso vale é Fertil',
       textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       temaClaro: true,
     },
     {
       ano: '2020',
       id: '2020',
       imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
+        {
+          src: '/img/oqueSomos/Historico/2.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/3.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/4.JPG',
+          alt: 'alt da imagem',
+        },
       ],
       tituloQuadro1: 'teste1',
       textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
+        {
+          src: '/img/oqueSomos/Historico/5.jpeg',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/1.JPG',
+          alt: 'alt da imagem',
+        },
+        {
+          src: '/img/oqueSomos/Historico/2.JPG',
+          alt: 'alt da imagem',
+        },
       ],
-      tituloQuadro2: 'teste2',
+      tituloQuadro2: 'Nosso vale é Fertil',
       textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales ',
       temaClaro: false,
-    },
-    {
-      ano: '2021',
-      id: '2021',
-      imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-      ],
-      tituloQuadro1: 'teste1',
-      textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
-      ],
-      tituloQuadro2: 'teste2',
-      textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      temaClaro: true,
-    },
-    {
-      ano: '2022',
-      id: '2022',
-      imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
-      ],
-      tituloQuadro1: 'teste1',
-      textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/2.JPG',
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
-      ],
-      tituloQuadro2: 'teste2',
-      textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      temaClaro: false,
-    },
-    {
-      ano: '2023',
-      id: '2023',
-      imagemsSecundariasQuadro1: [
-        '/img/oqueSomos/Historico/5.jpeg',
-        '/img/oqueSomos/Historico/1.JPG',
-        '/img/oqueSomos/Historico/2.JPG',
-      ],
-      tituloQuadro1: 'teste1',
-      textQuadro1:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      imagemsSecundariasQuadro2: [
-        '/img/oqueSomos/Historico/3.JPG',
-        '/img/oqueSomos/Historico/4.JPG',
-        '/img/oqueSomos/Historico/5.jpeg',
-      ],
-      tituloQuadro2: 'teste2',
-      textQuadro2:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ultrices dictum. Morbi euismod cursus felis vel aliquet. Quisque a odio nec urna pretium interdum et in ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vel laoreet lectus. Aenean vitae neque a metus varius sodales sed imperdiet purus. Fusce ipsum lacus, ultricies et sollicitudin vel, tristique et ante. Curabitur consequat nibh id tristique pretium. Vivamus sit amet lectus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id ipsum quis libero aliquet venenatis sed nec nisi.',
-      temaClaro: true,
     },
   ];
 
   return (
     <>
       {/* Section O que somos */}
-      <Flex
-        className="oqueSomos-container"
-        h={{ base: '100%', lg: '100vh' }}
-        alignItems="center"
-        justifyContent="center"
-        margin={{ base: '30px 0px', lg: '0px' }}
-        padding="50px"
-      >
+      <Flex h="100%" flexDirection="column">
+        <Navbar bgColor="cor.S1" />
         <Flex
-          flexDir={{ base: 'column', lg: 'row' }}
-          gap={{ base: '20px', lg: '0px' }}
-          w={{ lg: '80%' }}
+          as="section"
+          className="oqueSomos-container"
+          h={{ base: '100%', lg: '100vh' }}
+          alignItems="center"
+          justifyContent="center"
+          margin={{ base: '30px 0px', lg: '0px' }}
+          padding="50px"
         >
           <Flex
-            flexDir="column"
-            alignItems={{ base: 'center' }}
-            justifyContent={{ base: 'center' }}
-            padding={{ base: '10px', lg: '0px' }}
-            w={{ lg: '50%' }}
+            flexDir={{ base: 'column', lg: 'row' }}
+            gap={{ base: '20px', lg: '0px' }}
+            w={{ lg: '80%' }}
+            justifyContent={{ lg: 'center' }}
           >
-            <Heading fontFamily="Gotham-Black">
-              <Highlight
-                query="FOMENTA"
-                styles={{ fontFamily: 'Gotham-Light', color: 'cor.P2' }}
-              >
-                O que é a FOMENTA
-              </Highlight>
-              <Highlight query="VALE?" styles={{ color: 'cor.P2' }}>
-                &nbsp;VALE?
-              </Highlight>
-            </Heading>
             <Flex
-              className="oqueSomos-Fomenta"
-              bg="cor.S1"
-              flexDir={{ base: 'column' }}
-              color="white"
-              gap={{ base: '15px' }}
-              padding={{ base: '20px' }}
-              textAlign={{ base: 'left' }}
-              fontSize={{ lg: '13px' }}
+              flexDir="column"
+              alignItems={{ base: 'center' }}
+              justifyContent={{ base: 'center' }}
+              padding={{ base: '10px', lg: '0px' }}
+              w={{ lg: '50%' }}
             >
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium eveniet quibusdam omnis magnam soluta harum tempora
-                voluptatibus maxime facere. Ducimus consectetur in quas.
-                Similique molestias enim impedit culpa quae. Mollitia.
-              </Text>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus, sapiente cupiditate odio voluptate ducimus minus
-                nobis esse aut mollitia ullam quaerat dolores inventore dolore
-                expedita minima laboriosam quam sint delectus.
-              </Text>
+              <Heading
+                className="titulo-containerPrincipal"
+                fontFamily="Gotham-Black"
+              >
+                <Highlight
+                  query="FOMENTA"
+                  styles={{ fontFamily: 'Gotham-Light', color: 'cor.P2' }}
+                >
+                  O que é a FOMENTA
+                </Highlight>
+                <Highlight query="VALE?" styles={{ color: 'cor.P2' }}>
+                  &nbsp;VALE?
+                </Highlight>
+              </Heading>
+              <Flex
+                className="oqueSomos-Fomenta"
+                bg="cor.S1"
+                flexDir={{ base: 'column' }}
+                color="white"
+                gap={{ base: '15px' }}
+                padding={{ base: '20px' }}
+                textAlign={{ base: 'left' }}
+                fontSize={{ lg: '13px' }}
+              >
+                <Text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium eveniet quibusdam omnis magnam soluta harum
+                  tempora voluptatibus maxime facere. Ducimus consectetur in
+                  quas. Similique molestias enim impedit culpa quae. Mollitia.
+                </Text>
+                <Text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus, sapiente cupiditate odio voluptate ducimus minus
+                  nobis esse aut mollitia ullam quaerat dolores inventore dolore
+                  expedita minima laboriosam quam sint delectus.
+                </Text>
+              </Flex>
             </Flex>
-          </Flex>
-          <Flex alignItems="center" justifyContent="center">
-            <iframe
-              className="oqueSomos-video"
-              height="290"
-              width="90%"
-              src="https://www.youtube.com/embed/gv_3Rt3Eq9o"
-              title="Legado Fomenta Vale: Começo de uma Ideia"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            <Flex alignItems="center" justifyContent="center">
+              <iframe
+                className="oqueSomos-video"
+                height="290"
+                width="90%"
+                src="https://www.youtube.com/embed/gv_3Rt3Eq9o"
+                title="Legado Fomenta Vale: Começo de uma Ideia"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
@@ -259,6 +241,7 @@ export default function OqueSomos() {
       {/* Section Trajetoria */}
 
       <Flex
+        as="section"
         bg="cor.S1"
         flexDir={{ base: 'column', lg: 'column' }}
         padding={{ base: '20px 10px', lg: '50px 0px' }}
@@ -276,6 +259,7 @@ export default function OqueSomos() {
           <Heading>A nossa trajetória</Heading>
           <Flex
             h={{ base: '100%' }}
+            w={{ lg: '100%' }}
             alignItems="center"
             justifyContent="center"
             fontFamily="Gotham-Medium"
@@ -399,6 +383,7 @@ export default function OqueSomos() {
             </Flex>
           </Flex>
           <Flex
+            as="section"
             alignItems={{ base: 'center' }}
             flexDir={{ base: 'column' }}
             fontFamily="Gotham-Medium"
@@ -466,7 +451,7 @@ export default function OqueSomos() {
       </Flex>
 
       {/* Section Anos */}
-      <Flex h="100%" flexDir={{ base: 'column' }}>
+      <Flex as="section" h="100%" flexDir={{ base: 'column' }}>
         {historico.map((item, index) => (
           <HistoricoAnos
             key={index}

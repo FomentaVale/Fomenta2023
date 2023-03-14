@@ -138,6 +138,70 @@ a:hover {
   text-decoration: none;
 }
 
+.spotify:hover {
+  color: #7ab800 !important;
+}
+
+.instagram:hover {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  border-radius: 4px;
+}
+
+.linkedin:hover {
+  color: #007bb6 !important;
+}
+
+.youtube:hover {
+  color: #bb0000 !important;
+}
+
+.facebook:hover {
+  color: #3b5998 !important;
+}
+
+.whatsapp:hover {
+  color: #34af23 !important;
+}
+
+.github:hover {
+  color: #171515 !important;
+}
+
+.parallaxLaranja {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxVerde {
+  /* The image used */
+  background-image: url("/img/parallaxVerde.png") !important;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.parallaxLaranja {
+  /* The image used */
+  background-image: url("../public/img/parallaxLaranja.png") !important;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
 @font-face {
   font-family: 'Gotham-Black';
   src: url(/fonts/Gotham/Gotham-Black.otf);
@@ -161,4 +225,9 @@ a:hover {
 @font-face {
   font-family: 'Gotham-Book';
   src: url(/fonts/Gotham/Gotham-Book.otf);
+}
+
+@font-face {
+  font-family: 'POLYA';
+  src: url(/fonts/POLYA/POLYA.otf)
 }

@@ -31,3 +31,18 @@
         height: 300px;
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .oqueSomos-video {
+        height: 700px;
+        width: 950px;
+    }
+
+    .titulo-containerPrincipal {
+        font-size: 62px !important;
+    }
+
+    .oqueSomos-Fomenta {
+        font-size: 28px !important;
+    }
+}
