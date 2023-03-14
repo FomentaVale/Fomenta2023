@@ -18,22 +18,22 @@ export default function OqueSomos() {
     {
       caminho: '2019',
       ano: '2019',
-      imageHorizontal: '/public/img/oqueSomos/ItemH1.png',
-      imageVertical: '/public/img/oqueSomos/ItemV1.png',
+      imageHorizontal: '/img/oqueSomos/ItemH1.png',
+      imageVertical: '/img/oqueSomos/ItemV1.png',
       temaLaranja: true,
     },
     {
       caminho: '2021',
       ano: '2021',
-      imageHorizontal: '/public/img/oqueSomos/ItemH1.png',
-      imageVertical: '/public/img/oqueSomos/ItemV1.png',
+      imageHorizontal: '/img/oqueSomos/ItemH1.png',
+      imageVertical: '/img/oqueSomos/ItemV1.png',
       temaLaranja: true,
     },
     {
       caminho: '2023',
       ano: '2023',
-      imageHorizontal: '/public/img/oqueSomos/ItemH2.png',
-      imageVertical: '/public/img/oqueSomos/ItemV2.png',
+      imageHorizontal: '/img/oqueSomos/ItemH2.png',
+      imageVertical: '/img/oqueSomos/ItemV2.png',
       temaLaranja: false,
     },
   ];
@@ -42,22 +42,22 @@ export default function OqueSomos() {
     {
       caminho: '2020',
       ano: '2020',
-      imageHorizontal: '/public/img/oqueSomos/ItemH1.png',
-      imageVertical: '/public/img/oqueSomos/ItemV1.png',
+      imageHorizontal: '/img/oqueSomos/ItemH1.png',
+      imageVertical: '/img/oqueSomos/ItemV1.png',
       temaLaranja: true,
     },
     {
       caminho: '2022',
       ano: '2022',
-      imageHorizontal: '/public/img/oqueSomos/ItemH2.png',
-      imageVertical: '/public/img/oqueSomos/ItemV2.png',
+      imageHorizontal: '/img/oqueSomos/ItemH2.png',
+      imageVertical: '/img/oqueSomos/ItemV2.png',
       temaLaranja: false,
     },
     {
       caminho: '#',
       ano: '2024',
-      imageHorizontal: '/public/img/oqueSomos/ItemH2.png',
-      imageVertical: '/public/img/oqueSomos/ItemV2.png',
+      imageHorizontal: '/img/oqueSomos/ItemH2.png',
+      imageVertical: '/img/oqueSomos/ItemV2.png',
       temaLaranja: false,
     },
   ];
@@ -317,12 +317,12 @@ export default function OqueSomos() {
                 <>
                   <Image
                     w="50%"
-                    src="/public/img/oqueSomos/Trajetoria1.png"
+                    src="/img/oqueSomos/Trajetoria1.png"
                     alt="Inicio da linha do tempo"
                   />
                   <Image
                     w="50%"
-                    src="/public/img/oqueSomos/Trajetoria2.png"
+                    src="/img/oqueSomos/Trajetoria2.png"
                     alt="Fim da linha do tempo"
                   />
                 </>
@@ -330,12 +330,12 @@ export default function OqueSomos() {
                 <>
                   <Image
                     h="100%"
-                    src="/public/img/oqueSomos/TrajetoriaV1.png"
+                    src="/img/oqueSomos/TrajetoriaV1.png"
                     alt="Inicio da linha do tempo"
                   />
                   <Image
                     h="100%"
-                    src="/public/img/oqueSomos/TrajetoriaV2.png"
+                    src="/img/oqueSomos/TrajetoriaV2.png"
                     alt="Fim da linha do tempo"
                   />
                 </>
