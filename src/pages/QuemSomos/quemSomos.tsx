@@ -213,7 +213,7 @@ export default function QuemSomos() {
         alignItems={{ base: 'center' }}
         justifyContent={{ base: 'space-between' }}
       >
-        <Navbar bgColor="transparent" />
+        <Navbar />
         <Flex h="100%" w="100%" justifyContent="center" alignItems="center">
           <Flex
             flexDir={{ base: 'column' }}
@@ -286,7 +286,7 @@ export default function QuemSomos() {
           gap={{ base: '50px' }}
         >
           <Flex
-            flexDirection={{ base: 'column', lg: 'row' }}
+            flexDirection={{ base: 'column', md: 'row' }}
             justifyContent={{ lg: 'center' }}
             gap={{ base: '10px', lg: '0px' }}
           >
@@ -353,7 +353,6 @@ export default function QuemSomos() {
               as="a"
               target="_blank"
               href={item.site}
-              colSpan={{ base: 1, lg: 1 }}
               bg={item.fundo}
               borderRadius="16px"
               padding={{ base: '10px' }}
@@ -405,7 +404,6 @@ export default function QuemSomos() {
               as="a"
               target="_blank"
               href={item.linkedin}
-              colSpan={{ base: 1 }}
               bgColor="cor.P2"
               padding="10px"
               color="white"

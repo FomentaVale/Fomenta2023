@@ -159,7 +159,7 @@ export default function EquipeCard(props: Props) {
           ) : (
             <Flex
               className="etiqueta"
-              w={{ base: '90vw' }}
+              w={{ base: '100%' }}
               bgColor="cor.P3"
               h="70px"
               onClick={observaClique}
@@ -217,7 +217,7 @@ export default function EquipeCard(props: Props) {
                   </Flex>
                 </Flex>
                 <Box w={{ base: '60%' }}>
-                  <Image src={props.imagemContainer} alt={props.alt} />
+                  <Image w="100%" src={props.imagemContainer} alt={props.alt} />
                 </Box>
               </Flex>
             </Flex>
