@@ -30,6 +30,7 @@ export default function CartaoConteudo(props: CartaoConteudoProps) {
             color="black"
             size={{ base: 'md', lg: 'xl' }}
             borderBottom="2px solid #00A99D"
+            textAlign="center"
           >
             {props.conteudo.titulo}
           </Heading>
