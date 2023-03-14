@@ -46,7 +46,7 @@ export default function Realizacoes() {
           </Grid>
         </SecaoNavegacao>
       </Center>
-      {conteudo.atual.titulo ? <div>conteudo atual</div> : ''}
+      {conteudo.atual.titulo ? <CartaoConteudo conteudo={conteudo.atual} /> : ''}
     </Flex>
   );
 }
