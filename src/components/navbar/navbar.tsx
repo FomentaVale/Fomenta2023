@@ -51,7 +51,7 @@ export default function Navbar(props: Props) {
             corFundo="cor.P2"
             corFundoHover="cor.P3"
             marginX="5px"
-            tamanhoBotao={{ md: '100px', lg: '150px' }}
+            larguraBotao={{ md: '100px', lg: '150px' }}
           />
           <Botao
             to="/coworking"
@@ -60,7 +60,7 @@ export default function Navbar(props: Props) {
             corFundo="cor.P2"
             corFundoHover="cor.P3"
             marginX="5px"
-            tamanhoBotao={{ md: '100px', lg: '150px' }}
+            larguraBotao={{ md: '100px', lg: '150px' }}
           />
           <Botao
             to="/facaParte"
@@ -69,7 +69,7 @@ export default function Navbar(props: Props) {
             corFundo="cor.P2"
             corFundoHover="cor.P3"
             marginX="5px"
-            tamanhoBotao={{ md: '100px', lg: '150px' }}
+            larguraBotao={{ md: '100px', lg: '150px' }}
           />
         </Flex>
       ) : (
@@ -87,11 +87,21 @@ export default function Navbar(props: Props) {
             }
           />
           <MenuList>
-            <MenuItem>O que Somos</MenuItem>
-            <MenuItem>Quem Somos</MenuItem>
-            <MenuItem>Realizações</MenuItem>
-            <MenuItem>Coworking</MenuItem>
-            <MenuItem>Faça Parte</MenuItem>
+            <MenuItem>
+              <Link to="/oqueSomos">O que Somos</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/quemSomos">Quem Somos</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/realizacoes">Realizações</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/coworking">Coworking</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/facaParte">Faça Parte</Link>
+            </MenuItem>
           </MenuList>
         </Menu>
       )}

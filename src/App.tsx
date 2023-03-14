@@ -5,6 +5,8 @@ import Rodape from './components/rodape/rodape';
 import Realizacoes from './pages/Realizacoes/realizacoes';
 import OqueSomos from './pages/OqueSomos/oQueSomos';
 import Pagina404 from './pages/pagina404/pagina404';
+import Coworking from './pages/Coworking/coworking';
+import FacaParte from './pages/FacaParte/facaParte';
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
         <Route path="/oqueSomos" element={<OqueSomos />} />
         <Route path="/quemSomos" element={<QuemSomos />} />
         <Route path="/realizacoes" element={<Realizacoes />} />
+        <Route path="/coworking" element={<Coworking />} />
+        <Route path="/facaParte" element={<FacaParte />} />
         <Route path="/*" element={<Pagina404 />} />
       </Routes>
       <Rodape />
